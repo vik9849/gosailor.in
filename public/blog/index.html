@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Travel Blog 2026 — GoSailor</title>
+<meta name="description" content="World's best travel guides, flight hacks and destination tips for 2026. Tokyo, Bali, Bangkok, Paris and more."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"DM Sans",sans-serif;background:#f8fafc;color:#1e293b;}
+nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100;}
+.logo{font-family:"Playfair Display",serif;font-size:20px;font-weight:900;color:#fff;text-decoration:none;}
+.logo span{color:#f59e0b;}
+.nav-right{display:flex;align-items:center;gap:1.5rem;}
+.nav-right a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;}
+.nav-right a:hover{color:#fff;}
+.hero{background:#0a1628;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(26,86,219,0.3) 0%,transparent 70%);}
+.hero-tag{display:inline-block;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#f59e0b;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1rem;position:relative;z-index:1;}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;position:relative;z-index:1;margin-bottom:0.5rem;}
+.hero h1 em{font-style:normal;color:#f59e0b;}
+.hero p{color:rgba(255,255,255,0.6);font-size:15px;position:relative;z-index:1;}
+.container{max-width:1200px;margin:0 auto;padding:2.5rem 1.5rem;}
+.section-label{font-size:11px;font-weight:600;color:#1a56db;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.4rem;}
+.section-title{font-family:"Playfair Display",serif;font-size:1.6rem;font-weight:700;color:#1e293b;margin-bottom:1.25rem;}
+.new-badge{display:inline-block;background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:middle;text-transform:uppercase;letter-spacing:1px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:3rem;}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:all 0.2s;}
+.card:hover{border-color:#1a56db;transform:translateY(-3px);box-shadow:0 12px 32px rgba(26,86,219,0.1);}
+.card img{width:100%;height:180px;object-fit:cover;display:block;}
+.card-body{padding:1.25rem;}
+.card-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
+.card-title{font-family:"Playfair Display",serif;font-size:1rem;font-weight:700;color:#1e293b;margin-bottom:0.5rem;line-height:1.3;}
+.card-excerpt{font-size:13px;color:#64748b;line-height:1.6;margin-bottom:0.75rem;}
+.card-meta{font-size:12px;color:#94a3b8;display:flex;gap:1rem;}
+.cta-banner{background:#0a1628;border-radius:16px;padding:2rem;text-align:center;margin-bottom:3rem;}
+.cta-banner h3{font-family:"Playfair Display",serif;font-size:1.5rem;color:#fff;margin-bottom:0.5rem;}
+.cta-banner p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:1.25rem;}
+.cta-btn{display:inline-block;padding:12px 28px;background:#f59e0b;color:#0a1628;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;}
+footer{background:#0a1628;padding:2rem;text-align:center;}
+.fl{font-family:"Playfair Display",serif;font-size:18px;font-weight:900;color:#fff;}
+.fl span{color:#f59e0b;}
+footer p{font-size:12px;color:rgba(255,255,255,0.4);margin-top:0.5rem;}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="../index.html">Go<span>Sailor</span></a>
+  <div class="nav-right">
+    <a href="../index.html">✈ Flights</a>
+    <a href="../index.html">💸 Deals</a>
+    <a href="../index.html">⛵ Cruises</a>
+    <a href="index.html" style="color:#f59e0b;">📖 Blog</a>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-tag">✈ World Travel Guides 2026</div>
+  <h1>GoSailor <em>Travel Blog</em></h1>
+  <p>The world's best destinations — guides, tips and flight deals for every traveler</p>
+</div>
+<div class="container">
+
+  <!-- NEW ARTICLES FIRST -->
+  <div style="margin-bottom:1.5rem;">
+    <div class="section-label">🔥 Just published</div>
+    <div class="section-title">New articles <span class="new-badge">New</span></div>
+  </div>
+  <div class="grid">
+    <a class="card" href="thailand-safe-solo-female.html">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Thailand"/>
+      <div class="card-body"><div class="card-tag" style="color:#7c3aed;">👩 Solo Female Travel 🔥 Trending</div><div class="card-title">Is Thailand Safe for Solo Female Travelers in 2026?</div><div class="card-excerpt">Honest safety guide covering best areas, transport tips, scams to avoid and real advice for women traveling alone.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 11 min</span></div></div>
+    </a>
+    <a class="card" href="week-in-bali-cost-2026.html">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali"/>
+      <div class="card-body"><div class="card-tag" style="color:#ea580c;">💰 Budget Guide 🔥 Most Searched</div><div class="card-title">How Much Does a Week in Bali Cost in 2026?</div><div class="card-excerpt">Complete cost breakdown — accommodation, food, transport and activities for every budget level.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 10 min</span></div></div>
+    </a>
+    <a class="card" href="travel-hacks-long-flights.html">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80" alt="Long flights"/>
+      <div class="card-body"><div class="card-tag" style="color:#1a56db;">✈ Flight Hacks 📈 150% Trending</div><div class="card-title">25 Travel Hacks for Long Flights That Actually Work</div><div class="card-excerpt">Beat jet lag, sleep better, avoid DVT, get upgrades and arrive feeling fresh. Tips from frequent flyers.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 12 min</span></div></div>
+    </a>
+    <a class="card" href="passport-validity-guide.html">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Passport"/>
+      <div class="card-body"><div class="card-tag" style="color:#16a34a;">📋 Essential Guide ✅ Updated 2026</div><div class="card-title">Passport Validity Rules by Country 2026 — Complete Guide</div><div class="card-excerpt">Exact validity requirements for USA, Europe, Dubai, Thailand, Japan and every major destination.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 8 min</span></div></div>
+    </a>
+    <a class="card" href="find-cheap-flights-ai-2026.html">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1485871551301-aadbd8191b2a?w=600&q=80" alt="AI flights"/>
+      <div class="card-body"><div class="card-tag" style="color:#7c3aed;">🤖 AI Guide 🚀 315% Trending</div><div class="card-title">How to Find Cheap Flights Using AI in 2026</div><div class="card-excerpt">Best AI tools, prompts and strategies that actually save money. Search interest up 315% in 2026.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 9 min</span></div></div>
+    </a>
+    <a class="card" href="singapore-guide.html">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" alt="Singapore"/>
+      <div class="card-body"><div class="card-tag" style="color:#dc2626;">🦁 Solo Travel ⭐ Must Read</div><div class="card-title">Is Singapore Safe for Solo Travelers? Complete 2026 Guide</div><div class="card-excerpt">Safety scores, best areas, costs, free attractions and everything a solo traveler needs to know.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 10 min</span></div></div>
+    </a>
+  </div>
+
+  <!-- DESTINATION GUIDES -->
+  <div style="margin-bottom:1.5rem;">
+    <div class="section-label">🌍 Destination guides</div>
+    <div class="section-title">Most popular destinations 2026</div>
+  </div>
+  <div class="grid">
+    <a class="card" href="tokyo-japan-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80" alt="Tokyo"/><div class="card-body"><div class="card-tag" style="color:#dc2626;">🗾 #2 Globally Trending</div><div class="card-title">Tokyo Travel Guide 2026: The Ultimate Japan Experience</div><div class="card-excerpt">Temples, sushi, bullet trains and neon lights — the complete guide to Japan's incredible capital.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="rome-italy-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1529260830199-42c24126f198?w=600&q=80" alt="Rome"/><div class="card-body"><div class="card-tag" style="color:#dc2626;">🇮🇹 #1 Most Searched</div><div class="card-title">Rome & Italy Travel Guide 2026: Eternal City</div><div class="card-excerpt">Colosseum, Vatican, Amalfi Coast — Italy is the world's most searched destination for 2026.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="paris-france-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris"/><div class="card-body"><div class="card-tag" style="color:#7c3aed;">🗼 #4 Most Searched</div><div class="card-title">Paris Travel Guide 2026: The City of Light</div><div class="card-excerpt">Eiffel Tower, the Louvre, world-class food and that unmistakable Parisian atmosphere.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="bali-travel-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali"/><div class="card-body"><div class="card-tag" style="color:#0891b2;">🌴 Top Trending 2026</div><div class="card-title">Bali Travel Guide 2026: Island of the Gods</div><div class="card-excerpt">Rice terraces, ancient temples, surf beaches and spiritual retreats — Bali has it all.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="dubai-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai"/><div class="card-body"><div class="card-tag" style="color:#1a56db;">🌆 Most Visited</div><div class="card-title">Dubai Travel Guide 2026: Everything You Need to Know</div><div class="card-excerpt">Burj Khalifa, desert safari, Dubai Mall and world-class dining in the UAE's crown jewel.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 8 min</span></div></div></a>
+    <a class="card" href="bangkok-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80" alt="Bangkok"/><div class="card-body"><div class="card-tag" style="color:#7c3aed;">🏯 #1 Most Booked City</div><div class="card-title">Bangkok 5 Day Itinerary Under $500</div><div class="card-excerpt">Exact day-by-day plan with costs — temples, street food, markets and rooftop bars.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 12 min</span></div></div></a>
+    <a class="card" href="greece-santorini-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80" alt="Santorini"/><div class="card-body"><div class="card-tag" style="color:#1a56db;">🇬🇷 #12 Most Searched</div><div class="card-title">Greece & Santorini Travel Guide 2026</div><div class="card-excerpt">Iconic white buildings, blue domes, incredible sunsets and world-class Greek food.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="new-york-usa-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1485871551301-aadbd8191b2a?w=600&q=80" alt="New York"/><div class="card-body"><div class="card-tag" style="color:#1a56db;">🗽 Top City Worldwide</div><div class="card-title">New York City Travel Guide 2026</div><div class="card-excerpt">Times Square, Central Park, Broadway and the Statue of Liberty — NYC delivers everything.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="london-uk-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" alt="London"/><div class="card-body"><div class="card-tag" style="color:#1a56db;">🎡 #5 Most Searched</div><div class="card-title">London Travel Guide 2026</div><div class="card-excerpt">Free world-class museums, royal palaces, West End shows and iconic British culture.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="maldives-travel-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives"/><div class="card-body"><div class="card-tag" style="color:#0891b2;">🏝 Top Honeymoon 2026</div><div class="card-title">Maldives Travel Guide 2026: Paradise Found</div><div class="card-excerpt">Overwater villas, crystal-clear water and some of the world's best snorkeling.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="istanbul-turkey-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80" alt="Istanbul"/><div class="card-body"><div class="card-tag" style="color:#7c3aed;">🕌 Best Value Europe</div><div class="card-title">Istanbul & Turkey Travel Guide 2026</div><div class="card-excerpt">Hagia Sophia, Cappadocia balloon rides and world-famous Turkish cuisine.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+    <a class="card" href="croatia-travel-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80" alt="Croatia"/><div class="card-body"><div class="card-tag" style="color:#0891b2;">⛵ Top Sailing Dest.</div><div class="card-title">Croatia Travel Guide 2026: Adriatic Paradise</div><div class="card-excerpt">Dubrovnik's city walls, island hopping, yacht charters and the most beautiful coastline in Europe.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 7 min</span></div></div></a>
+  </div>
+
+  <!-- FLIGHT GUIDES -->
+  <div style="margin-bottom:1.5rem;">
+    <div class="section-label">✈ Flight guides & money tips</div>
+    <div class="section-title">Save money on every trip</div>
+  </div>
+  <div class="grid">
+    <a class="card" href="cheap-flights-india.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80" alt="Flights"/><div class="card-body"><div class="card-tag" style="color:#ea580c;">💸 Flight Hacks</div><div class="card-title">Cheapest Day to Fly — How to Save 23% on Every Flight</div><div class="card-excerpt">Data-backed research reveals exact days, times and booking windows for lowest prices.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 9 min</span></div></div></a>
+    <a class="card" href="flight-compensation.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1544620347460-35ea508f54eb?w=600&q=80" alt="Airport"/><div class="card-body"><div class="card-tag" style="color:#16a34a;">💰 Claim Up to €600</div><div class="card-title">How to Claim EU261 Flight Compensation Step by Step</div><div class="card-excerpt">Exact scripts, timelines and what to do when airlines refuse to pay your claim.</div><div class="card-meta"><span>📅 May 2026</span><span>⏱ 11 min</span></div></div></a>
+    <a class="card" href="yacht-cruise-guide.html"><img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Yacht"/><div class="card-body"><div class="card-tag" style="color:#0891b2;">⛵ Cruise Guide</div><div class="card-title">Yacht & Cruise Charter Guide 2026</div><div class="card-excerpt">Greece, Croatia, Maldives — charter a private yacht and explore the world's best coastlines.</div><div class="card-meta"><span>📅 April 2026</span><span>⏱ 6 min</span></div></div></a>
+  </div>
+
+  <div class="cta-banner">
+    <h3>Ready to book your next adventure?</h3>
+    <p>Search and compare flights from hundreds of airlines worldwide in one place</p>
+    <a class="cta-btn" href="../index.html">Search Flights on GoSailor →</a>
+  </div>
+</div>
+<footer>
+  <div class="fl">Go<span>Sailor</span>.in</div>
+  <p>© 2026 GoSailor.in — Your trusted worldwide travel search engine</p>
+</footer>
+</body>
+</html>
