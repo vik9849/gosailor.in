@@ -1,21 +1,9 @@
-# netlify.toml — gosailor.in
-# Fixed: blog .html files now load directly without being swallowed by the SPA redirect
-
-# Rule 1: Let all /blog/*.html files serve as-is (no redirect)
 [[redirects]]
-  from = "/blog/*.html"
-  to = "/blog/:splat.html"
-  status = 200
-  force = false
-
-# Rule 2: Let /blog/ index load as-is
-[[redirects]]
-  from = "/blog/"
+  from = "/blog"
   to = "/blog/index.html"
   status = 200
   force = false
 
-# Rule 3: SPA fallback for Next.js routes only (must come LAST)
 [[redirects]]
   from = "/*"
   to = "/index.html"
