@@ -6,7 +6,16 @@
 <title>GoSailor.in — Cheap Flights from Anywhere to Everywhere</title>
 <meta name="google-site-verification" content="lIJMPegUDu6TftkD1IOx8tGQU-j6Ll8j3NgygDkPuj0" />
 <meta name="description" content="Search millions of cheap flights in one place. Find the best flight deals worldwide on GoSailor.in" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="canonical" href="https://gosailor.in/" />
+<meta property="og:title" content="GoSailor.in — Cheap Flights from Anywhere to Everywhere" />
+<meta property="og:description" content="Search millions of cheap flights in one place. Find the best flight deals worldwide on GoSailor.in" />
+<meta property="og:url" content="https://gosailor.in/" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <!-- Travelpayouts Drive -->
 <script data-cfasync="false" data-no-defer="1">
   (function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.head.appendChild(s);})();
@@ -362,61 +371,6 @@ nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-co
       </div>
 
 
-      <!-- HOTELS SECTION -->
-      <div id="section-hotels" style="display:none">
-        <div class="hero-tag">🏨 Hotels Worldwide</div>
-        <h1>Find amazing hotels at the <em>lowest prices</em></h1>
-        <p>Search hotels, resorts, apartments and more powered by Klook — instant confirmation worldwide.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px 16px 0 0;padding:2rem;">
-          <div style="text-align:center;margin-bottom:1.5rem;">
-            <div style="font-size:48px;margin-bottom:0.5rem;">🏨</div>
-            <h3 style="font-size:1.2rem;font-weight:600;color:#1e293b;margin-bottom:0.5rem;">Search Hotels & Resorts</h3>
-            <p style="font-size:13px;color:#64748b;margin-bottom:0.5rem;">Hotels · Resorts · Apartments · Villas · Hostels</p>
-            <p style="font-size:12px;color:#94a3b8;">Powered by Klook — 2,300+ destinations worldwide</p>
-          </div>
-          <div style="margin-bottom:12px;">
-            <label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Destination</label>
-            <input type="text" id="hotel-dest" placeholder="City, hotel name or area e.g. Dubai, Bangkok, Tokyo" style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#1a56db'" onblur="this.style.borderColor='#e2e8f0'"/>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-            <div>
-              <label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Check-in</label>
-              <input type="date" id="hotel-checkin" style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;"/>
-            </div>
-            <div>
-              <label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Check-out</label>
-              <input type="date" id="hotel-checkout" style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;"/>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
-            <div>
-              <label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Guests</label>
-              <select style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#fff;">
-                <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Rooms</label>
-              <select style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#fff;">
-                <option>1 Room</option><option>2 Rooms</option><option>3 Rooms</option>
-              </select>
-            </div>
-          </div>
-          <button onclick="searchHotels()" style="width:100%;padding:14px;background:#1a56db;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;" onmouseover="this.style.background='#1648c8'" onmouseout="this.style.background='#1a56db'">Search Hotels →</button>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:1.5rem;">
-            <a href="https://klook.tpo.lv/DbyqEc3I" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:12px;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">🌆<br><strong>Dubai</strong></a>
-            <a href="https://klook.tpo.lv/DbyqEc3I" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:12px;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">🏯<br><strong>Bangkok</strong></a>
-            <a href="https://klook.tpo.lv/DbyqEc3I" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:12px;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">🦁<br><strong>Singapore</strong></a>
-            <a href="https://klook.tpo.lv/DbyqEc3I" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:12px;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">🗾<br><strong>Tokyo</strong></a>
-          </div>
-          <div style="display:flex;gap:1rem;justify-content:center;margin-top:1rem;flex-wrap:wrap;">
-            <span style="font-size:12px;color:#64748b;">✅ Instant confirmation</span>
-            <span style="font-size:12px;color:#64748b;">💰 Best price guarantee</span>
-            <span style="font-size:12px;color:#64748b;">🌍 2,300+ destinations</span>
-            <span style="font-size:12px;color:#64748b;">📱 Mobile tickets</span>
-          </div>
-        </div>
-      </div>
       <!-- FLIGHT DEALS SECTION -->
       <div id="section-deals" style="display:none">
         <div class="hero-tag">💸 Best Flight Deals</div>
@@ -676,27 +630,27 @@ nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-co
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
     <a href="blog/thailand-safe-solo-female.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
+      <img alt="GoSailor travel" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
       <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#7c3aed;text-transform:uppercase;margin-bottom:4px;">👩 Solo Travel · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">Is Thailand Safe for Solo Female Travelers in 2026?</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 11 min read</div></div>
     </a>
     <a href="blog/week-in-bali-cost-2026.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
+      <img alt="GoSailor travel" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
       <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#ea580c;text-transform:uppercase;margin-bottom:4px;">💰 Budget · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">How Much Does a Week in Bali Cost in 2026?</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 10 min read</div></div>
     </a>
     <a href="blog/travel-hacks-long-flights.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
+      <img alt="GoSailor travel" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
       <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#1a56db;text-transform:uppercase;margin-bottom:4px;">✈ Flight Hacks · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">25 Travel Hacks for Long Flights That Actually Work</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 12 min read</div></div>
     </a>
     <a href="blog/passport-validity-guide.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
+      <img alt="GoSailor travel" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
       <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#16a34a;text-transform:uppercase;margin-bottom:4px;">📋 Essential · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">Passport Validity Rules by Country 2026</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 8 min read</div></div>
     </a>
     <a href="blog/find-cheap-flights-ai-2026.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1485871551301-aadbd8191b2a?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
+      <img alt="GoSailor travel" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1485871551301-aadbd8191b2a?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
       <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#7c3aed;text-transform:uppercase;margin-bottom:4px;">🤖 AI Guide · 🔥 New · 315% Trending</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">How to Find Cheap Flights Using AI in 2026</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 9 min read</div></div>
     </a>
     <a href="blog/flight-compensation.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1544620347460-35ea508f54eb?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
+      <img alt="GoSailor travel" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1544620347460-35ea508f54eb?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
       <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#16a34a;text-transform:uppercase;margin-bottom:4px;">💰 Compensation · Up to €600</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">How to Claim EU261 Flight Compensation</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 11 min read</div></div>
     </a>
   </div>
@@ -945,12 +899,7 @@ function searchCars() {
   window.open(url, '_blank');
 }
 
-function searchHotels() {
-  var dest = document.getElementById('hotel-dest').value.trim();
-  var url = 'https://klook.tpo.lv/DbyqEc3I';
-  if(dest) url = 'https://www.klook.com/en-US/hotels/?query=' + encodeURIComponent(dest) + '&aff_id=klook.tpo.lv/DbyqEc3I';
-  window.open('https://klook.tpo.lv/DbyqEc3I', '_blank');
-}
+
 function searchKiwi() {
   var from = document.getElementById('kiwi-from').value.trim();
   var to = document.getElementById('kiwi-to').value.trim();
