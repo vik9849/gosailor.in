@@ -84,7 +84,7 @@ nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-co
 /* RESULTS */
 .results-wrap{background:#fff;max-width:1400px;margin:0 auto;}
 .results-inner{padding:0 2rem 2rem;}
-#tpwl-tickets{width:100%;}
+#tpwl-tickets{width:100%;} #tpwl-tickets > * {max-width:100% !important;}
 
 /* MAIN LAYOUT */
 .main-layout{max-width:1400px;margin:1.5rem auto;padding:0 2rem;display:grid;grid-template-columns:1fr;gap:1.5rem;}
@@ -164,9 +164,6 @@ nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-co
 .remember{display:flex;align-items:center;gap:8px;font-size:13px;color:#64748b;margin-bottom:12px;}
 
 @media(max-width:768px){
-  #results-section > div { grid-template-columns: 1fr !important; }
-  #filter-sidebar { position: static !important; }
-
   .hero-inner{grid-template-columns:1fr;}
   
   .search-fields{grid-template-columns:1fr 1fr;border:none;gap:8px;}
@@ -517,66 +514,9 @@ nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-co
 </div>
 
 <!-- RESULTS -->
-<div id="results-section" style="background:#fff;">
-  <div style="max-width:1400px;margin:0 auto;padding:0 2rem 1.5rem;display:grid;grid-template-columns:260px 1fr;gap:1.5rem;align-items:start;">
-    
-    <!-- FILTER SIDEBAR -->
-    <div id="filter-sidebar" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:1.25rem;position:sticky;top:70px;">
-      <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:1rem;display:flex;align-items:center;gap:6px;">
-        🎛️ Filter Results
-      </div>
-
-      <!-- Stops -->
-      <div style="margin-bottom:1.25rem;">
-        <div style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Stops</div>
-        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#1e293b;margin-bottom:6px;cursor:pointer;">
-          <input type="checkbox" id="f-direct" onchange="applyFilters()" style="accent-color:#1a56db;width:14px;height:14px;"> Direct only
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#1e293b;margin-bottom:6px;cursor:pointer;">
-          <input type="checkbox" id="f-1stop" onchange="applyFilters()" style="accent-color:#1a56db;width:14px;height:14px;"> Max 1 stop
-        </label>
-      </div>
-
-      <!-- Baggage -->
-      <div style="margin-bottom:1.25rem;">
-        <div style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Baggage</div>
-        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#1e293b;margin-bottom:6px;cursor:pointer;">
-          <input type="checkbox" id="f-baggage" onchange="applyFilters()" style="accent-color:#1a56db;width:14px;height:14px;"> Baggage included
-        </label>
-      </div>
-
-      <!-- Price Range -->
-      <div style="margin-bottom:1.25rem;">
-        <div style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Max Price</div>
-        <input type="range" id="f-price" min="0" max="200000" step="1000" value="200000" oninput="updatePrice(this.value)" style="width:100%;accent-color:#1a56db;">
-        <div style="font-size:12px;color:#1a56db;margin-top:4px;font-weight:600;">Up to ₹<span id="price-label">Any</span></div>
-      </div>
-
-      <!-- Departure Time -->
-      <div style="margin-bottom:1.25rem;">
-        <div style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Departure Time</div>
-        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#1e293b;margin-bottom:6px;cursor:pointer;">
-          <input type="checkbox" id="f-morning" onchange="applyFilters()" style="accent-color:#1a56db;width:14px;height:14px;"> 🌅 Morning (6am–12pm)
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#1e293b;margin-bottom:6px;cursor:pointer;">
-          <input type="checkbox" id="f-afternoon" onchange="applyFilters()" style="accent-color:#1a56db;width:14px;height:14px;"> ☀️ Afternoon (12–6pm)
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#1e293b;margin-bottom:6px;cursor:pointer;">
-          <input type="checkbox" id="f-night" onchange="applyFilters()" style="accent-color:#1a56db;width:14px;height:14px;"> 🌙 Night (6pm–6am)
-        </label>
-      </div>
-
-      <!-- Reset -->
-      <button onclick="resetFilters()" style="width:100%;padding:8px;background:transparent;border:1.5px solid #e2e8f0;border-radius:8px;font-size:12px;color:#64748b;cursor:pointer;font-family:inherit;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a56db';this.style.color='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#64748b'">
-        Reset filters
-      </button>
-    </div>
-
-    <!-- RESULTS WIDGET -->
-    <div>
-      <div id="tpwl-tickets"></div>
-    </div>
-
+<div style="background:#fff;">
+  <div style="max-width:1400px;margin:0 auto;padding:0 1rem 1rem;">
+    <div id="tpwl-tickets" style="width:100%;"></div>
   </div>
 </div>
 
@@ -940,8 +880,6 @@ function showSection(section, el) {
   });
   var tickets = document.getElementById('tpwl-tickets');
   if(tickets) tickets.style.display = section === 'flights' ? 'block' : 'none';
-  var resultsSection = document.getElementById('results-section');
-  if(resultsSection) resultsSection.style.display = section === 'flights' ? 'block' : 'none';
   var mainLayout = document.querySelector('.main-layout');
   if(mainLayout) mainLayout.style.display = section === 'flights' ? 'grid' : 'none';
   window.scrollTo({top: 0, behavior: 'smooth'});
@@ -999,37 +937,6 @@ function searchTickets() {
   var url = 'https://ticketnetwork.tpo.lv/3ooUWVAH';
   if(q) url = 'https://ticketnetwork.tpo.lv/3ooUWVAH?q=' + encodeURIComponent(q);
   window.open(url, '_blank');
-}
-
-function updatePrice(val) {
-  document.getElementById('price-label').textContent = val == 200000 ? 'Any' : Number(val).toLocaleString('en-IN');
-  applyFilters();
-}
-
-function applyFilters() {
-  // Visual feedback only - actual filtering done by Travelpayouts widget internally
-  // These checkboxes mirror the widget's own filter pills for sidebar UX
-  var direct = document.getElementById('f-direct').checked;
-  var baggage = document.getElementById('f-baggage').checked;
-  
-  // Click corresponding filter pills inside the widget if they exist
-  var pills = document.querySelectorAll('#tpwl-tickets button, #tpwl-tickets [class*="filter"], #tpwl-tickets [class*="chip"]');
-  pills.forEach(function(pill) {
-    var text = pill.textContent.toLowerCase();
-    if(direct && text.includes('layover') && !pill.classList.contains('active')) pill.click();
-    if(baggage && text.includes('baggage') && !pill.classList.contains('active')) pill.click();
-  });
-}
-
-function resetFilters() {
-  document.getElementById('f-direct').checked = false;
-  document.getElementById('f-1stop').checked = false;
-  document.getElementById('f-baggage').checked = false;
-  document.getElementById('f-morning').checked = false;
-  document.getElementById('f-afternoon').checked = false;
-  document.getElementById('f-night').checked = false;
-  document.getElementById('f-price').value = 200000;
-  document.getElementById('price-label').textContent = 'Any';
 }
 </script>
 </body>
