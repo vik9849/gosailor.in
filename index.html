@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
 <title>GoSailor.in — Flights, Hotels, Activities &amp; Cruises</title>
 <meta name="google-site-verification" content="lIJMPegUDu6TftkD1IOx8tGQU-j6Ll8j3NgygDkPuj0"/>
-<meta name="description" content="Search cheap flights, hotels, tours and cruises worldwide. Compare the best travel deals on GoSailor.in"/>
+<meta name="description" content="Search cheap flights, hotels, tours and cruises worldwide. Best travel deals on GoSailor.in"/>
 <link rel="canonical" href="https://gosailor.in/"/>
 <meta property="og:title" content="GoSailor.in — Flights, Hotels, Activities &amp; Cruises"/>
 <meta property="og:description" content="Search cheap flights, hotels, tours and cruises on GoSailor.in"/>
@@ -13,38 +13,24 @@
 <meta property="og:type" content="website"/>
 <meta name="robots" content="index, follow"/>
 <meta name="theme-color" content="#003b6f"/>
+
+<!-- Fonts: preload only, swap display -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
-
-<!-- ✅ YOUR TRAVELPAYOUTS WHITE LABEL — loads the full metasearch engine -->
-<script data-cfasync="false" data-no-defer="1">
-(function(){
-  var script = document.createElement("script");
-  script.async = 1;
-  script.type = "module";
-  script.src = "https://tpwgts.com/wl_web/main.js?wl_id=16536";
-  document.head.appendChild(script);
-})();
-</script>
-
-<!-- Travelpayouts Drive tracking -->
-<script data-cfasync="false" data-no-defer="1">
-(function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.head.appendChild(s);})();
-</script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" media="print" onload="this.media='all'"/>
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#f3f4f6;color:#1a1a2e;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#f3f4f6;color:#1a1a2e;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 
 :root{
   --blue:#0071c2;--blue-d:#005299;--blue-l:#e8f3ff;
   --navy:#003b6f;--yellow:#febb02;--yellow-d:#d4a000;
-  --green:#008009;--text:#1a1a2e;--muted:#6b7280;
+  --text:#1a1a2e;--muted:#6b7280;
   --border:#e5e7eb;--bg:#f3f4f6;--white:#fff;
   --r:10px;--rl:14px;
   --sh:0 2px 12px rgba(0,0,0,.09);
@@ -52,7 +38,7 @@ button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparen
 }
 
 /* ── TOPBAR ── */
-.topbar{position:sticky;top:0;z-index:300;background:var(--navy);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.topbar{position:sticky;top:0;z-index:300;background:var(--navy);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.3);will-change:transform}
 .logo{display:flex;align-items:center;gap:7px;color:#fff}
 .logo-mark{width:28px;height:28px;border-radius:5px;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
 .logo-text{font-size:1.05rem;font-weight:800;letter-spacing:-.3px;white-space:nowrap}
@@ -60,163 +46,137 @@ button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparen
 .topnav{display:none}
 @media(min-width:640px){
   .topnav{display:flex;align-items:center;gap:2px}
-  .topnav a{color:rgba(255,255,255,.75);font-size:.78rem;font-weight:500;padding:.28rem .65rem;border-radius:5px;transition:color .15s;cursor:pointer}
+  .topnav a{color:rgba(255,255,255,.75);font-size:.78rem;font-weight:700;padding:.28rem .65rem;border-radius:5px;transition:color .15s;cursor:pointer}
   .topnav a:hover{color:#fff;background:rgba(255,255,255,.1)}
   .topbar{padding:0 1.5rem}
   .logo-text{font-size:1.15rem}
 }
 .topbar-right{display:flex;gap:.4rem}
-.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:#fff;font-size:.75rem;font-weight:600;padding:.28rem .7rem;border-radius:6px;min-height:34px}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:#fff;font-size:.75rem;font-weight:700;padding:.28rem .7rem;border-radius:6px;min-height:34px}
 .btn-yellow{background:var(--yellow);border:none;color:var(--text);font-size:.75rem;font-weight:700;padding:.28rem .7rem;border-radius:6px;min-height:34px}
-.btn-yellow:active{background:var(--yellow-d)}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(160deg,#002952 0%,#0071c2 60%,#0096c7 100%);padding:2.5rem 1rem 3.5rem;position:relative;overflow:hidden;text-align:center}
-.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:40px;background:var(--bg);clip-path:ellipse(58% 100% at 50% 100%)}
-.hero-eyebrow{display:inline-block;background:rgba(255,255,255,.13);color:rgba(255,255,255,.88);font-size:.68rem;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:.25rem .85rem;border-radius:20px;margin-bottom:1rem;border:1px solid rgba(255,255,255,.18)}
-.hero h1{font-size:clamp(1.65rem,6vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:.45rem}
+.hero{background:linear-gradient(160deg,#002952 0%,#0071c2 60%,#0096c7 100%);padding:2rem 1rem 3rem;position:relative;overflow:hidden;text-align:center;contain:layout}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:36px;background:var(--bg);clip-path:ellipse(58% 100% at 50% 100%)}
+.hero-eyebrow{display:inline-block;background:rgba(255,255,255,.13);color:rgba(255,255,255,.88);font-size:.65rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:.22rem .8rem;border-radius:20px;margin-bottom:.85rem;border:1px solid rgba(255,255,255,.18)}
+.hero h1{font-size:clamp(1.6rem,5.5vw,2.8rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:.4rem}
 .hero h1 em{color:var(--yellow);font-style:normal}
-.hero-sub{color:rgba(255,255,255,.68);font-size:.9rem}
-@media(min-width:640px){.hero{padding:3.5rem 1.5rem 4.5rem}.hero-sub{font-size:1rem}}
+.hero-sub{color:rgba(255,255,255,.68);font-size:.875rem}
+@media(min-width:640px){.hero{padding:3rem 1.5rem 4rem}}
 
-/* ── SECTION TABS (sticky below topbar) ── */
-.section-tabs{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:200;box-shadow:var(--sh)}
-.section-tabs-inner{max-width:1120px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.section-tabs-inner::-webkit-scrollbar{display:none}
-.stab{flex:1;min-width:75px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.65rem .35rem;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-1px;font-size:.67rem;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;transition:all .15s}
-.stab .si{font-size:.95rem;line-height:1}
+/* ── SECTION TABS ── */
+.section-tabs{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:200;box-shadow:var(--sh);contain:layout}
+.stabs-inner{max-width:1120px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.stabs-inner::-webkit-scrollbar{display:none}
+.stab{flex:1;min-width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.6rem .3rem;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-1px;font-size:.64rem;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s}
+.stab .si{font-size:.9rem;line-height:1}
 .stab.active{color:var(--blue);border-bottom-color:var(--blue)}
 .stab:hover{color:var(--text)}
-@media(min-width:640px){.stab{font-size:.76rem;padding:.75rem .5rem;min-width:90px}.stab .si{font-size:1.05rem}}
+@media(min-width:640px){.stab{font-size:.74rem;padding:.7rem .45rem;min-width:88px}.stab .si{font-size:1rem}}
 
 /* ── TAB SECTIONS ── */
-.tab-section{display:none;padding:1.5rem 1rem 2rem;background:var(--bg)}
+.tab-section{display:none;padding:1.25rem 1rem 2rem;background:var(--bg)}
 .tab-section.active{display:block}
-@media(min-width:640px){.tab-section{padding:2rem 1.5rem 2.5rem}}
+@media(min-width:640px){.tab-section{padding:1.75rem 1.5rem 2.5rem}}
 .sec-inner{max-width:1120px;margin:0 auto}
-.sec-title{font-size:1.1rem;font-weight:800;margin-bottom:.25rem}
-.sec-sub{font-size:.75rem;color:var(--muted);margin-bottom:1.25rem}
-@media(min-width:640px){.sec-title{font-size:1.25rem}}
+.sec-title{font-size:1.05rem;font-weight:800;margin-bottom:.2rem}
+.sec-sub{font-size:.73rem;color:var(--muted);margin-bottom:1rem}
+@media(min-width:640px){.sec-title{font-size:1.2rem}}
 
-/* ── WHITE LABEL CONTAINER ── */
-/* tpwl-search = the search form metasearch widget */
-/* tpwl-tickets = the results that appear below */
-#tpwl-search{
-  background:var(--white);
-  border-radius:var(--rl);
-  box-shadow:var(--shl);
-  overflow:hidden;
-  margin-bottom:1rem;
-  min-height:80px;
-}
-#tpwl-tickets{
-  background:var(--white);
-  border-radius:var(--rl);
-  box-shadow:var(--sh);
-  overflow:hidden;
-  min-height:80px;
-}
+/* Widget containers — white card */
+.wcard{background:var(--white);border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;padding:1rem;margin-top:.25rem}
+@media(min-width:640px){.wcard{padding:1.5rem}}
 
-/* ── ACTIVITIES widget ── */
-.widget-wrap{
-  background:var(--white);
-  border-radius:var(--rl);
-  box-shadow:var(--sh);
-  overflow:hidden;
-  padding:1rem;
-  min-height:80px;
-}
-
-/* ── CARS CTA ── */
-.cars-cta{text-align:center;padding:3rem 1rem;background:var(--white);border-radius:var(--rl);box-shadow:var(--sh)}
-.cars-cta .icon{font-size:3rem;margin-bottom:1rem}
-.cars-cta p{font-size:.9rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6;max-width:420px;margin-left:auto;margin-right:auto}
-.btn-big{display:inline-block;background:var(--blue);color:#fff;padding:.75rem 2.5rem;border-radius:var(--r);font-weight:700;font-size:.95rem;min-height:48px;line-height:1.5;transition:background .15s}
-.btn-big:hover{background:var(--blue-d)}
+/* ── WHITE LABEL containers ── */
+/* Must always be in DOM — White Label JS finds them by ID on load */
+#tpwl-search,#tpwl-tickets{width:100%}
+#tpwl-search{background:var(--white);border-radius:var(--rl);box-shadow:var(--shl);overflow:hidden;margin-bottom:.75rem;min-height:60px}
+#tpwl-tickets{background:var(--white);border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;min-height:40px}
 
 /* ── BLOG ── */
-.blog-grid{display:grid;grid-template-columns:1fr;gap:1rem}
-@media(min-width:480px){.blog-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:800px){.blog-grid{grid-template-columns:repeat(3,1fr)}}
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(min-width:640px){.blog-grid{grid-template-columns:repeat(3,1fr)}}
 .blog-card{background:var(--white);border-radius:var(--rl);border:1.5px solid var(--border);overflow:hidden;display:block;transition:box-shadow .2s,transform .15s}
 .blog-card:hover{box-shadow:var(--shl);transform:translateY(-2px)}
-.blog-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:3rem}
-.blog-img.c1{background:linear-gradient(135deg,#fde68a,#fca5a5)}
-.blog-img.c2{background:linear-gradient(135deg,#a7f3d0,#6ee7b7)}
-.blog-img.c3{background:linear-gradient(135deg,#bfdbfe,#c7d2fe)}
-.blog-img.c4{background:linear-gradient(135deg,#fecdd3,#fbcfe8)}
-.blog-img.c5{background:linear-gradient(135deg,#fed7aa,#fde68a)}
-.blog-img.c6{background:linear-gradient(135deg,#ddd6fe,#c7d2fe)}
-.blog-body{padding:1rem}
-.blog-tag{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);background:var(--blue-l);padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:.45rem}
-.blog-title{font-size:.9rem;font-weight:700;line-height:1.3;margin-bottom:.35rem;color:var(--text)}
-.blog-date{font-size:.68rem;color:var(--muted)}
-.blog-excerpt{font-size:.76rem;color:#555;line-height:1.6;margin-top:.4rem}
+.blog-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+@media(min-width:640px){.blog-img{height:150px;font-size:3rem}}
+.c1{background:linear-gradient(135deg,#fde68a,#fca5a5)}
+.c2{background:linear-gradient(135deg,#a7f3d0,#6ee7b7)}
+.c3{background:linear-gradient(135deg,#bfdbfe,#c7d2fe)}
+.c4{background:linear-gradient(135deg,#fecdd3,#fbcfe8)}
+.c5{background:linear-gradient(135deg,#fed7aa,#fde68a)}
+.c6{background:linear-gradient(135deg,#ddd6fe,#c7d2fe)}
+.blog-body{padding:.75rem}
+.blog-tag{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);background:var(--blue-l);padding:2px 6px;border-radius:3px;display:inline-block;margin-bottom:.4rem}
+.blog-title{font-size:.82rem;font-weight:700;line-height:1.3;margin-bottom:.3rem;color:var(--text)}
+.blog-date{font-size:.64rem;color:var(--muted)}
+.blog-excerpt{font-size:.72rem;color:#555;line-height:1.55;margin-top:.35rem;display:none}
+@media(min-width:640px){.blog-excerpt{display:block}}
 
 /* ── COMPENSATION ── */
-.comp{background:linear-gradient(135deg,#002952,#0071c2);padding:2rem 1rem}
+.comp{background:linear-gradient(135deg,#002952,#0071c2);padding:1.75rem 1rem}
 .comp-inner{max-width:1120px;margin:0 auto}
-.comp-text h2{font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:.35rem;line-height:1.2}
-.comp-text p{font-size:.82rem;color:rgba(255,255,255,.68);line-height:1.6;margin-bottom:1.1rem}
+.comp-text h2{font-size:1rem;font-weight:800;color:#fff;margin-bottom:.3rem;line-height:1.2}
+.comp-text p{font-size:.8rem;color:rgba(255,255,255,.68);line-height:1.55;margin-bottom:1rem}
 .comp-btns{display:flex;gap:.5rem;flex-wrap:wrap}
-.comp-btns button{flex:1;min-width:130px}
-.btn-cy{background:var(--yellow);color:var(--text);border:none;padding:.6rem 1.1rem;border-radius:var(--r);font-weight:700;font-size:.82rem;min-height:44px}
-.btn-co{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.1rem;border-radius:var(--r);font-weight:600;font-size:.82rem;min-height:44px}
+.comp-btns button{flex:1;min-width:120px}
+.btn-cy{background:var(--yellow);color:var(--text);border:none;padding:.55rem 1rem;border-radius:var(--r);font-weight:700;font-size:.8rem;min-height:42px}
+.btn-co{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:.55rem 1rem;border-radius:var(--r);font-weight:700;font-size:.8rem;min-height:42px}
 @media(min-width:640px){
-  .comp{padding:2.5rem 1.5rem}
+  .comp{padding:2.25rem 1.5rem}
   .comp-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
   .comp-text p{margin-bottom:0}
-  .comp-text h2{font-size:1.25rem}
+  .comp-text h2{font-size:1.2rem}
   .comp-btns{flex-wrap:nowrap}
   .comp-btns button{flex:none}
 }
 
 /* ── WHY ── */
-.why-section{padding:2rem 1rem;background:var(--white)}
-@media(min-width:640px){.why-section{padding:2.75rem 1.5rem}}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.25rem}
-@media(min-width:640px){.why-grid{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}}
-.why-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--rl);padding:1rem}
-.why-icon{width:34px;height:34px;border-radius:7px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:.95rem;margin-bottom:.6rem}
-.why-card h3{font-size:.8rem;font-weight:700;margin-bottom:.25rem}
-.why-card p{font-size:.72rem;color:var(--muted);line-height:1.5}
+.why{padding:1.75rem 1rem;background:var(--white)}
+@media(min-width:640px){.why{padding:2.5rem 1.5rem}}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:1rem}
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--rl);padding:.9rem}
+.why-icon{width:32px;height:32px;border-radius:6px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:.9rem;margin-bottom:.55rem}
+.why-card h3{font-size:.76rem;font-weight:700;margin-bottom:.2rem}
+.why-card p{font-size:.68rem;color:var(--muted);line-height:1.5}
 
 /* ── FAQ ── */
-.faq-section{padding:2rem 1rem;background:var(--bg)}
-@media(min-width:640px){.faq-section{padding:2.75rem 1.5rem}}
-.faq-wrap{display:flex;flex-direction:column;gap:.4rem;max-width:800px}
+.faq{padding:1.75rem 1rem;background:var(--bg)}
+@media(min-width:640px){.faq{padding:2.5rem 1.5rem}}
+.faq-wrap{display:flex;flex-direction:column;gap:.35rem;max-width:800px}
 .faq-item{border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--white)}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:.85rem 1rem;background:none;border:none;font-size:.82rem;font-weight:600;text-align:left;color:var(--text);cursor:pointer;gap:.5rem;min-height:48px}
-.faq-icon{font-size:.95rem;color:var(--muted);transition:transform .2s;flex-shrink:0}
-.faq-a{max-height:0;overflow:hidden;padding:0 1rem;font-size:.78rem;color:var(--muted);line-height:1.65;transition:max-height .25s ease,padding .25s}
-.faq-item.open .faq-a{max-height:220px;padding:.05rem 1rem .85rem}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem;background:none;border:none;font-size:.8rem;font-weight:700;text-align:left;color:var(--text);cursor:pointer;gap:.5rem;min-height:46px}
+.faq-icon{font-size:.9rem;color:var(--muted);transition:transform .2s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;padding:0 1rem;font-size:.76rem;color:var(--muted);line-height:1.65;transition:max-height .25s ease,padding .25s}
+.faq-item.open .faq-a{max-height:220px;padding:.05rem 1rem .8rem}
 .faq-item.open .faq-icon{transform:rotate(45deg)}
 
 /* ── FOOTER ── */
-footer{background:#00224d;color:rgba(255,255,255,.5);padding:2.25rem 1rem 1.5rem}
-@media(min-width:640px){footer{padding:2.75rem 1.5rem 2rem}}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:1120px;margin:0 auto 2rem}
+footer{background:#00224d;color:rgba(255,255,255,.5);padding:2rem 1rem 1.5rem;contain:layout}
+@media(min-width:640px){footer{padding:2.5rem 1.5rem 2rem}}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:1120px;margin:0 auto 1.75rem}
 @media(min-width:760px){.fg{grid-template-columns:2fr 1fr 1fr 1fr}}
 .f-brand{grid-column:1/-1}
 @media(min-width:760px){.f-brand{grid-column:auto}}
-.f-logo{display:flex;align-items:center;gap:7px;color:#fff;margin-bottom:.65rem}
-.f-logo .logo-mark{width:26px;height:26px;font-size:.85rem}
-.f-logo-text{font-size:1rem;font-weight:800}
-.f-desc{font-size:.72rem;line-height:1.65}
-.fcol h4{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#fff;margin-bottom:.75rem}
-.fcol a{display:block;font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:.35rem;padding:.1rem 0;min-height:28px;transition:color .15s;cursor:pointer}
+.f-logo{display:flex;align-items:center;gap:7px;color:#fff;margin-bottom:.6rem}
+.f-logo .logo-mark{width:24px;height:24px;font-size:.8rem}
+.f-logo-text{font-size:.95rem;font-weight:800}
+.f-desc{font-size:.7rem;line-height:1.65}
+.fcol h4{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#fff;margin-bottom:.7rem}
+.fcol a{display:block;font-size:.7rem;color:rgba(255,255,255,.4);margin-bottom:.32rem;padding:.08rem 0;min-height:26px;transition:color .15s;cursor:pointer}
 .fcol a:hover{color:#fff}
-.fbot{border-top:1px solid rgba(255,255,255,.1);padding-top:1.25rem;display:flex;justify-content:space-between;font-size:.68rem;max-width:1120px;margin:0 auto;flex-wrap:wrap;gap:.35rem}
-.fbot a{color:rgba(255,255,255,.35);margin-left:.75rem}
+.fbot{border-top:1px solid rgba(255,255,255,.1);padding-top:1.1rem;display:flex;justify-content:space-between;font-size:.65rem;max-width:1120px;margin:0 auto;flex-wrap:wrap;gap:.3rem}
+.fbot a{color:rgba(255,255,255,.35);margin-left:.7rem}
 .fbot a:hover{color:#fff}
 
 /* ── BOTTOM NAV mobile ── */
-.bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--white);border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom)}
-@media(min-width:640px){.bottom-nav{display:none}}
-.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.5rem .1rem;background:none;border:none;font-size:.54rem;font-weight:600;color:var(--muted);cursor:pointer;min-height:52px;-webkit-tap-highlight-color:transparent}
-.bn-item .bi{font-size:1.1rem;line-height:1}
-.bn-item.active{color:var(--blue)}
-body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
+.bnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--white);border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom);contain:layout}
+@media(min-width:640px){.bnav{display:none}}
+.bn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.45rem .1rem;background:none;border:none;font-size:.52rem;font-weight:700;color:var(--muted);cursor:pointer;min-height:50px;-webkit-tap-highlight-color:transparent}
+.bn .bi{font-size:1.05rem;line-height:1}
+.bn.active{color:var(--blue)}
+body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 @media(min-width:640px){body{padding-bottom:0}}
 </style>
 </head>
@@ -226,11 +186,11 @@ body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
 <header class="topbar">
   <a class="logo" href="/"><div class="logo-mark">⛵</div><div class="logo-text">Go<span>Sailor</span>.in</div></a>
   <nav class="topnav">
-    <a onclick="switchTab('flights')">Flights</a>
-    <a onclick="switchTab('hotels')">Hotels</a>
-    <a onclick="switchTab('activities')">Activities</a>
-    <a onclick="switchTab('cruises')">Cruises</a>
-    <a onclick="switchTab('blog')">Blog</a>
+    <a onclick="sw('flights')">Flights</a>
+    <a onclick="sw('hotels')">Hotels</a>
+    <a onclick="sw('activities')">Activities</a>
+    <a onclick="sw('cruises')">Cruises</a>
+    <a onclick="sw('blog')">Blog</a>
     <a href="#compensation">Compensation</a>
   </nav>
   <div class="topbar-right">
@@ -243,100 +203,87 @@ body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
 <section class="hero">
   <div class="hero-eyebrow">Flights · Hotels · Activities · Cruises · Blog</div>
   <h1>Travel smarter,<br/>pay <em>less</em></h1>
-  <p class="hero-sub">Search and book — results shown right here on GoSailor</p>
+  <p class="hero-sub">Real results — shown right here on GoSailor</p>
 </section>
 
-<!-- STICKY SECTION TABS -->
+<!-- STICKY TABS -->
 <div class="section-tabs">
-  <div class="section-tabs-inner">
-    <button class="stab active" id="tab-flights"    onclick="switchTab('flights')"><span class="si">✈️</span>Flights</button>
-    <button class="stab"        id="tab-hotels"     onclick="switchTab('hotels')"><span class="si">🏨</span>Hotels</button>
-    <button class="stab"        id="tab-cars"       onclick="switchTab('cars')"><span class="si">🚗</span>Cars</button>
-    <button class="stab"        id="tab-activities" onclick="switchTab('activities')"><span class="si">🎡</span>Activities</button>
-    <button class="stab"        id="tab-cruises"    onclick="switchTab('cruises')"><span class="si">⛵</span>Cruises</button>
-    <button class="stab"        id="tab-blog"       onclick="switchTab('blog')"><span class="si">📝</span>Blog</button>
+  <div class="stabs-inner">
+    <button class="stab active" id="tab-flights"    onclick="sw('flights')"><span class="si">✈️</span>Flights</button>
+    <button class="stab"        id="tab-hotels"     onclick="sw('hotels')"><span class="si">🏨</span>Hotels</button>
+    <button class="stab"        id="tab-cars"       onclick="sw('cars')"><span class="si">🚗</span>Cars</button>
+    <button class="stab"        id="tab-activities" onclick="sw('activities')"><span class="si">🎡</span>Activities</button>
+    <button class="stab"        id="tab-cruises"    onclick="sw('cruises')"><span class="si">⛵</span>Cruises</button>
+    <button class="stab"        id="tab-blog"       onclick="sw('blog')"><span class="si">📝</span>Blog</button>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     FLIGHTS TAB
-     White Label metasearch — search form + live results
-     shown directly on this page (wl_id=16536)
-══════════════════════════════════════════════════════ -->
+<!-- ══ FLIGHTS ══
+     White Label: tpwl-search + tpwl-tickets
+     MUST be in DOM at all times so wl_id=16536 can initialise them.
+     We show/hide with visibility, not display:none -->
 <div class="tab-section active" id="section-flights">
   <div class="sec-inner">
     <div class="sec-title">Flights</div>
     <p class="sec-sub">Search hundreds of airlines — results appear right here</p>
-
-    <!-- ✅ WHITE LABEL SEARCH FORM -->
+    <!-- White Label search form -->
     <div id="tpwl-search"></div>
-
-    <!-- ✅ WHITE LABEL RESULTS (appear below the search form after searching) -->
+    <!-- White Label results -->
     <div id="tpwl-tickets"></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     HOTELS TAB
-     White Label hotel metasearch
-══════════════════════════════════════════════════════ -->
+<!-- ══ HOTELS ══
+     Travelpayouts hotel search widget — promo_id=7873 campaign_id=101
+     Shows hotel search form + results on your page -->
 <div class="tab-section" id="section-hotels">
   <div class="sec-inner">
     <div class="sec-title">Hotels</div>
-    <p class="sec-sub">Search hotels — results shown right here</p>
-
-    <!-- ✅ WHITE LABEL SEARCH FORM (same containers, White Label handles both flights & hotels) -->
-    <div id="tpwl-search-hotels"></div>
-    <div id="tpwl-tickets-hotels"></div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════════
-     CARS TAB
-══════════════════════════════════════════════════════ -->
-<div class="tab-section" id="section-cars">
-  <div class="sec-inner">
-    <div class="sec-title">Car Rentals</div>
-    <p class="sec-sub">Compare car rentals at 500+ locations worldwide</p>
-    <div class="cars-cta">
-      <div class="icon">🚗</div>
-      <p>Search and compare car rentals at airports and cities worldwide. Best prices from Hertz, Enterprise, Sixt and more.</p>
-      <a href="https://expedia.tpo.lv/SFgJTRlR" target="_blank" class="btn-big">Search Car Rentals on Expedia →</a>
+    <p class="sec-sub">Search hotels worldwide — results shown here, powered by Booking.com</p>
+    <div class="wcard">
+      <script async src="https://tp.media/content?currency=inr&trs=520977&shmarker=719723&show_hotels=true&powered_by=true&locale=en&primary_override=%230071c2&color_button=%230071c2&color_icons=%230071c2&secondary=%23FFFFFF&dark=%231a1a2e&light=%23FFFFFF&special=%23e5e7eb&color_focused=%230071c2&border_radius=8&plain=false&promo_id=7873&campaign_id=101" charset="utf-8"></script>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     ACTIVITIES TAB
-     GetYourGuide widget (campaign_id=108)
-══════════════════════════════════════════════════════ -->
+<!-- ══ CARS ══
+     Travelpayouts car rental widget — RentalCars / EconomyBookings -->
+<div class="tab-section" id="section-cars">
+  <div class="sec-inner">
+    <div class="sec-title">Car Rentals</div>
+    <p class="sec-sub">Compare car rentals worldwide — search results shown here</p>
+    <div class="wcard">
+      <!-- RentalCars widget via Travelpayouts -->
+      <script async src="https://tp.media/content?currency=inr&trs=520977&shmarker=719723&powered_by=true&locale=en&color_button=%230071c2&border_radius=8&plain=true&promo_id=3893&campaign_id=121" charset="utf-8"></script>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ACTIVITIES ══
+     GetYourGuide widget — campaign_id=108 -->
 <div class="tab-section" id="section-activities">
   <div class="sec-inner">
     <div class="sec-title">Tours &amp; Activities</div>
     <p class="sec-sub">300,000+ experiences worldwide — powered by GetYourGuide</p>
-    <div class="widget-wrap">
+    <div class="wcard">
       <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&place=DXB&items=6&locale=en-US&powered_by=true&campaign_id=108&promo_id=4039" charset="utf-8"></script>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     CRUISES TAB
-     Your cruise widget (campaign_id=47)
-══════════════════════════════════════════════════════ -->
+<!-- ══ CRUISES ══
+     Your cruise widget — campaign_id=47 -->
 <div class="tab-section" id="section-cruises">
   <div class="sec-inner">
     <div class="sec-title">Yacht &amp; Cruise Charter</div>
     <p class="sec-sub">Find and book yacht charters and cruises worldwide</p>
-    <div class="widget-wrap">
+    <div class="wcard">
       <script async src="https://tpwgts.com/content?currency=usd&trs=520977&shmarker=719723&powered_by=true&locale=en&lowest_price=&highest_price=&min_lines=5&color_button=%230071c2&promo_id=5850&campaign_id=47" charset="utf-8"></script>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     BLOG TAB
-══════════════════════════════════════════════════════ -->
+<!-- ══ BLOG ══ -->
 <div class="tab-section" id="section-blog">
   <div class="sec-inner">
     <div class="sec-title">Travel Blog</div>
@@ -360,11 +307,11 @@ body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
 </div>
 
 <!-- WHY -->
-<div class="why-section">
+<div class="why">
   <div class="sec-inner">
-    <div class="sec-title" style="margin-bottom:1.25rem">Why GoSailor?</div>
+    <div class="sec-title">Why GoSailor?</div>
     <div class="why-grid">
-      <div class="why-card"><div class="why-icon">🔍</div><h3>Results on your page</h3><p>Flight and hotel results appear right here — no blank redirects.</p></div>
+      <div class="why-card"><div class="why-icon">🔍</div><h3>Results on your page</h3><p>Flights and hotels load right here — no blank redirects.</p></div>
       <div class="why-card"><div class="why-icon">💰</div><h3>Best prices</h3><p>Live prices from 500+ airlines and hotel partners.</p></div>
       <div class="why-card"><div class="why-icon">⚡</div><h3>Lightning fast</h3><p>Real-time results in seconds worldwide.</p></div>
       <div class="why-card"><div class="why-icon">🔒</div><h3>Secure booking</h3><p>Trusted checkout partners. Your payment is always safe.</p></div>
@@ -373,14 +320,14 @@ body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
 </div>
 
 <!-- FAQ -->
-<div class="faq-section" id="faq">
+<div class="faq" id="faq">
   <div class="sec-inner">
-    <div class="sec-title" style="margin-bottom:1.1rem">Frequently asked questions</div>
+    <div class="sec-title" style="margin-bottom:1rem">Frequently asked questions</div>
     <div class="faq-wrap" id="faq-list"></div>
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER — removed useless search links section -->
 <footer>
   <div class="fg">
     <div class="f-brand">
@@ -388,15 +335,8 @@ body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
       <p class="f-desc">Cheap flights, hotels, activities and cruises. Based in Hyderabad, India.</p>
     </div>
     <div class="fcol">
-      <h4>Search</h4>
-      <a onclick="switchTab('flights')">Flights</a>
-      <a onclick="switchTab('hotels')">Hotels</a>
-      <a onclick="switchTab('activities')">Activities</a>
-      <a onclick="switchTab('cruises')">Cruises</a>
-    </div>
-    <div class="fcol">
       <h4>Company</h4>
-      <a onclick="switchTab('blog')">Blog</a>
+      <a onclick="sw('blog')">Blog</a>
       <a href="/about.html">About GoSailor</a>
       <a href="mailto:hello@gosailor.in">Contact Us</a>
     </div>
@@ -414,80 +354,76 @@ body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
 </footer>
 
 <!-- BOTTOM NAV mobile -->
-<nav class="bottom-nav">
-  <button class="bn-item active" id="bn-flights"    onclick="switchTab('flights')"><span class="bi">✈️</span>Flights</button>
-  <button class="bn-item"        id="bn-hotels"     onclick="switchTab('hotels')"><span class="bi">🏨</span>Hotels</button>
-  <button class="bn-item"        id="bn-cars"       onclick="switchTab('cars')"><span class="bi">🚗</span>Cars</button>
-  <button class="bn-item"        id="bn-activities" onclick="switchTab('activities')"><span class="bi">🎡</span>Activities</button>
-  <button class="bn-item"        id="bn-blog"       onclick="switchTab('blog')"><span class="bi">📝</span>Blog</button>
+<nav class="bnav">
+  <button class="bn active" id="bn-flights"    onclick="sw('flights')"><span class="bi">✈️</span>Flights</button>
+  <button class="bn"        id="bn-hotels"     onclick="sw('hotels')"><span class="bi">🏨</span>Hotels</button>
+  <button class="bn"        id="bn-cars"       onclick="sw('cars')"><span class="bi">🚗</span>Cars</button>
+  <button class="bn"        id="bn-activities" onclick="sw('activities')"><span class="bi">🎡</span>Activities</button>
+  <button class="bn"        id="bn-blog"       onclick="sw('blog')"><span class="bi">📝</span>Blog</button>
 </nav>
+
+<!-- White Label script — loaded LAST so DOM is ready -->
+<script type="module" src="https://tpwgts.com/wl_web/main.js?wl_id=16536"></script>
+<!-- Travelpayouts Drive tracking -->
+<script>(function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.body.appendChild(s);})();</script>
 
 <script>
 'use strict';
+var TABS=['flights','hotels','cars','activities','cruises','blog'];
 
-var TABS = ['flights','hotels','cars','activities','cruises','blog'];
-
-function switchTab(tab) {
-  TABS.forEach(function(t) {
-    var sec = document.getElementById('section-' + t);
-    var btn = document.getElementById('tab-' + t);
-    var bn  = document.getElementById('bn-' + t);
-    if (sec) sec.classList.toggle('active', t === tab);
-    if (btn) btn.classList.toggle('active', t === tab);
-    if (bn)  bn.classList.toggle('active', t === tab);
+function sw(tab){
+  TABS.forEach(function(t){
+    var sec=document.getElementById('section-'+t);
+    var btn=document.getElementById('tab-'+t);
+    var bn=document.getElementById('bn-'+t);
+    if(sec) sec.classList.toggle('active',t===tab);
+    if(btn) btn.classList.toggle('active',t===tab);
+    if(bn)  bn.classList.toggle('active',t===tab);
   });
-  document.querySelector('.section-tabs').scrollIntoView({behavior:'smooth', block:'start'});
+  document.querySelector('.section-tabs').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-/* ── BLOG ── */
-var BLOGS = [
-  {emoji:'🏙️',col:'c1',tag:'City Guide',title:'The Ultimate Dubai Travel Guide 2026',date:'May 2026',excerpt:'Everything you need before visiting Dubai — visa requirements, hidden restaurants, and what to skip.',href:'/blog/dubai-travel-guide.html'},
-  {emoji:'🌴',col:'c2',tag:'Beach',title:'Top 10 Beaches in Thailand Under ₹5,000/night',date:'Apr 2026',excerpt:'Thailand has 1,400+ islands. We found the 10 most beautiful beaches that won\'t blow your budget.',href:'/blog/thailand-beaches.html'},
-  {emoji:'✈️',col:'c3',tag:'Flight Tips',title:'How to Find Cheap Flights from Hyderabad',date:'Apr 2026',excerpt:'The exact strategy to find HYD flights at 40% below average — including the best days to book.',href:'/blog/cheap-flights-hyderabad.html'},
-  {emoji:'🏨',col:'c4',tag:'Hotels',title:'Best Boutique Hotels in Goa Under ₹3,000',date:'Mar 2026',excerpt:'Skip the crowded resorts. These boutique properties offer better value and fewer crowds.',href:'/blog/goa-boutique-hotels.html'},
-  {emoji:'🗺️',col:'c5',tag:'Travel Tips',title:'EU Flight Compensation: How to Claim €600',date:'Mar 2026',excerpt:'Millions of passengers are owed compensation and never claim it. Here is exactly how to get yours.',href:'/blog/eu-flight-compensation.html'},
-  {emoji:'⛵',col:'c6',tag:'Cruises',title:'Greece Yacht Charter: The Complete 2026 Guide',date:'Feb 2026',excerpt:'Sailing the Greek islands is more affordable than you think. Routes, costs and the best time to go.',href:'/blog/greece-yacht-charter.html'},
+var BLOGS=[
+  {emoji:'🏙️',col:'c1',tag:'City Guide',title:'The Ultimate Dubai Travel Guide 2026',date:'May 2026',excerpt:'Visa requirements, hidden restaurants, and what to skip.',href:'/blog/dubai-travel-guide.html'},
+  {emoji:'🌴',col:'c2',tag:'Beach',title:'Top 10 Beaches in Thailand Under ₹5,000/night',date:'Apr 2026',excerpt:'The most beautiful beaches that won\'t blow your budget.',href:'/blog/thailand-beaches.html'},
+  {emoji:'✈️',col:'c3',tag:'Flight Tips',title:'How to Find Cheap Flights from Hyderabad',date:'Apr 2026',excerpt:'Find HYD flights at 40% below average — exact strategy.',href:'/blog/cheap-flights-hyderabad.html'},
+  {emoji:'🏨',col:'c4',tag:'Hotels',title:'Best Boutique Hotels in Goa Under ₹3,000',date:'Mar 2026',excerpt:'Better value and fewer crowds than the big resorts.',href:'/blog/goa-boutique-hotels.html'},
+  {emoji:'🗺️',col:'c5',tag:'Travel Tips',title:'EU Flight Compensation: How to Claim €600',date:'Mar 2026',excerpt:'Millions never claim what they\'re owed. Here\'s how.',href:'/blog/eu-flight-compensation.html'},
+  {emoji:'⛵',col:'c6',tag:'Cruises',title:'Greece Yacht Charter: The 2026 Guide',date:'Feb 2026',excerpt:'More affordable than you think. Routes, costs, best time.',href:'/blog/greece-yacht-charter.html'},
 ];
 
-function renderBlog() {
-  document.getElementById('blog-grid').innerHTML = BLOGS.map(function(b) {
-    return '<a class="blog-card" href="' + b.href + '">'
-      + '<div class="blog-img ' + b.col + '">' + b.emoji + '</div>'
-      + '<div class="blog-body">'
-      + '<span class="blog-tag">' + b.tag + '</span>'
-      + '<div class="blog-title">' + b.title + '</div>'
-      + '<div class="blog-date">' + b.date + '</div>'
-      + '<div class="blog-excerpt">' + b.excerpt + '</div>'
-      + '</div></a>';
+function renderBlog(){
+  document.getElementById('blog-grid').innerHTML=BLOGS.map(function(b){
+    return '<a class="blog-card" href="'+b.href+'">'
+      +'<div class="blog-img '+b.col+'">'+b.emoji+'</div>'
+      +'<div class="blog-body">'
+      +'<span class="blog-tag">'+b.tag+'</span>'
+      +'<div class="blog-title">'+b.title+'</div>'
+      +'<div class="blog-date">'+b.date+'</div>'
+      +'<div class="blog-excerpt">'+b.excerpt+'</div>'
+      +'</div></a>';
   }).join('');
 }
 
-/* ── FAQ ── */
-var FAQS = [
-  {q:'Do flight and hotel results show on GoSailor itself?',
-   a:'Yes. The Flights tab uses your Travelpayouts White Label (wl_id=16536) — this is a full metasearch engine that runs on your page. You search, results appear here, you click to book on the airline or hotel partner\'s secure checkout.'},
-  {q:'Why does final booking happen on another site?',
-   a:'Payment must happen on the airline or hotel\'s own PCI-DSS certified server — this is a global legal requirement, not a limitation of GoSailor. Every major travel site (Skyscanner, Kayak, Google Flights) works identically.'},
-  {q:'Are the prices real and live?',
-   a:'Yes. All prices are pulled in real time from our partner networks the moment you search. Always confirm the final price on the booking page before paying.'},
-  {q:'How do I claim flight compensation?',
-   a:'If your flight was delayed 3+ hours, cancelled, or you were denied boarding, tap "Check My Flight" in the compensation section. Free eligibility check — you could be owed up to €600.'},
-  {q:'Is my payment secure?',
-   a:'Yes. All payments go directly to the airline, hotel or activity partner — never through GoSailor. We never see or store your card details.'},
+var FAQS=[
+  {q:'Do flight and hotel results show on GoSailor itself?',a:'Yes. Flights use your Travelpayouts White Label — search and results appear right on this page. Hotels use the Booking.com search widget which also renders on this page. You click a result to pay on the partner\'s secure checkout.'},
+  {q:'Why does payment happen on another site?',a:'Payment must happen on the airline or hotel\'s PCI-DSS certified server — a global legal requirement. Every major travel site (Skyscanner, Kayak, Google Flights) works identically.'},
+  {q:'Are prices real and live?',a:'Yes. All prices are pulled in real time from our partner networks the moment you search. Always confirm the final price before paying.'},
+  {q:'How do I claim flight compensation?',a:'If your flight was delayed 3+ hours, cancelled, or you were denied boarding, tap "Check My Flight" above. Free eligibility check — you could be owed up to €600.'},
+  {q:'Is my payment secure?',a:'Yes. Payments go directly to the airline, hotel or activity partner. GoSailor never sees or stores your card details.'},
 ];
 
-function renderFAQ() {
-  document.getElementById('faq-list').innerHTML = FAQS.map(function(f, i) {
-    return '<div class="faq-item" id="fi-' + i + '">'
-      + '<button class="faq-q" onclick="toggleFAQ(' + i + ')">' + f.q
-      + '<span class="faq-icon">+</span></button>'
-      + '<div class="faq-a">' + f.a + '</div></div>';
+function renderFAQ(){
+  document.getElementById('faq-list').innerHTML=FAQS.map(function(f,i){
+    return '<div class="faq-item" id="fi-'+i+'">'
+      +'<button class="faq-q" onclick="tf('+i+')">'+f.q
+      +'<span class="faq-icon">+</span></button>'
+      +'<div class="faq-a">'+f.a+'</div></div>';
   }).join('');
 }
 
-function toggleFAQ(i) { document.getElementById('fi-' + i).classList.toggle('open'); }
+function tf(i){document.getElementById('fi-'+i).classList.toggle('open');}
 
-/* INIT */
 renderBlog();
 renderFAQ();
 </script>
