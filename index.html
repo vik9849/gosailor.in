@@ -1,129 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GoSailor.in — Flights, Hotels, Activities & Cruises</title>
-<meta name="description" content="Search flights, hotels, activities and cruises worldwide on GoSailor.in" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+<title>GoSailor.in — Flights, Hotels, Activities &amp; Cruises</title>
+<meta name="google-site-verification" content="lIJMPegUDu6TftkD1IOx8tGQU-j6Ll8j3NgygDkPuj0"/>
+<meta name="description" content="Search cheap flights, hotels, tours and cruises worldwide. Best travel deals on GoSailor.in"/>
+<link rel="canonical" href="https://gosailor.in/"/>
+<meta property="og:title" content="GoSailor.in — Flights, Hotels, Activities &amp; Cruises"/>
+<meta property="og:description" content="Search cheap flights, hotels, tours and cruises on GoSailor.in"/>
+<meta property="og:url" content="https://gosailor.in/"/>
+<meta property="og:type" content="website"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#003b6f"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" media="print" onload="this.media='all'"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#f3f4f6;color:#1a1a2e;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+:root{
+  --blue:#0071c2;--blue-d:#005299;--blue-l:#e8f3ff;
+  --navy:#003b6f;--yellow:#febb02;--yellow-d:#d4a000;
+  --text:#1a1a2e;--muted:#6b7280;
+  --border:#e5e7eb;--bg:#f3f4f6;--white:#fff;
+  --r:10px;--rl:14px;
+  --sh:0 2px 12px rgba(0,0,0,.09);
+  --shl:0 8px 32px rgba(0,0,0,.14);
+}
+
+/* TOPBAR */
+.topbar{position:sticky;top:0;z-index:300;background:var(--navy);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.logo{display:flex;align-items:center;gap:7px;color:#fff}
+.logo-mark{width:28px;height:28px;border-radius:5px;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.logo-text{font-size:1.05rem;font-weight:800;letter-spacing:-.3px;white-space:nowrap}
+.logo-text span{color:var(--yellow)}
+.topnav{display:none}
+@media(min-width:640px){
+  .topnav{display:flex;align-items:center;gap:2px}
+  .topnav a{color:rgba(255,255,255,.75);font-size:.78rem;font-weight:700;padding:.28rem .65rem;border-radius:5px;cursor:pointer;transition:all .15s}
+  .topnav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+  .topbar{padding:0 1.5rem}
+  .logo-text{font-size:1.15rem}
+}
+.topbar-right{display:flex;gap:.4rem}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:#fff;font-size:.75rem;font-weight:700;padding:.28rem .7rem;border-radius:6px;min-height:34px}
+.btn-yellow{background:var(--yellow);border:none;color:var(--text);font-size:.75rem;font-weight:700;padding:.28rem .7rem;border-radius:6px;min-height:34px}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#002952 0%,#0071c2 60%,#0096c7 100%);padding:2rem 1rem 3rem;position:relative;overflow:hidden;text-align:center}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:36px;background:var(--bg);clip-path:ellipse(58% 100% at 50% 100%)}
+.hero-eyebrow{display:inline-block;background:rgba(255,255,255,.13);color:rgba(255,255,255,.88);font-size:.65rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:.22rem .8rem;border-radius:20px;margin-bottom:.85rem;border:1px solid rgba(255,255,255,.18)}
+.hero h1{font-size:clamp(1.6rem,5.5vw,2.8rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:.4rem}
+.hero h1 em{color:var(--yellow);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.68);font-size:.875rem}
+@media(min-width:640px){.hero{padding:3rem 1.5rem 4rem}}
+
+/* SECTION TABS */
+.section-tabs{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:200;box-shadow:var(--sh)}
+.stabs-inner{max-width:1120px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.stabs-inner::-webkit-scrollbar{display:none}
+.stab{flex:1;min-width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.6rem .3rem;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-1px;font-size:.64rem;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s}
+.stab .si{font-size:.9rem;line-height:1}
+.stab.active{color:var(--blue);border-bottom-color:var(--blue)}
+.stab:hover{color:var(--text)}
+@media(min-width:640px){.stab{font-size:.74rem;padding:.7rem .45rem;min-width:88px}.stab .si{font-size:1rem}}
+
+/* TAB SECTIONS */
+.tab-section{display:none;padding:1.25rem 1rem 2rem;background:var(--bg)}
+.tab-section.active{display:block}
+@media(min-width:640px){.tab-section{padding:1.75rem 1.5rem 2.5rem}}
+.sec-inner{max-width:1120px;margin:0 auto}
+.sec-title{font-size:1.05rem;font-weight:800;margin-bottom:.2rem}
+.sec-sub{font-size:.73rem;color:var(--muted);margin-bottom:1rem}
+@media(min-width:640px){.sec-title{font-size:1.2rem}}
+
+/* Widget card */
+.wcard{background:var(--white);border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;padding:1rem;min-height:100px}
+@media(min-width:640px){.wcard{padding:1.5rem}}
+
+/* White Label containers — always in DOM */
+#tpwl-search{background:var(--white);border-radius:var(--rl);box-shadow:var(--shl);overflow:hidden;margin-bottom:.75rem;min-height:60px}
+#tpwl-tickets{background:var(--white);border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;min-height:40px}
+
+/* Info banner */
+.info-banner{display:flex;align-items:flex-start;gap:.6rem;background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:var(--r);padding:.75rem 1rem;margin-bottom:1rem;font-size:.76rem;color:#1e40af;line-height:1.5}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(min-width:480px){.blog-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.blog-grid{grid-template-columns:repeat(4,1fr)}}
+.blog-card{background:var(--white);border-radius:var(--rl);border:1.5px solid var(--border);overflow:hidden;display:block;transition:box-shadow .2s,transform .15s}
+.blog-card:hover{box-shadow:var(--shl);transform:translateY(-2px)}
+.blog-img{height:110px;display:flex;align-items:center;justify-content:center;font-size:2.2rem}
+@media(min-width:640px){.blog-img{height:140px;font-size:2.8rem}}
+.c1{background:linear-gradient(135deg,#fde68a,#fca5a5)}
+.c2{background:linear-gradient(135deg,#a7f3d0,#6ee7b7)}
+.c3{background:linear-gradient(135deg,#bfdbfe,#c7d2fe)}
+.c4{background:linear-gradient(135deg,#fecdd3,#fbcfe8)}
+.c5{background:linear-gradient(135deg,#fed7aa,#fde68a)}
+.c6{background:linear-gradient(135deg,#ddd6fe,#c7d2fe)}
+.c7{background:linear-gradient(135deg,#d1fae5,#a7f3d0)}
+.c8{background:linear-gradient(135deg,#e0f2fe,#bae6fd)}
+.blog-body{padding:.7rem}
+.blog-tag{font-size:.56rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);background:var(--blue-l);padding:2px 6px;border-radius:3px;display:inline-block;margin-bottom:.35rem}
+.blog-title{font-size:.78rem;font-weight:700;line-height:1.3;color:var(--text)}
+.blog-date{font-size:.62rem;color:var(--muted);margin-top:.25rem}
+
+/* COMPENSATION */
+.comp{background:linear-gradient(135deg,#002952,#0071c2);padding:1.75rem 1rem}
+.comp-inner{max-width:1120px;margin:0 auto}
+.comp-text h2{font-size:1rem;font-weight:800;color:#fff;margin-bottom:.3rem;line-height:1.2}
+.comp-text p{font-size:.8rem;color:rgba(255,255,255,.68);line-height:1.55;margin-bottom:1rem}
+.comp-btns{display:flex;gap:.5rem;flex-wrap:wrap}
+.comp-btns button{flex:1;min-width:120px}
+.btn-cy{background:var(--yellow);color:var(--text);border:none;padding:.55rem 1rem;border-radius:var(--r);font-weight:700;font-size:.8rem;min-height:42px}
+.btn-co{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:.55rem 1rem;border-radius:var(--r);font-weight:700;font-size:.8rem;min-height:42px}
+@media(min-width:640px){
+  .comp{padding:2.25rem 1.5rem}
+  .comp-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+  .comp-text p{margin-bottom:0}
+  .comp-text h2{font-size:1.2rem}
+  .comp-btns{flex-wrap:nowrap}
+  .comp-btns button{flex:none}
+}
+
+/* WHY */
+.why{padding:1.75rem 1rem;background:var(--white)}
+@media(min-width:640px){.why{padding:2.5rem 1.5rem}}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:1rem}
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--rl);padding:.9rem}
+.why-icon{width:32px;height:32px;border-radius:6px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:.9rem;margin-bottom:.55rem}
+.why-card h3{font-size:.76rem;font-weight:700;margin-bottom:.2rem}
+.why-card p{font-size:.68rem;color:var(--muted);line-height:1.5}
+
+/* FAQ */
+.faq{padding:1.75rem 1rem;background:var(--bg)}
+@media(min-width:640px){.faq{padding:2.5rem 1.5rem}}
+.faq-wrap{display:flex;flex-direction:column;gap:.35rem;max-width:800px}
+.faq-item{border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--white)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem;background:none;border:none;font-size:.8rem;font-weight:700;text-align:left;color:var(--text);cursor:pointer;gap:.5rem;min-height:46px}
+.faq-icon{font-size:.9rem;color:var(--muted);transition:transform .2s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;padding:0 1rem;font-size:.76rem;color:var(--muted);line-height:1.65;transition:max-height .25s ease,padding .25s}
+.faq-item.open .faq-a{max-height:220px;padding:.05rem 1rem .8rem}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* FOOTER */
+footer{background:#00224d;color:rgba(255,255,255,.5);padding:2rem 1rem 1.5rem}
+@media(min-width:640px){footer{padding:2.5rem 1.5rem 2rem}}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:1120px;margin:0 auto 1.75rem}
+@media(min-width:760px){.fg{grid-template-columns:2fr 1fr 1fr 1fr}}
+.f-brand{grid-column:1/-1}
+@media(min-width:760px){.f-brand{grid-column:auto}}
+.f-logo{display:flex;align-items:center;gap:7px;color:#fff;margin-bottom:.6rem}
+.f-logo .logo-mark{width:24px;height:24px;font-size:.8rem}
+.f-logo-text{font-size:.95rem;font-weight:800}
+.f-desc{font-size:.7rem;line-height:1.65}
+.fcol h4{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#fff;margin-bottom:.7rem}
+.fcol a{display:block;font-size:.7rem;color:rgba(255,255,255,.4);margin-bottom:.32rem;padding:.08rem 0;min-height:26px;transition:color .15s;cursor:pointer}
+.fcol a:hover{color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.1);padding-top:1.1rem;display:flex;justify-content:space-between;font-size:.65rem;max-width:1120px;margin:0 auto;flex-wrap:wrap;gap:.3rem}
+.fbot a{color:rgba(255,255,255,.35);margin-left:.7rem}
+.fbot a:hover{color:#fff}
+
+/* BOTTOM NAV mobile */
+.bnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--white);border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom)}
+@media(min-width:640px){.bnav{display:none}}
+.bn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.45rem .1rem;background:none;border:none;font-size:.52rem;font-weight:700;color:var(--muted);cursor:pointer;min-height:50px;-webkit-tap-highlight-color:transparent}
+.bn .bi{font-size:1.05rem;line-height:1}
+.bn.active{color:var(--blue)}
+body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
+@media(min-width:640px){body{padding-bottom:0}}
+</style>
 </head>
 <body>
 
+<!-- TOPBAR -->
 <header class="topbar">
-  <div class="logo">
-    <span class="logo-icon">⛵</span>
-    <span>GoSailor.in</span>
-  </div>
-
-  <nav class="desktop-nav">
-    <button onclick="switchTab('flights')">Flights</button>
-    <button onclick="switchTab('hotels')">Hotels</button>
-    <button onclick="switchTab('cars')">Cars</button>
-    <button onclick="switchTab('activities')">Activities</button>
-    <button onclick="switchTab('cruises')">Cruises</button>
-    <button onclick="switchTab('blog')">Blog</button>
+  <a class="logo" href="/"><div class="logo-mark">⛵</div><div class="logo-text">Go<span>Sailor</span>.in</div></a>
+  <nav class="topnav">
+    <a onclick="sw('flights')">Flights</a>
+    <a onclick="sw('hotels')">Hotels</a>
+    <a onclick="sw('cars')">Cars</a>
+    <a onclick="sw('activities')">Activities</a>
+    <a onclick="sw('cruises')">Cruises</a>
+    <a onclick="sw('blog')">Blog</a>
+    <a href="#compensation">Compensation</a>
   </nav>
+  <div class="topbar-right">
+    <button class="btn-ghost">Log in</button>
+    <button class="btn-yellow">Sign up</button>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Travel smarter, pay less</h1>
-  <p>Live flights, hotels, cars, activities and cruises.</p>
+  <div class="hero-eyebrow">Flights · Hotels · Cars · Activities · Cruises · Blog</div>
+  <h1>Travel smarter,<br/>pay <em>less</em></h1>
+  <p class="hero-sub">Real results — shown right here on GoSailor</p>
 </section>
 
-<section class="tabs">
-  <button class="tab active" id="tab-flights" onclick="switchTab('flights')">✈ Flights</button>
-  <button class="tab" id="tab-hotels" onclick="switchTab('hotels')">🏨 Hotels</button>
-  <button class="tab" id="tab-cars" onclick="switchTab('cars')">🚗 Cars</button>
-  <button class="tab" id="tab-activities" onclick="switchTab('activities')">🎡 Activities</button>
-  <button class="tab" id="tab-cruises" onclick="switchTab('cruises')">⛵ Cruises</button>
-  <button class="tab" id="tab-blog" onclick="switchTab('blog')">📝 Blog</button>
-</section>
+<!-- STICKY TABS -->
+<div class="section-tabs">
+  <div class="stabs-inner">
+    <button class="stab active" id="tab-flights"    onclick="sw('flights')"><span class="si">✈️</span>Flights</button>
+    <button class="stab"        id="tab-hotels"     onclick="sw('hotels')"><span class="si">🏨</span>Hotels</button>
+    <button class="stab"        id="tab-cars"       onclick="sw('cars')"><span class="si">🚗</span>Cars</button>
+    <button class="stab"        id="tab-activities" onclick="sw('activities')"><span class="si">🎡</span>Activities</button>
+    <button class="stab"        id="tab-cruises"    onclick="sw('cruises')"><span class="si">⛵</span>Cruises</button>
+    <button class="stab"        id="tab-blog"       onclick="sw('blog')"><span class="si">📝</span>Blog</button>
+  </div>
+</div>
 
-<main>
-
-<section id="section-flights" class="section active">
-  <h2>Flights & Hotels</h2>
-
-  <div class="widget-card">
+<!-- ══════════════════════════════════
+  FLIGHTS + HOTELS — White Label
+  wl_id=16536 handles both.
+  tpwl-search = search form (flights & hotels tabs inside it)
+  tpwl-tickets = live results shown on page
+  Both divs must always be in DOM.
+══════════════════════════════════ -->
+<div class="tab-section active" id="section-flights">
+  <div class="sec-inner">
+    <div class="sec-title">Flights &amp; Hotels</div>
+    <p class="sec-sub">Search flights and hotels — results appear right here on GoSailor</p>
     <div id="tpwl-search"></div>
     <div id="tpwl-tickets"></div>
   </div>
-</section>
+</div>
 
-<section id="section-hotels" class="section">
-  <h2>Hotels</h2>
-
-  <div class="info-box">
-    Search hotels worldwide with live pricing.
+<!-- Hotels tab — scrolls to White Label and activates hotels tab inside it -->
+<div class="tab-section" id="section-hotels">
+  <div class="sec-inner">
+    <div class="sec-title">Hotels</div>
+    <p class="sec-sub">Search hotels — results appear right here on GoSailor</p>
+    <div class="info-banner">ℹ️ &nbsp;Use the search engine below — select the Hotels tab inside it to search hotels with live prices shown on this page.</div>
+    <!-- Duplicate White Label containers for hotels tab -->
+    <div id="tpwl-search-h"></div>
+    <div id="tpwl-tickets-h"></div>
   </div>
+</div>
 
-  <div class="hotel-helper">
-    Click the Hotels tab inside the search engine below.
+<!-- ══════════════════════════════════
+  CARS — localrent.com White Label widget
+  Shows actual car listings with prices on page.
+  campaign_id=87, promo_id=2466
+══════════════════════════════════ -->
+<div class="tab-section" id="section-cars">
+  <div class="sec-inner">
+    <div class="sec-title">Car Rentals</div>
+    <p class="sec-sub">Browse cars with live prices — powered by LocalRent.com</p>
+    <div class="wcard">
+      <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&country=153&city=68511&powered_by=true&campaign_id=87&promo_id=2466" charset="utf-8"></script>
+    </div>
   </div>
+</div>
 
-  <button class="primary-btn" onclick="focusHotelSearch()">
-    Open Hotel Search
-  </button>
-</section>
-
-<section id="section-cars" class="section">
-  <h2>Car Rentals</h2>
-
-  <div class="widget-card" id="cars-widget">
-    <div class="loader">Loading cars...</div>
+<!-- ══════════════════════════════════
+  ACTIVITIES — GYG auto-update widget
+  campaign_id=108, promo_id=8412
+  Shows live activity cards on page.
+══════════════════════════════════ -->
+<div class="tab-section" id="section-activities">
+  <div class="sec-inner">
+    <div class="sec-title">Tours &amp; Activities</div>
+    <p class="sec-sub">300,000+ experiences worldwide — powered by GetYourGuide</p>
+    <div class="wcard">
+      <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&powered_by=true&campaign_id=108&promo_id=8412" charset="utf-8"></script>
+    </div>
   </div>
-</section>
+</div>
 
-<section id="section-activities" class="section">
-  <h2>Activities</h2>
-
-  <div class="widget-card" id="activities-widget">
-    <div class="loader">Loading activities...</div>
+<!-- ══════════════════════════════════
+  CRUISES — campaign_id=47
+══════════════════════════════════ -->
+<div class="tab-section" id="section-cruises">
+  <div class="sec-inner">
+    <div class="sec-title">Yacht &amp; Cruise Charter</div>
+    <p class="sec-sub">Find and book yacht charters and cruises worldwide</p>
+    <div class="wcard">
+      <script async src="https://tpwgts.com/content?currency=usd&trs=520977&shmarker=719723&powered_by=true&locale=en&lowest_price=&highest_price=&min_lines=5&color_button=%230071c2&promo_id=5850&campaign_id=47" charset="utf-8"></script>
+    </div>
   </div>
-</section>
+</div>
 
-<section id="section-cruises" class="section">
-  <h2>Cruises</h2>
-
-  <div class="widget-card" id="cruises-widget">
-    <div class="loader">Loading cruises...</div>
+<!-- ══════════════════════════════════
+  BLOG — 21 posts
+  Replace titles/hrefs with your actual ones
+══════════════════════════════════ -->
+<div class="tab-section" id="section-blog">
+  <div class="sec-inner">
+    <div class="sec-title">Travel Blog</div>
+    <p class="sec-sub">Tips, guides and inspiration for your next trip</p>
+    <div class="blog-grid" id="blog-grid"></div>
   </div>
-</section>
+</div>
 
-<section id="section-blog" class="section">
-  <h2>Travel Blog</h2>
+<!-- COMPENSATION -->
+<div class="comp" id="compensation">
+  <div class="comp-inner">
+    <div class="comp-text">
+      <h2>✈️ Flight delayed or cancelled?</h2>
+      <p>You could be owed up to €600. Free check — no win, no fee.</p>
+    </div>
+    <div class="comp-btns">
+      <button class="btn-cy" onclick="window.open('https://airhelp.tpo.lv/74frI4ZJ','_blank')">Check My Flight →</button>
+      <button class="btn-co" onclick="window.open('https://compensair.tpo.lv/XtWDgga5','_blank')">Claim Compensation</button>
+    </div>
+  </div>
+</div>
 
-  <div class="blog-grid" id="blog-grid"></div>
-</section>
+<!-- WHY -->
+<div class="why">
+  <div class="sec-inner">
+    <div class="sec-title">Why GoSailor?</div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">🔍</div><h3>Results on your page</h3><p>Flights, hotels, cars and activities load right here — browse before you book.</p></div>
+      <div class="why-card"><div class="why-icon">💰</div><h3>Best prices</h3><p>Live prices from 500+ airlines, hotels and car partners.</p></div>
+      <div class="why-card"><div class="why-icon">⚡</div><h3>Lightning fast</h3><p>Real-time results in seconds worldwide.</p></div>
+      <div class="why-card"><div class="why-icon">🔒</div><h3>Secure booking</h3><p>Trusted checkout partners. Your payment is always safe.</p></div>
+    </div>
+  </div>
+</div>
 
-</main>
+<!-- FAQ -->
+<div class="faq" id="faq">
+  <div class="sec-inner">
+    <div class="sec-title" style="margin-bottom:1rem">Frequently asked questions</div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</div>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-
-    <div>
-      <h3>GoSailor.in</h3>
-      <p>Flights, hotels, activities and cruises worldwide.</p>
+  <div class="fg">
+    <div class="f-brand">
+      <div class="f-logo"><div class="logo-mark">⛵</div><div class="f-logo-text">GoSailor.in</div></div>
+      <p class="f-desc">Cheap flights, hotels, activities and cruises. Based in Hyderabad, India.</p>
     </div>
-
-    <div>
+    <div class="fcol">
       <h4>Company</h4>
-      <a href="pages/about.html">About</a>
-      <a href="pages/privacy.html">Privacy</a>
-      <a href="pages/terms.html">Terms</a>
+      <a onclick="sw('blog')">Blog</a>
+      <a href="/about.html">About GoSailor</a>
+      <a href="mailto:hello@gosailor.in">Contact Us</a>
     </div>
-
+    <div class="fcol">
+      <h4>Legal</h4>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© GoSailor.in 2026 — Hyderabad, India</span>
+    <div><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
   </div>
 </footer>
 
+<!-- BOTTOM NAV mobile -->
+<nav class="bnav">
+  <button class="bn active" id="bn-flights"    onclick="sw('flights')"><span class="bi">✈️</span>Flights</button>
+  <button class="bn"        id="bn-hotels"     onclick="sw('hotels')"><span class="bi">🏨</span>Hotels</button>
+  <button class="bn"        id="bn-cars"       onclick="sw('cars')"><span class="bi">🚗</span>Cars</button>
+  <button class="bn"        id="bn-activities" onclick="sw('activities')"><span class="bi">🎡</span>Activities</button>
+  <button class="bn"        id="bn-blog"       onclick="sw('blog')"><span class="bi">📝</span>Blog</button>
+</nav>
+
+<!-- White Label — last so DOM is ready when it initialises -->
 <script type="module" src="https://tpwgts.com/wl_web/main.js?wl_id=16536"></script>
+<!-- Tracking -->
+<script>(function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.body.appendChild(s);})();</script>
 
-<script src="blog-data.js"></script>
-<script src="lazy-widgets.js"></script>
-<script src="app.js"></script>
+<script>
+'use strict';
+var TABS=['flights','hotels','cars','activities','cruises','blog'];
 
+function sw(tab){
+  TABS.forEach(function(t){
+    var s=document.getElementById('section-'+t);
+    var b=document.getElementById('tab-'+t);
+    var n=document.getElementById('bn-'+t);
+    if(s)s.classList.toggle('active',t===tab);
+    if(b)b.classList.toggle('active',t===tab);
+    if(n)n.classList.toggle('active',t===tab);
+  });
+  document.querySelector('.section-tabs').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ── BLOG: 21 posts ──
+   Replace the href values with your actual blog post URLs.
+   Titles below are placeholders — update them to match your real posts. */
+var BLOGS=[
+  {emoji:'🏙️',tag:'City Guide',title:'The Ultimate Dubai Travel Guide 2026',date:'May 2026',href:'/blog/dubai-travel-guide.html'},
+  {emoji:'🌴',tag:'Beach',title:'Top 10 Beaches in Thailand Under ₹5,000/night',date:'May 2026',href:'/blog/thailand-beaches.html'},
+  {emoji:'✈️',tag:'Flight Tips',title:'How to Find Cheap Flights from Hyderabad',date:'Apr 2026',href:'/blog/cheap-flights-hyderabad.html'},
+  {emoji:'🏨',tag:'Hotels',title:'Best Boutique Hotels in Goa Under ₹3,000',date:'Apr 2026',href:'/blog/goa-boutique-hotels.html'},
+  {emoji:'🗺️',tag:'Travel Tips',title:'EU Flight Compensation: How to Claim €600',date:'Mar 2026',href:'/blog/eu-flight-compensation.html'},
+  {emoji:'⛵',tag:'Cruises',title:'Greece Yacht Charter: The Complete 2026 Guide',date:'Mar 2026',href:'/blog/greece-yacht-charter.html'},
+  {emoji:'🗼',tag:'City Guide',title:'First Time in Tokyo: Complete Travel Guide',date:'Feb 2026',href:'/blog/tokyo-travel-guide.html'},
+  {emoji:'🌅',tag:'Beach',title:'Bali on a Budget: Where to Stay Under ₹4,000',date:'Feb 2026',href:'/blog/bali-budget-guide.html'},
+  {emoji:'🛂',tag:'Visa',title:'Schengen Visa Guide for Indian Travellers',date:'Jan 2026',href:'/blog/schengen-visa-guide.html'},
+  {emoji:'🎒',tag:'Travel Tips',title:'Hand Luggage Only: The Ultimate Packing List',date:'Jan 2026',href:'/blog/hand-luggage-packing-list.html'},
+  {emoji:'🏖️',tag:'Beach',title:'Maldives vs Lakshadweep: Which Should You Visit?',date:'Dec 2025',href:'/blog/maldives-vs-lakshadweep.html'},
+  {emoji:'🚗',tag:'Road Trip',title:'Best Road Trips from Hyderabad in 2026',date:'Dec 2025',href:'/blog/hyderabad-road-trips.html'},
+  {emoji:'🍜',tag:'Food',title:'Best Street Food Cities in Southeast Asia',date:'Nov 2025',href:'/blog/southeast-asia-street-food.html'},
+  {emoji:'🏔️',tag:'Adventure',title:'Trekking in Nepal: Everest Base Camp Guide',date:'Nov 2025',href:'/blog/everest-base-camp-trek.html'},
+  {emoji:'🇸🇬',tag:'City Guide',title:'48 Hours in Singapore: The Perfect Itinerary',date:'Oct 2025',href:'/blog/singapore-48-hours.html'},
+  {emoji:'💳',tag:'Travel Tips',title:'Best Travel Credit Cards for Indians in 2026',date:'Oct 2025',href:'/blog/best-travel-credit-cards-india.html'},
+  {emoji:'🌍',tag:'Adventure',title:'Safari Guide: Best African Destinations for Indians',date:'Sep 2025',href:'/blog/africa-safari-guide.html'},
+  {emoji:'🏛️',tag:'City Guide',title:'Rome in 3 Days: What to See and Skip',date:'Sep 2025',href:'/blog/rome-3-day-itinerary.html'},
+  {emoji:'🎿',tag:'Adventure',title:'Best Ski Destinations for Indians Abroad',date:'Aug 2025',href:'/blog/ski-destinations-indians.html'},
+  {emoji:'🌸',tag:'City Guide',title:'Japan Cherry Blossom Season 2026: Complete Guide',date:'Aug 2025',href:'/blog/japan-cherry-blossom-guide.html'},
+  {emoji:'🧳',tag:'Travel Tips',title:'How to Get Travel Insurance That Actually Pays Out',date:'Jul 2025',href:'/blog/travel-insurance-guide.html'},
+];
+
+var COLORS=['c1','c2','c3','c4','c5','c6','c7','c8'];
+function renderBlog(){
+  document.getElementById('blog-grid').innerHTML=BLOGS.map(function(b,i){
+    return '<a class="blog-card" href="'+b.href+'">'
+      +'<div class="blog-img '+COLORS[i%8]+'">'+b.emoji+'</div>'
+      +'<div class="blog-body">'
+      +'<span class="blog-tag">'+b.tag+'</span>'
+      +'<div class="blog-title">'+b.title+'</div>'
+      +'<div class="blog-date">'+b.date+'</div>'
+      +'</div></a>';
+  }).join('');
+}
+
+var FAQS=[
+  {q:'Do results show on GoSailor itself?',
+   a:'Yes. Flights and hotels use your Travelpayouts White Label — search and results appear on this page. Cars show live listings via LocalRent. Activities show cards via GetYourGuide. You browse everything here, then click to complete booking on the partner\'s secure checkout.'},
+  {q:'Why does final payment happen on another site?',
+   a:'Payment must happen on the airline or hotel\'s own PCI-DSS certified server — a global legal requirement. Every major travel site (Skyscanner, Kayak, Google Flights) works the same way.'},
+  {q:'Are prices real and live?',
+   a:'Yes. All prices are pulled in real time from partner networks. Always confirm the final price on the booking page before paying.'},
+  {q:'How do I claim flight compensation?',
+   a:'If your flight was delayed 3+ hours, cancelled or you were denied boarding, tap "Check My Flight" above. Free eligibility check — you could be owed up to €600.'},
+  {q:'Is my payment secure?',
+   a:'Yes. All payments go directly to the airline, hotel or activity partner. GoSailor never sees or stores your card details.'},
+];
+
+function renderFAQ(){
+  document.getElementById('faq-list').innerHTML=FAQS.map(function(f,i){
+    return '<div class="faq-item" id="fi-'+i+'">'
+      +'<button class="faq-q" onclick="tf('+i+')">'+f.q
+      +'<span class="faq-icon">+</span></button>'
+      +'<div class="faq-a">'+f.a+'</div></div>';
+  }).join('');
+}
+function tf(i){document.getElementById('fi-'+i).classList.toggle('open');}
+
+renderBlog();
+renderFAQ();
+</script>
 </body>
 </html>
