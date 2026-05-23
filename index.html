@@ -1,1000 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GoSailor.in — Cheap Flights from Anywhere to Everywhere</title>
-<meta name="google-site-verification" content="lIJMPegUDu6TftkD1IOx8tGQU-j6Ll8j3NgygDkPuj0" />
-<meta name="description" content="Search millions of cheap flights in one place. Find the best flight deals worldwide on GoSailor.in" />
-<link rel="canonical" href="https://gosailor.in/" />
-<meta property="og:title" content="GoSailor.in — Cheap Flights from Anywhere to Everywhere" />
-<meta property="og:description" content="Search millions of cheap flights in one place. Find the best flight deals worldwide on GoSailor.in" />
-<meta property="og:url" content="https://gosailor.in/" />
-<meta property="og:type" content="website" />
-<meta name="robots" content="index, follow" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-<!-- Travelpayouts Drive -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+<title>GoSailor.in — Flights, Hotels, Activities &amp; Cruises</title>
+<meta name="google-site-verification" content="lIJMPegUDu6TftkD1IOx8tGQU-j6Ll8j3NgygDkPuj0"/>
+<meta name="description" content="Search cheap flights, hotels, tours and cruises worldwide. Compare the best travel deals on GoSailor.in"/>
+<link rel="canonical" href="https://gosailor.in/"/>
+<meta property="og:title" content="GoSailor.in — Flights, Hotels, Activities &amp; Cruises"/>
+<meta property="og:description" content="Search cheap flights, hotels, tours and cruises on GoSailor.in"/>
+<meta property="og:url" content="https://gosailor.in/"/>
+<meta property="og:type" content="website"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#003b6f"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
 <script data-cfasync="false" data-no-defer="1">
-  (function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.head.appendChild(s);})();
-</script>
-<!-- Travelpayouts White Label -->
-<script data-cfasync="false" data-no-defer="1">
-  (function(){var s=document.createElement("script");s.async=1;s.type="module";s.src="https://tpwgts.com/wl_web/main.js?wl_id=16536";document.head.appendChild(s);})();
+(function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.head.appendChild(s);})();
 </script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'DM Sans',sans-serif;background:#f1f5f9;color:#1e293b;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#f3f4f6;color:#1a1a2e;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 
-/* NAV */
-nav{background:#0a1628;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:200;}
-.logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:#fff;text-decoration:none;}
-.logo span{color:#f59e0b;}
-.nav-center{display:flex;gap:0;margin-left:2rem;}
-.nav-tab{padding:0 16px;height:56px;display:flex;align-items:center;color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;border-bottom:2px solid transparent;transition:all 0.2s;gap:6px;}
-.nav-tab:hover{color:#fff;}
-.nav-tab.active{color:#fff;border-bottom-color:#f59e0b;}
-.nav-right{display:flex;align-items:center;gap:12px;}
-.nav-help{color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;}
-.nav-help:hover{color:#fff;}
-.btn-login{padding:7px 16px;border:1.5px solid rgba(255,255,255,0.4);border-radius:20px;color:#fff;font-size:13px;font-weight:500;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
-.btn-login:hover{background:rgba(255,255,255,0.1);}
-.btn-signup{padding:7px 16px;border:none;border-radius:20px;color:#0a1628;font-size:13px;font-weight:500;background:#f59e0b;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
-.btn-signup:hover{background:#e08c00;}
-
-/* HERO */
-.hero{background:#0a1628;padding:3rem 2rem 0;position:relative;overflow:hidden;min-height:auto;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(26,86,219,0.3) 0%,transparent 70%);}
-.hero-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:1;}
-.hero-main{}
-.hero-tag{display:inline-block;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#f59e0b;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem;}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:0.5rem;text-align:center;}
-.hero h1 em{font-style:normal;color:#f59e0b;}
-.hero p{color:rgba(255,255,255,0.55);font-size:15px;margin-bottom:1.5rem;}
-
-/* SEARCH CARD */
-.search-wrap{background:#fff;border-radius:16px 16px 0 0;padding:1.5rem;}
-.trip-tabs{display:flex;gap:8px;margin-bottom:1.25rem;}
-.trip-tab{padding:6px 16px;border-radius:20px;border:1.5px solid #e2e8f0;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;background:transparent;color:#64748b;transition:all 0.2s;}
-.trip-tab.active{border-color:#1a56db;color:#1a56db;background:#eff6ff;}
-.search-fields{display:grid;grid-template-columns:1fr 40px 1fr 1fr 1fr auto;gap:0;border:1.5px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:1rem;}
-.sf{padding:12px 16px;border-right:1px solid #e2e8f0;cursor:pointer;transition:background 0.2s;min-width:0;}
-.sf:hover{background:#f8fafc;}
-.sf:last-child{border-right:none;}
-.sf-label{font-size:10px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px;}
-.sf-value{font-size:14px;color:#1e293b;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.sf-value.placeholder{color:#cbd5e1;font-weight:400;}
-.swap-center{display:flex;align-items:center;justify-content:center;border-right:1px solid #e2e8f0;cursor:pointer;}
-.swap-center:hover{background:#f8fafc;}
-.swap-btn{width:30px;height:30px;border-radius:50%;border:1.5px solid #e2e8f0;background:#fff;cursor:pointer;font-size:14px;color:#64748b;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
-.swap-btn:hover{border-color:#1a56db;color:#1a56db;}
-.search-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
-.add-hotel{font-size:13px;color:#1a56db;cursor:pointer;text-decoration:none;display:flex;align-items:center;gap:4px;}
-.search-btn{padding:12px 32px;background:#1a56db;color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;margin-left:auto;}
-.search-btn:hover{background:#1648c8;}
-
-/* AD COLUMN */
-
-
-
-
-
-/* RESULTS */
-.results-wrap{background:#fff;max-width:1400px;margin:0 auto;}
-.results-inner{padding:0 2rem 2rem;}
-#tpwl-tickets{max-width:900px;}
-
-/* MAIN LAYOUT */
-.main-layout{max-width:1400px;margin:1.5rem auto;padding:0 2rem;display:grid;grid-template-columns:1fr;gap:1.5rem;}
-.main-content{}
-
-
-
-
-
-/* DEALS */
-.deals-card{background:#fff;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
-.section-label{font-size:11px;font-weight:600;color:#1a56db;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.4rem;}
-.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#1e293b;margin-bottom:1.25rem;}
-
-/* DESTINATIONS */
-.dest-card-wrap{background:#fff;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
-.dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
-.dest-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1rem;text-decoration:none;color:inherit;display:block;transition:all 0.2s;}
-.dest-card:hover{border-color:#1a56db;transform:translateY(-2px);}
-.dest-emoji{font-size:24px;margin-bottom:0.5rem;}
-.dest-name{font-size:14px;font-weight:500;color:#1e293b;margin-bottom:2px;}
-.dest-price{font-size:12px;color:#64748b;}
-.dest-price strong{color:#1a56db;}
-
-/* FAQ */
-.faq-card{background:#fff;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
-.faq-item{border-bottom:1px solid #f1f5f9;padding:1rem 0;cursor:pointer;}
-.faq-item:last-child{border-bottom:none;}
-.faq-q{font-size:14px;font-weight:500;color:#1e293b;display:flex;justify-content:space-between;align-items:center;}
-.faq-a{font-size:13px;color:#64748b;margin-top:0.5rem;line-height:1.6;display:none;}
-.faq-a.open{display:block;}
-
-/* WHY */
-.why-card{background:#0a1628;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
-.why-card .section-label{color:#f59e0b;}
-.why-card .section-title{color:#fff;}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;}
-.why-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1rem;}
-.why-icon{font-size:20px;margin-bottom:0.5rem;}
-.why-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:4px;}
-.why-sub{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;}
-
-/* FOOTER */
-.footer-wrap{background:#0a1628;padding:2rem;border-top:1px solid rgba(255,255,255,0.08);}
-.footer-inner{max-width:1400px;margin:0 auto;}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
-.footer-links a{color:rgba(255,255,255,0.5);font-size:12px;text-decoration:none;}
-.footer-links a:hover{color:#fff;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:#fff;margin-bottom:0.5rem;}
-.footer-logo span{color:#f59e0b;}
-.footer-copy{font-size:12px;color:rgba(255,255,255,0.3);}
-.footer-sections{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.5rem;margin-bottom:1.5rem;}
-.footer-col h4{font-size:12px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.75rem;}
-.footer-col a{display:block;color:rgba(255,255,255,0.5);font-size:12px;text-decoration:none;margin-bottom:4px;}
-.footer-col a:hover{color:#fff;}
-
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;align-items:center;justify-content:center;}
-.modal-overlay.open{display:flex;}
-.modal{background:#fff;border-radius:20px;padding:2rem;width:100%;max-width:400px;position:relative;}
-.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:20px;cursor:pointer;color:#64748b;}
-.modal h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:0.25rem;}
-.modal p{font-size:13px;color:#64748b;margin-bottom:1.5rem;}
-.modal-input{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:#1e293b;outline:none;margin-bottom:10px;transition:border-color 0.2s;}
-.modal-input:focus{border-color:#1a56db;}
-.modal-btn{width:100%;padding:13px;background:#1a56db;color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:10px;}
-.modal-btn:hover{background:#1648c8;}
-.modal-divider{text-align:center;font-size:12px;color:#94a3b8;margin:10px 0;position:relative;}
-.modal-divider::before,.modal-divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:#e2e8f0;}
-.modal-divider::before{left:0;}
-.modal-divider::after{right:0;}
-.modal-google{width:100%;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;background:#fff;color:#1e293b;display:flex;align-items:center;justify-content:center;gap:8px;}
-.modal-google:hover{background:#f8fafc;}
-.modal-switch{font-size:13px;color:#64748b;text-align:center;margin-top:1rem;}
-.modal-switch a{color:#1a56db;cursor:pointer;text-decoration:none;}
-.modal-terms{font-size:11px;color:#94a3b8;text-align:center;margin-top:0.75rem;line-height:1.5;}
-.remember{display:flex;align-items:center;gap:8px;font-size:13px;color:#64748b;margin-bottom:12px;}
-
-@media(max-width:768px){
-  .hero-inner{grid-template-columns:1fr;}
-  
-  .search-fields{grid-template-columns:1fr 1fr;border:none;gap:8px;}
-  .sf{border:1.5px solid #e2e8f0;border-radius:10px;border-right:1.5px solid #e2e8f0 !important;}
-  .swap-center{display:none;}
-  .main-layout{grid-template-columns:1fr;padding:0 1rem;}
-  
-  .nav-center{display:none;}
-  nav{padding:0 1rem;}
+:root{
+  --blue:#0071c2;--blue-d:#005299;--blue-l:#e8f3ff;
+  --navy:#003b6f;--yellow:#febb02;--yellow-d:#d4a000;
+  --green:#008009;--text:#1a1a2e;--muted:#6b7280;
+  --border:#e5e7eb;--bg:#f3f4f6;--white:#fff;
+  --r:10px;--rl:14px;
+  --sh:0 2px 12px rgba(0,0,0,.09);
+  --shl:0 8px 32px rgba(0,0,0,.14);
 }
 
-/* ===== GOSAILOR REDESIGN ===== */
-body { background: #eef2fb; }
-nav { background: linear-gradient(135deg, #0a1628 0%, #0f2040 100%); }
-.hero { background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 100%); }
-.hero::before { background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(26,86,219,0.45) 0%, transparent 70%); }
-.deals-card, .dest-card-wrap, .faq-card { box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-.why-card { background: linear-gradient(135deg, #0a1628 0%, #0f2040 100%); }
-.footer-wrap { background: linear-gradient(135deg, #060e1a 0%, #0a1628 100%); }
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:300;background:var(--navy);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.logo{display:flex;align-items:center;gap:7px;color:#fff}
+.logo-mark{width:28px;height:28px;border-radius:5px;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.logo-text{font-size:1.05rem;font-weight:800;letter-spacing:-.3px;white-space:nowrap}
+.logo-text span{color:var(--yellow)}
+.topnav{display:none}
+@media(min-width:640px){
+  .topnav{display:flex;align-items:center;gap:2px}
+  .topnav a{color:rgba(255,255,255,.75);font-size:.78rem;font-weight:500;padding:.28rem .65rem;border-radius:5px;transition:color .15s}
+  .topnav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+  .topbar{padding:0 1.5rem}
+  .logo-text{font-size:1.15rem}
+}
+.topbar-right{display:flex;gap:.4rem}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:#fff;font-size:.75rem;font-weight:600;padding:.28rem .7rem;border-radius:6px;min-height:34px}
+.btn-ghost:active{background:rgba(255,255,255,.1)}
+.btn-yellow{background:var(--yellow);border:none;color:var(--text);font-size:.75rem;font-weight:700;padding:.28rem .7rem;border-radius:6px;min-height:34px}
+.btn-yellow:active{background:var(--yellow-d)}
 
-/* ===== HOTEL / ACTIVITY TABS ===== */
-.ptab { padding:7px 16px; border-radius:20px; border:1.5px solid #e2e8f0; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer; background:#fff; color:#64748b; transition:all 0.2s; }
-.ptab:hover { border-color:#1a56db; color:#1a56db; }
-.ptab.active { background:#1a56db; color:#fff; border-color:#1a56db; }
+/* ── HERO ── */
+.hero{background:linear-gradient(160deg,#002952 0%,#0071c2 60%,#0096c7 100%);padding:2.5rem 1rem 4rem;position:relative;overflow:hidden;text-align:center}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:40px;background:var(--bg);clip-path:ellipse(58% 100% at 50% 100%)}
+.hero-eyebrow{display:inline-block;background:rgba(255,255,255,.13);color:rgba(255,255,255,.88);font-size:.68rem;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:.25rem .85rem;border-radius:20px;margin-bottom:1rem;border:1px solid rgba(255,255,255,.18)}
+.hero h1{font-size:clamp(1.65rem,6vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:.45rem}
+.hero h1 em{color:var(--yellow);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.68);font-size:.9rem;margin-bottom:2rem}
+@media(min-width:640px){.hero{padding:3.5rem 1.5rem 5rem}.hero-sub{font-size:1rem}}
 
-/* ===== PROVIDER BADGE ===== */
-.pvdr { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600; color:#fff; margin-right:8px; }
-.pvdr.booking { background:#003580; }
-.pvdr.expedia { background:#00355f; }
-.pvdr.bundle  { background:#1a56db; }
-.pvdr.agoda   { background:#e81840; }
-.pvdr.viator  { background:#ee2e24; }
-.pvdr.gyg     { background:#ff5533; }
-.pvdr.tiqets  { background:#6d28d9; }
-.pvdr.deals   { background:#dc2626; }
+/* ── SEARCH CARD ── */
+.search-card{background:var(--white);border-radius:var(--rl);max-width:960px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.28);overflow:hidden;position:relative;z-index:1}
+.tab-bar{display:flex;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tab-bar::-webkit-scrollbar{display:none}
+.stab{flex:1;min-width:68px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.6rem .3rem;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-1px;font-size:.68rem;font-weight:600;color:var(--muted);transition:all .15s;white-space:nowrap;cursor:pointer}
+.stab .si{font-size:.95rem;line-height:1}
+.stab.active{color:var(--blue);border-bottom-color:var(--blue)}
+@media(min-width:480px){.stab{min-width:80px;font-size:.73rem;padding:.7rem .4rem}.stab .si{font-size:1rem}}
+.panel{padding:1rem;display:none}
+.panel.active{display:block}
+@media(min-width:640px){.panel{padding:1.25rem 1.4rem}}
+.srow{display:flex;flex-direction:column;gap:.55rem}
+@media(min-width:600px){.srow{flex-direction:row;align-items:flex-end;flex-wrap:wrap}}
+.sf{display:flex;flex-direction:column;gap:3px;width:100%}
+@media(min-width:600px){.sf{flex:1;min-width:110px;width:auto}}
+.sf.w2{flex:2}
+.sf label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.35px;color:var(--muted)}
+.sf input,.sf select{height:44px;padding:0 .75rem;border:1.5px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:.875rem;color:var(--text);background:var(--white);transition:border-color .15s;appearance:none;-webkit-appearance:none;width:100%}
+.sf input:focus,.sf select:focus{outline:none;border-color:var(--blue)}
+.sbtn{width:100%;height:44px;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.9rem;font-weight:700;transition:background .15s;flex-shrink:0;margin-top:.15rem}
+.sbtn:active{background:var(--blue-d)}
+@media(min-width:600px){.sbtn{width:auto;padding:0 1.4rem;margin-top:0;align-self:flex-end}}
+.quick-links{display:flex;gap:.3rem;flex-wrap:wrap;padding:.65rem 1rem .85rem;border-top:1px solid var(--border)}
+.ql-label{font-size:.65rem;color:var(--muted);font-weight:600;align-self:center;flex-shrink:0}
+.ql{font-size:.68rem;font-weight:500;background:var(--blue-l);color:var(--blue);padding:.16rem .6rem;border-radius:20px;white-space:nowrap}
+.ql:active{background:#c8e4ff}
+@media(min-width:640px){.quick-links{padding:.7rem 1.4rem .95rem}}
 
-/* ===== WIDGET LABEL BAR ===== */
-.wlabel { display:flex; align-items:center; padding:8px 12px; background:#f0f4ff; border-radius:8px; margin-bottom:1rem; font-size:12px; color:#64748b; }
+/* ── WIDGET PANEL ── */
+.result-panel{max-width:960px;margin:.6rem auto 0;display:none}
+.result-panel.open{display:block}
+.rp-box{background:var(--white);border-radius:var(--rl);box-shadow:var(--shl);overflow:hidden}
+.rp-head{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;background:#fafafa;border-bottom:1px solid var(--border)}
+.rp-title{font-weight:700;font-size:.875rem}
+.rp-close{background:none;border:none;font-size:1.1rem;color:var(--muted);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rp-close:active{background:var(--bg)}
+.rp-body{padding:1rem}
+@media(min-width:640px){.rp-head{padding:.85rem 1.4rem}.rp-body{padding:1.25rem 1.4rem}}
 
-/* ===== TRUST CHIPS ===== */
-.tchip { background:#f1f5f9; border-radius:20px; padding:5px 12px; font-size:12px; color:#475569; display:inline-block; }
+/* ── PAGE SECTIONS ── */
+.section{padding:2.25rem 1rem}
+.section.gray{background:var(--bg)}
+.section.white{background:var(--white)}
+@media(min-width:640px){.section{padding:2.75rem 1.5rem}}
+.sec-inner{max-width:1120px;margin:0 auto}
+.sec-title{font-size:1.1rem;font-weight:800;margin-bottom:.4rem}
+.sec-sub{font-size:.78rem;color:var(--muted);margin-bottom:1.5rem}
+@media(min-width:640px){.sec-title{font-size:1.3rem}}
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .ptab { font-size:12px; padding:6px 11px; }
-  .ptabs-wrap { gap:6px !important; }
+/* The real widgets need breathing room */
+.widget-block{width:100%;overflow:hidden;min-height:80px}
+.widget-block>script{display:none}
+
+/* ── STYLE TABS ── */
+.style-tabs{display:flex;gap:.25rem;border-bottom:1px solid var(--border);margin-bottom:1.25rem;overflow-x:auto;scrollbar-width:none}
+.style-tabs::-webkit-scrollbar{display:none}
+.st{background:none;border:none;border-bottom:2.5px solid transparent;font-size:.78rem;font-weight:600;color:var(--muted);padding:.4rem .8rem;margin-bottom:-1px;cursor:pointer;white-space:nowrap}
+.st.active,.st:hover{color:var(--blue);border-bottom-color:var(--blue)}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.dgrid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}}
+.dcard{border-radius:var(--rl);overflow:hidden;border:1.5px solid var(--border);background:var(--white);cursor:pointer}
+.dcard:active{opacity:.9}
+.dc-img{height:110px;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.dc-img.beach{background:linear-gradient(135deg,#fde68a,#fed7aa)}
+.dc-img.city{background:linear-gradient(135deg,#c7d2fe,#ddd6fe)}
+.dc-img.family{background:linear-gradient(135deg,#d1fae5,#a7f3d0)}
+.dc-img.wellness{background:linear-gradient(135deg,#e0f2fe,#bae6fd)}
+.dc-body{padding:.65rem}
+.dc-name{font-weight:700;font-size:.82rem}
+.dc-loc{font-size:.68rem;color:var(--muted);margin-bottom:3px}
+.dc-price{font-size:.72rem;color:var(--muted)}
+.dc-price strong{font-size:.85rem;font-weight:800;color:var(--text)}
+
+/* ── COMPENSATION ── */
+.comp{background:linear-gradient(135deg,#002952,#0071c2);padding:2rem 1rem}
+.comp-inner{max-width:1120px;margin:0 auto}
+.comp-text h2{font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:.35rem;line-height:1.2}
+.comp-text p{font-size:.82rem;color:rgba(255,255,255,.68);line-height:1.6;margin-bottom:1.1rem}
+.comp-btns{display:flex;gap:.5rem;flex-wrap:wrap}
+.comp-btns button{flex:1;min-width:130px}
+.btn-cy{background:var(--yellow);color:var(--text);border:none;padding:.6rem 1.1rem;border-radius:var(--r);font-weight:700;font-size:.82rem;min-height:44px}
+.btn-co{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:.6rem 1.1rem;border-radius:var(--r);font-weight:600;font-size:.82rem;min-height:44px}
+@media(min-width:640px){
+  .comp{padding:2.5rem 1.5rem}
+  .comp-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+  .comp-text p{margin-bottom:0}
+  .comp-text h2{font-size:1.25rem}
+  .comp-btns{flex-wrap:nowrap}
+  .comp-btns button{flex:none}
 }
 
+/* ── WHY ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.25rem}
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}}
+.why-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--rl);padding:1rem}
+.why-icon{width:34px;height:34px;border-radius:7px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:.95rem;margin-bottom:.6rem}
+.why-card h3{font-size:.8rem;font-weight:700;margin-bottom:.25rem}
+.why-card p{font-size:.72rem;color:var(--muted);line-height:1.5}
+
+/* ── FAQ ── */
+.faq-wrap{display:flex;flex-direction:column;gap:.4rem}
+.faq-item{border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--white)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:.85rem 1rem;background:none;border:none;font-size:.82rem;font-weight:600;text-align:left;color:var(--text);cursor:pointer;gap:.5rem;min-height:48px}
+.faq-icon{font-size:.95rem;color:var(--muted);transition:transform .2s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;padding:0 1rem;font-size:.78rem;color:var(--muted);line-height:1.65;transition:max-height .25s ease,padding .25s}
+.faq-item.open .faq-a{max-height:220px;padding:.05rem 1rem .85rem}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* ── FOOTER ── */
+footer{background:#00224d;color:rgba(255,255,255,.5);padding:2.25rem 1rem 1.5rem}
+@media(min-width:640px){footer{padding:2.75rem 1.5rem 2rem}}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:1120px;margin:0 auto 2rem}
+@media(min-width:760px){.fg{grid-template-columns:2fr 1fr 1fr 1fr}}
+.f-brand{grid-column:1/-1}
+@media(min-width:760px){.f-brand{grid-column:auto}}
+.f-logo{display:flex;align-items:center;gap:7px;color:#fff;margin-bottom:.65rem}
+.f-logo .logo-mark{width:26px;height:26px;font-size:.85rem}
+.f-logo-text{font-size:1rem;font-weight:800}
+.f-desc{font-size:.72rem;line-height:1.65}
+.fcol h4{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#fff;margin-bottom:.75rem}
+.fcol a{display:block;font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:.35rem;padding:.1rem 0;min-height:28px;transition:color .15s}
+.fcol a:hover{color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.1);padding-top:1.25rem;display:flex;justify-content:space-between;font-size:.68rem;max-width:1120px;margin:0 auto;flex-wrap:wrap;gap:.35rem}
+.fbot a{color:rgba(255,255,255,.35);margin-left:.75rem}
+.fbot a:hover{color:#fff}
+
+/* ── BOTTOM NAV (mobile) ── */
+.bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--white);border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom)}
+@media(min-width:640px){.bottom-nav{display:none}}
+.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.5rem .2rem;background:none;border:none;font-size:.58rem;font-weight:600;color:var(--muted);cursor:pointer;min-height:52px}
+.bn-item .bi{font-size:1.15rem;line-height:1}
+.bn-item.active{color:var(--blue)}
+body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
+@media(min-width:640px){body{padding-bottom:0}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="logo" href="#">Go<span>Sailor</span></a>
-  <div class="nav-center">
-    <a class="nav-tab active" onclick="showSection('flights',this)" href="#">✈ Flights</a>
-    <a class="nav-tab" onclick="showSection('hotels',this)" href="#">🏨 Hotels</a>
-    <a class="nav-tab" onclick="showSection('deals',this)" href="#">💸 Flight Deals</a>
-    <a class="nav-tab" onclick="showSection('compensation',this)" href="#">💰 Compensation</a>
-    <a class="nav-tab" onclick="showSection('cruises',this)" href="#">⛵ Cruises</a>
-    <a class="nav-tab" onclick="showSection('cars',this)" href="#">🚗 Cars</a>
-    <a class="nav-tab" onclick="showSection('activities',this)" href="#">🎡 Activities</a>
-    <a class="nav-tab" onclick="showSection('tickets',this)" href="#">🎟️ Events</a>
-    <a class="nav-tab" onclick="showSection('insurance',this)" href="#">🛡️ Insurance</a>
+<!-- TOPBAR -->
+<header class="topbar">
+  <a class="logo" href="/"><div class="logo-mark">⛵</div><div class="logo-text">Go<span>Sailor</span>.in</div></a>
+  <nav class="topnav">
+    <a href="#activities">Activities</a>
+    <a href="#compensation">Compensation</a>
+    <a href="#faq">Help</a>
+  </nav>
+  <div class="topbar-right">
+    <button class="btn-ghost">Log in</button>
+    <button class="btn-yellow">Sign up</button>
   </div>
-  <div class="nav-right">
-    <a class="nav-help" href="#faq" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'});return false;">Help</a>
-    <button class="btn-login" onclick="openModal('login')">Log in</button>
-    <button class="btn-signup" onclick="openModal('signup')">Sign up</button>
+</header>
+
+<!-- HERO + SEARCH -->
+<section class="hero">
+  <div class="hero-eyebrow">Hotels · Flights · Activities · Cruises</div>
+  <h1>Travel smarter,<br/>pay <em>less</em></h1>
+  <p class="hero-sub">Search, compare and book — all in one place</p>
+
+  <div class="search-card">
+    <div class="tab-bar">
+      <button class="stab active" onclick="switchTab('hotels',this)"><span class="si">🏨</span>Hotels</button>
+      <button class="stab" onclick="switchTab('flights',this)"><span class="si">✈️</span>Flights</button>
+      <button class="stab" onclick="switchTab('cars',this)"><span class="si">🚗</span>Cars</button>
+      <button class="stab" onclick="switchTab('activities',this)"><span class="si">🎡</span>Activities</button>
+      <button class="stab" onclick="switchTab('cruises',this)"><span class="si">⛵</span>Cruises</button>
+    </div>
+
+    <!-- HOTELS panel -->
+    <div class="panel active" id="panel-hotels">
+      <div class="srow">
+        <div class="sf w2"><label>Where to?</label><input type="text" placeholder="City, hotel or area" id="h-dest" autocomplete="off"/></div>
+        <div class="sf"><label>Check-in</label><input type="date" id="h-in"/></div>
+        <div class="sf"><label>Check-out</label><input type="date" id="h-out"/></div>
+        <div class="sf"><label>Guests</label><select><option>1 guest, 1 room</option><option selected>2 guests, 1 room</option><option>3 guests, 1 room</option><option>4 guests, 2 rooms</option></select></div>
+        <button class="sbtn" onclick="openResult('hotels')">Search Hotels</button>
+      </div>
+    </div>
+
+    <!-- FLIGHTS panel -->
+    <div class="panel" id="panel-flights">
+      <div class="srow">
+        <div class="sf"><label>From</label><input type="text" placeholder="City or airport" value="Hyderabad (HYD)"/></div>
+        <div class="sf"><label>To</label><input type="text" placeholder="City or airport"/></div>
+        <div class="sf"><label>Depart</label><input type="date"/></div>
+        <div class="sf"><label>Return</label><input type="date"/></div>
+        <div class="sf"><label>Passengers</label><select><option>1 Adult</option><option selected>2 Adults</option><option>3 Adults</option></select></div>
+        <button class="sbtn" onclick="openResult('flights')">Search Flights</button>
+      </div>
+    </div>
+
+    <!-- CARS panel -->
+    <div class="panel" id="panel-cars">
+      <div class="srow">
+        <div class="sf w2"><label>Pick-up location</label><input type="text" placeholder="City, airport or address"/></div>
+        <div class="sf"><label>Pick-up</label><input type="date"/></div>
+        <div class="sf"><label>Drop-off</label><input type="date"/></div>
+        <div class="sf"><label>Car type</label><select><option>Any</option><option>Economy</option><option>SUV</option><option>Luxury</option></select></div>
+        <button class="sbtn" onclick="openResult('cars')">Search Cars</button>
+      </div>
+    </div>
+
+    <!-- ACTIVITIES panel -->
+    <div class="panel" id="panel-activities">
+      <div class="srow">
+        <div class="sf w2"><label>Destination or activity</label><input type="text" placeholder="e.g. Dubai, Bali tour, Rome food walk" id="act-dest" autocomplete="off"/></div>
+        <div class="sf"><label>Date</label><input type="date"/></div>
+        <div class="sf"><label>Category</label><select><option>All</option><option>Tours</option><option>Attractions</option><option>Adventure</option><option>Food &amp; Drink</option></select></div>
+        <button class="sbtn" onclick="openResult('activities')">Search Activities</button>
+      </div>
+    </div>
+
+    <!-- CRUISES panel -->
+    <div class="panel" id="panel-cruises">
+      <div class="srow">
+        <div class="sf w2"><label>Destination</label><select><option>Anywhere</option><option>Croatia</option><option>Greece</option><option>Italy</option><option>Spain</option><option>Maldives</option><option>Thailand</option><option>Turkey</option></select></div>
+        <div class="sf"><label>Yacht type</label><select><option>Any</option><option>Sailboat</option><option>Catamaran</option><option>Motorboat</option></select></div>
+        <div class="sf"><label>From date</label><input type="date"/></div>
+        <div class="sf"><label>Guests</label><select><option>2</option><option>4</option><option>6</option><option>8+</option></select></div>
+        <button class="sbtn" onclick="openResult('cruises')">Search Cruises</button>
+      </div>
+    </div>
+
+    <div class="quick-links">
+      <span class="ql-label">Popular:</span>
+      <a class="ql" href="https://booking.tpo.lv/A2xyok35" target="_blank">Dubai</a>
+      <a class="ql" href="https://booking.tpo.lv/A2xyok35" target="_blank">Bangkok</a>
+      <a class="ql" href="https://booking.tpo.lv/A2xyok35" target="_blank">Singapore</a>
+      <a class="ql" href="https://booking.tpo.lv/A2xyok35" target="_blank">London</a>
+      <a class="ql" href="https://booking.tpo.lv/A2xyok35" target="_blank">New York</a>
+      <a class="ql" href="https://booking.tpo.lv/A2xyok35" target="_blank">Tokyo</a>
+    </div>
   </div>
+
+  <!-- ════ RESULT PANELS — YOUR REAL WIDGETS ════ -->
+
+  <!-- HOTELS: your Hotellook widget (campaign_id=594, promo_id=8682) -->
+  <div class="result-panel" id="rp-hotels">
+    <div class="rp-box">
+      <div class="rp-head">
+        <span class="rp-title" id="rp-hotels-title">Hotels</span>
+        <button class="rp-close" onclick="closeResult('hotels')">✕</button>
+      </div>
+      <div class="rp-body">
+        <div class="widget-block" id="hotels-widget"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLIGHTS: your WayAway/Aviasales widget (campaign_id=84, promo_id=2693) -->
+  <div class="result-panel" id="rp-flights">
+    <div class="rp-box">
+      <div class="rp-head">
+        <span class="rp-title">Flights</span>
+        <button class="rp-close" onclick="closeResult('flights')">✕</button>
+      </div>
+      <div class="rp-body">
+        <div class="widget-block" id="flights-widget"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARS: Expedia via Travelpayouts -->
+  <div class="result-panel" id="rp-cars">
+    <div class="rp-box">
+      <div class="rp-head">
+        <span class="rp-title">Car Rentals</span>
+        <button class="rp-close" onclick="closeResult('cars')">✕</button>
+      </div>
+      <div class="rp-body" style="text-align:center;padding:2.5rem 1rem">
+        <div style="font-size:2.5rem;margin-bottom:.75rem">🚗</div>
+        <p style="font-size:.875rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6">Compare car rentals at 500+ locations worldwide.</p>
+        <a href="https://expedia.tpo.lv/SFgJTRlR" target="_blank" style="display:inline-block;background:var(--blue);color:#fff;padding:.7rem 2rem;border-radius:var(--r);font-weight:700;font-size:.9rem">Search Car Rentals on Expedia →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVITIES: your GetYourGuide widget (campaign_id=108, promo_id=4039) -->
+  <div class="result-panel" id="rp-activities">
+    <div class="rp-box">
+      <div class="rp-head">
+        <span class="rp-title" id="rp-act-title">Activities &amp; Experiences</span>
+        <button class="rp-close" onclick="closeResult('activities')">✕</button>
+      </div>
+      <div class="rp-body">
+        <div class="widget-block" id="activities-widget"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRUISES: your cruise widget (campaign_id=47, promo_id=5850) -->
+  <div class="result-panel" id="rp-cruises">
+    <div class="rp-box">
+      <div class="rp-head">
+        <span class="rp-title">Yacht &amp; Cruise Charter</span>
+        <button class="rp-close" onclick="closeResult('cruises')">✕</button>
+      </div>
+      <div class="rp-body">
+        <div class="widget-block" id="cruises-widget"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════ STAYS BY STYLE ════ -->
+<section class="section gray">
+  <div class="sec-inner">
+    <div class="sec-title">Stays for every travel style</div>
+    <p class="sec-sub">Tap to explore deals by destination type</p>
+    <div class="style-tabs">
+      <button class="st active" onclick="switchStyle('beach',this)">🏖 Beach</button>
+      <button class="st" onclick="switchStyle('city',this)">🏙 City</button>
+      <button class="st" onclick="switchStyle('family',this)">👨‍👩‍👧 Family</button>
+      <button class="st" onclick="switchStyle('wellness',this)">🧘 Wellness</button>
+    </div>
+    <div class="dgrid" id="style-grid"></div>
+  </div>
+</section>
+
+<!-- ════ ACTIVITIES FULL SECTION — your GYG widget ════ -->
+<section class="section white" id="activities">
+  <div class="sec-inner">
+    <div class="sec-title">Tours &amp; Experiences</div>
+    <p class="sec-sub">Powered by GetYourGuide — 300,000+ experiences worldwide</p>
+    <!-- YOUR GetYourGuide widget — campaign_id=108 -->
+    <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&place=DXB&items=6&locale=en-US&powered_by=true&campaign_id=108&promo_id=4039" charset="utf-8"></script>
+  </div>
+</section>
+
+<!-- ════ COMPENSATION ════ -->
+<div class="comp" id="compensation">
+  <div class="comp-inner">
+    <div class="comp-text">
+      <h2>✈️ Flight delayed or cancelled?</h2>
+      <p>You could be owed up to €600. Free check — no win, no fee.</p>
+    </div>
+    <div class="comp-btns">
+      <button class="btn-cy" onclick="window.open('https://airhelp.tpo.lv/74frI4ZJ','_blank')">Check My Flight →</button>
+      <button class="btn-co" onclick="window.open('https://compensair.tpo.lv/XtWDgga5','_blank')">Claim Compensation</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════ WHY ════ -->
+<section class="section gray">
+  <div class="sec-inner">
+    <div class="sec-title" style="margin-bottom:1.25rem">Why GoSailor?</div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">🔍</div><h3>Search everywhere</h3><p>100+ travel sites searched at once.</p></div>
+      <div class="why-card"><div class="why-icon">💰</div><h3>Best prices</h3><p>Real prices. No hidden fees.</p></div>
+      <div class="why-card"><div class="why-icon">⚡</div><h3>Lightning fast</h3><p>Results in seconds worldwide.</p></div>
+      <div class="why-card"><div class="why-icon">🔒</div><h3>Trusted partners</h3><p>Booking.com, Expedia, GYG &amp; more.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="section white" id="faq">
+  <div class="sec-inner">
+    <div class="sec-title" style="margin-bottom:1.1rem">Frequently asked questions</div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="fg">
+    <div class="f-brand">
+      <div class="f-logo"><div class="logo-mark">⛵</div><div class="f-logo-text">GoSailor.in</div></div>
+      <p class="f-desc">Cheap flights, hotels, activities and cruises. Based in Hyderabad, India.</p>
+    </div>
+    <div class="fcol">
+      <h4>Explore</h4>
+      <a href="https://booking.tpo.lv/A2xyok35" target="_blank">Hotels in Dubai</a>
+      <a href="https://booking.tpo.lv/A2xyok35" target="_blank">Hotels in Bangkok</a>
+      <a href="https://booking.tpo.lv/A2xyok35" target="_blank">Hotels in Singapore</a>
+      <a href="https://expedia.tpo.lv/SFgJTRlR" target="_blank">Search Flights</a>
+    </div>
+    <div class="fcol">
+      <h4>Company</h4>
+      <a href="/about.html">About GoSailor</a>
+      <a href="mailto:hello@gosailor.in">Contact Us</a>
+      <a href="/blog/">Travel Blog</a>
+    </div>
+    <div class="fcol">
+      <h4>Legal</h4>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© GoSailor.in 2026</span>
+    <div><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+  </div>
+</footer>
+
+<!-- BOTTOM NAV (mobile) -->
+<nav class="bottom-nav">
+  <button class="bn-item active" onclick="scrollToSearch('hotels',this)"><span class="bi">🏨</span>Hotels</button>
+  <button class="bn-item" onclick="scrollToSearch('flights',this)"><span class="bi">✈️</span>Flights</button>
+  <button class="bn-item" onclick="scrollToSearch('cars',this)"><span class="bi">🚗</span>Cars</button>
+  <button class="bn-item" onclick="scrollToSearch('activities',this)"><span class="bi">🎡</span>Activities</button>
+  <button class="bn-item" onclick="scrollToSearch('cruises',this)"><span class="bi">⛵</span>Cruises</button>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-main">
-      <!-- HOTELS SECTION -->
-      <div id="section-hotels" style="display:none">
-        <div class="hero-tag">🏨 Hotels, Stays &amp; Packages</div>
-        <h1>Find the perfect stay<br>at the <em>best price</em></h1>
-        <p>Compare hotels from Booking.com, Expedia &amp; Agoda — all in one place.</p>
-        <div class="search-wrap" style="padding:1.5rem;">
-
-          <!-- Tabs -->
-          <div class="ptabs-wrap" style="display:flex;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap;">
-            <button class="ptab active" onclick="showWidget('hotel','booking',this)">🏨 Booking.com</button>
-            <button class="ptab" onclick="showWidget('hotel','expedia',this)">✈ Expedia</button>
-            <button class="ptab" onclick="showWidget('hotel','bundle',this)">📦 Flight+Hotel</button>
-            <button class="ptab" onclick="showWidget('hotel','agoda',this)">🌏 Agoda</button>
-            <button class="ptab" onclick="showWidget('hotel','deals',this)">🔥 Hot Deals</button>
-          </div>
-
-          <!-- Booking.com -->
-          <div class="hw" id="hw-booking">
-            <div class="wlabel"><span class="pvdr booking">Booking.com</span>28M+ listings · Best for Europe &amp; worldwide · 3–5% commission</div>
-            <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&sustainable=false&deals=false&border_radius=5&plain=true&powered_by=true&promo_id=2693&campaign_id=84" charset="utf-8"></script>
-          </div>
-
-          <!-- Expedia -->
-          <div class="hw" id="hw-expedia" style="display:none">
-            <div class="wlabel"><span class="pvdr expedia">Expedia</span>140,000+ properties · No booking fees · 1.35–3.6%</div>
-            <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&lang=www&layout=S10391&powered_by=true&campaign_id=121&promo_id=4038" charset="utf-8"></script>
-          </div>
-
-          <!-- Bundle -->
-          <div class="hw" id="hw-bundle" style="display:none">
-            <div class="wlabel"><span class="pvdr bundle">Flight + Hotel</span>Save up to $500 booking together on Expedia</div>
-            <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&tab=H&background=1&overlay=000000&button_color=FFCB00&target=1&powered_by=true&campaign_id=594&promo_id=8682" charset="utf-8"></script>
-          </div>
-
-          <!-- Agoda -->
-          <div class="hw" id="hw-agoda" style="display:none">
-            <div class="wlabel"><span class="pvdr agoda">Agoda</span>Best for Asia Pacific · Up to 6% commission</div>
-            <script async src="https://tpwgts.com/content?currency=usd&trs=520977&shmarker=719723&powered_by=true&locale=en&min_lines=5&color_button=%23346A6C&promo_id=5850&campaign_id=47" charset="utf-8"></script>
-          </div>
-
-          <!-- Hot Deals -->
-          <div class="hw" id="hw-deals" style="display:none">
-            <div class="wlabel"><span class="pvdr deals">🔥 Hot Deals</span>Live prices updated daily</div>
-            <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&powered_by=true&primary_override=%235392F9&color_button=%23346A6C&color_icons=%235392F9&dark=%23262626&color_border=%235392F9&color_focused=%2332a8dd&border_radius=5&plain=false&promo_id=8303&campaign_id=104" charset="utf-8"></script>
-          </div>
-
-          <!-- Trust -->
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:1.25rem;padding-top:1rem;border-top:1px solid #f1f5f9;">
-            <span class="tchip">✅ No booking fees</span>
-            <span class="tchip">💰 Best price guarantee</span>
-            <span class="tchip">🌍 Worldwide coverage</span>
-            <span class="tchip">📱 Instant confirmation</span>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- FLIGHTS SECTION -->
-      <div id="section-flights">
-        <div class="hero-tag">✈ Millions of cheap flights</div>
-        <h1>Cheap flights from <em>anywhere</em>,<br>to everywhere</h1>
-        <p>Search top travel sites in one place. One simple search.</p>
-        <div class="search-wrap">
-          <div id="tpwl-search"></div>
-        </div>
-      </div>
-
-      <!-- CRUISES SECTION -->
-      <div id="section-cruises" style="display:none">
-        <div class="hero-tag">⛵ Yacht &amp; Cruise Charter</div>
-        <h1>Sail the world for <em>less</em></h1>
-        <p>Find and book the best yacht charters and cruises worldwide.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px;padding:1.5rem;">
-          <div style="font-size:13px;color:#64748b;margin-bottom:1rem;">🌍 Search yachts and cruises in 50+ destinations worldwide</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Destination</label>
-              <select id="cruiseRegion" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;">
-                <option value="">Select region...</option>
-                <option value="croatia">Croatia</option>
-                <option value="greece">Greece</option>
-                <option value="italy">Italy</option>
-                <option value="spain">Spain</option>
-                <option value="thailand">Thailand</option>
-                <option value="france">France</option>
-                <option value="turkey">Turkey</option>
-                <option value="montenegro">Montenegro</option>
-                <option value="maldives">Maldives</option>
-              </select>
-            </div>
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Yacht type</label>
-              <select id="cruiseType" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;">
-                <option value="">Any type</option>
-                <option value="sailboat">Sailboat</option>
-                <option value="catamaran">Catamaran</option>
-                <option value="motorboat">Motorboat</option>
-                <option value="gulet">Gulet</option>
-              </select>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Charter from</label>
-              <input type="date" id="cruiseDate" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;" />
-            </div>
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Guests</label>
-              <select style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;">
-                <option>2 guests</option>
-                <option>4 guests</option>
-                <option>6 guests</option>
-                <option>8 guests</option>
-                <option>10+ guests</option>
-              </select>
-            </div>
-          </div>
-          <button onclick="searchCruises()" style="width:100%;padding:14px;background:#1a56db;color:#fff;border:none;border-radius:12px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;">Search Yachts &amp; Cruises →</button>
-          <div style="margin-top:12px;padding:10px;background:#f0f9ff;border-radius:8px;font-size:12px;color:#0369a1;">
-            ⭐ Average booking value €3,000+ — earn 5% commission on every booking!
-          </div>
-        </div>
-      </div>
-
-      <!-- CARS SECTION -->
-      <div id="section-cars" style="display:none">
-        <div class="hero-tag">🚗 Cars, Transport &amp; Activities</div>
-        <h1>Book cars, tours &amp; <em>experiences</em></h1>
-        <p>Find transport, activities and experiences powered by Klook.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px;padding:1.5rem;">
-          <div style="font-size:13px;color:#64748b;margin-bottom:1rem;">🌍 530,000+ products across 1,700+ destinations</div>
-          <div style="margin-bottom:10px;">
-            <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Destination or activity</label>
-            <input type="text" id="klookSearch" placeholder="e.g. Tokyo, Dubai, Singapore..." style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;" />
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Category</label>
-              <select id="klookCat" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;">
-                <option value="car-rentals">🚗 Car Rentals</option>
-                <option value="airport-transfer">✈ Airport Transfers</option>
-                <option value="tours">🗺 Tours &amp; Sightseeing</option>
-                <option value="attractions">🎡 Attractions</option>
-                <option value="activities">🏄 Activities</option>
-                <option value="transport">🚌 Transport</option>
-              </select>
-            </div>
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px;">Date</label>
-              <input type="date" id="klookDate" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;color:#1e293b;outline:none;" />
-            </div>
-          </div>
-          <button onclick="searchKlook()" style="width:100%;padding:14px;background:#ff6b35;color:#fff;border:none;border-radius:12px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;">Search on Klook →</button>
-          <div style="margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <div style="background:#fff7ed;border-radius:8px;padding:8px;text-align:center;font-size:11px;color:#c2410c;cursor:pointer;" onclick="quickKlook('car-rentals','dubai')">🚗 Cars in Dubai</div>
-            <div style="background:#fff7ed;border-radius:8px;padding:8px;text-align:center;font-size:11px;color:#c2410c;cursor:pointer;" onclick="quickKlook('airport-transfer','singapore')">✈ Singapore Transfer</div>
-            <div style="background:#fff7ed;border-radius:8px;padding:8px;text-align:center;font-size:11px;color:#c2410c;cursor:pointer;" onclick="quickKlook('tours','bangkok')">🗺 Bangkok Tours</div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- FLIGHT DEALS SECTION -->
-      <div id="section-deals" style="display:none">
-        <div class="hero-tag">💸 Best Flight Deals</div>
-        <h1>Cheapest flights from <em>India</em><br>updated daily</h1>
-        <p>Powered by Aviasales — best fares right now.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px 16px 0 0;padding:2rem;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">From</label><input type="text" id="avia-from" placeholder="e.g. Hyderabad, Mumbai" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">To</label><input type="text" id="avia-to" placeholder="e.g. Dubai, Bangkok" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Departure</label><input type="date" id="avia-dep" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Passengers</label><select style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;background:#fff;"><option>1 Adult</option><option>2 Adults</option><option>3 Adults</option><option>Family</option></select></div>
-          </div>
-          <button onclick="searchAviasales()" style="width:100%;padding:14px;background:#1a56db;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Find Cheapest Flights &rarr;</button>
-          <div style="margin-top:1.25rem;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-            <a href="https://aviasales.tpo.lv/8czJdWtU" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🌆 Dubai<br><strong style="color:#1a56db;">from &#8377;8,500</strong></a>
-            <a href="https://aviasales.tpo.lv/8czJdWtU" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🏯 Bangkok<br><strong style="color:#1a56db;">from &#8377;6,200</strong></a>
-            <a href="https://aviasales.tpo.lv/8czJdWtU" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🦁 Singapore<br><strong style="color:#1a56db;">from &#8377;9,800</strong></a>
-            <a href="https://aviasales.tpo.lv/8czJdWtU" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🎡 London<br><strong style="color:#1a56db;">from &#8377;38,000</strong></a>
-            <a href="https://aviasales.tpo.lv/8czJdWtU" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🗽 New York<br><strong style="color:#1a56db;">from &#8377;52,000</strong></a>
-            <a href="https://aviasales.tpo.lv/8czJdWtU" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🗼 Paris<br><strong style="color:#1a56db;">from &#8377;41,000</strong></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- COMPENSATION SECTION -->
-      <div id="section-compensation" style="display:none">
-        <div class="hero-tag">💰 Flight Compensation</div>
-        <h1>Claim up to <em>&euro;600</em><br>for flight disruptions</h1>
-        <p>Flight delayed or cancelled? You may be owed compensation. Free check in 2 minutes.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px 16px 0 0;padding:2rem;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
-            <div style="background:#eff6ff;border-radius:12px;padding:1.25rem;text-align:center;">
-              <div style="font-size:32px;margin-bottom:0.5rem;">✈️</div>
-              <div style="font-size:15px;font-weight:600;color:#1e293b;margin-bottom:0.25rem;">AirHelp</div>
-              <div style="font-size:12px;color:#64748b;margin-bottom:1rem;">Delays, cancellations &amp; denied boarding. Up to &euro;600.</div>
-              <a href="https://airhelp.tpo.lv/74frI4ZJ" target="_blank" style="display:block;padding:10px;background:#1a56db;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">Check My Flight &rarr;</a>
-            </div>
-            <div style="background:#f0fdf4;border-radius:12px;padding:1.25rem;text-align:center;">
-              <div style="font-size:32px;margin-bottom:0.5rem;">🛡️</div>
-              <div style="font-size:15px;font-weight:600;color:#1e293b;margin-bottom:0.25rem;">Compensair</div>
-              <div style="font-size:12px;color:#64748b;margin-bottom:1rem;">Free claim check. No win, no fee policy.</div>
-              <a href="https://compensair.tpo.lv/XtWDgga5" target="_blank" style="display:block;padding:10px;background:#16a34a;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">Claim Compensation &rarr;</a>
-            </div>
-          </div>
-          <div style="background:#fef9c3;border-radius:12px;padding:1.25rem;margin-bottom:1rem;">
-            <div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:0.5rem;">You may be eligible if:</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
-              <div style="font-size:13px;color:#64748b;">&#10003; Flight delayed 3+ hours</div>
-              <div style="font-size:13px;color:#64748b;">&#10003; Flight was cancelled</div>
-              <div style="font-size:13px;color:#64748b;">&#10003; Denied boarding</div>
-              <div style="font-size:13px;color:#64748b;">&#10003; Missed connection</div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
-            <div style="background:#f8fafc;border-radius:10px;padding:1rem;"><div style="font-size:20px;font-weight:700;color:#1a56db;">&euro;600</div><div style="font-size:12px;color:#64748b;">Max compensation</div></div>
-            <div style="background:#f8fafc;border-radius:10px;padding:1rem;"><div style="font-size:20px;font-weight:700;color:#1a56db;">Free</div><div style="font-size:12px;color:#64748b;">Check eligibility</div></div>
-            <div style="background:#f8fafc;border-radius:10px;padding:1rem;"><div style="font-size:20px;font-weight:700;color:#1a56db;">No win</div><div style="font-size:12px;color:#64748b;">No fee policy</div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ACTIVITIES SECTION -->
-      <div id="section-activities" style="display:none">
-        <div class="hero-tag">🎡 Tours &amp; Activities</div>
-        <h1>Book amazing <em>experiences</em><br>wherever you travel</h1>
-        <p>Museums, tours, shows and attractions. Instant mobile tickets by Tiqets.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px 16px 0 0;padding:2rem;">
-          <div style="margin-bottom:12px;"><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Destination</label><input type="text" id="act-dest" placeholder="e.g. Paris, Dubai, New York" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Date</label><input type="date" id="act-date" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Category</label><select style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;background:#fff;"><option>All activities</option><option>Museums</option><option>Tours</option><option>Shows</option><option>Food &amp; Dining</option><option>Adventure</option></select></div>
-          </div>
-          <button onclick="searchActivities()" style="width:100%;padding:14px;background:#1a56db;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Search Activities &rarr;</button>
-        </div>
-      </div>
-
-      <!-- EVENTS SECTION -->
-      <div id="section-tickets" style="display:none">
-        <div class="hero-tag">🎟️ Events &amp; Tickets</div>
-        <h1>Sports, concerts &amp; <em>shows</em><br>worldwide</h1>
-        <p>Book tickets to the world biggest events. Powered by TicketNetwork.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px 16px 0 0;padding:2rem;">
-          <div style="margin-bottom:12px;"><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Search events</label><input type="text" id="ticket-search" placeholder="e.g. FIFA, Taylor Swift, Broadway" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Category</label><select style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;background:#fff;"><option>All events</option><option>Sports</option><option>Concerts</option><option>Theater</option><option>Comedy</option><option>Festivals</option></select></div>
-            <div><label style="font-size:11px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;display:block;margin-bottom:5px;">Date</label><input type="date" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:inherit;outline:none;"/></div>
-          </div>
-          <button onclick="searchTickets()" style="width:100%;padding:14px;background:#1a56db;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Find Tickets &rarr;</button>
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:1.25rem;">
-            <a href="https://ticketnetwork.tpo.lv/3ooUWVAH" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">⚽ Sports</a>
-            <a href="https://ticketnetwork.tpo.lv/3ooUWVAH" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🎵 Concerts</a>
-            <a href="https://ticketnetwork.tpo.lv/3ooUWVAH" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🎭 Theater</a>
-            <a href="https://ticketnetwork.tpo.lv/3ooUWVAH" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">😂 Comedy</a>
-            <a href="https://ticketnetwork.tpo.lv/3ooUWVAH" target="_blank" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:0.75rem;text-align:center;text-decoration:none;color:#1e293b;font-size:13px;">🎪 Festivals</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- INSURANCE SECTION -->
-      <div id="section-insurance" style="display:none">
-        <div class="hero-tag">🛡️ Travel Insurance</div>
-        <h1>Protect your trip with<br><em>travel insurance</em></h1>
-        <p>Flight delays, cancellations, medical emergencies — stay protected wherever you travel.</p>
-        <div class="search-wrap" style="background:#fff;border-radius:16px 16px 0 0;padding:2rem;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
-            <div style="background:#eff6ff;border-radius:12px;padding:1.25rem;">
-              <div style="font-size:24px;margin-bottom:0.5rem;">✈️</div>
-              <div style="font-size:15px;font-weight:600;color:#1e293b;margin-bottom:0.25rem;">Flight Protection</div>
-              <div style="font-size:12px;color:#64748b;margin-bottom:1rem;">Delays, cancellations &amp; missed connections covered</div>
-              <a href="https://airhelp.tpo.lv/74frI4ZJ" target="_blank" style="display:block;padding:10px;background:#1a56db;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;text-align:center;">Get Protected &rarr;</a>
-            </div>
-            <div style="background:#fef9c3;border-radius:12px;padding:1.25rem;">
-              <div style="font-size:24px;margin-bottom:0.5rem;">💰</div>
-              <div style="font-size:15px;font-weight:600;color:#1e293b;margin-bottom:0.25rem;">Claim Compensation</div>
-              <div style="font-size:12px;color:#64748b;margin-bottom:1rem;">Already had a disrupted flight? Claim up to &euro;600</div>
-              <a href="https://compensair.tpo.lv/XtWDgga5" target="_blank" style="display:block;padding:10px;background:#ca8a04;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;text-align:center;">Check Eligibility &rarr;</a>
-            </div>
-          </div>
-          <div style="background:#f8fafc;border-radius:12px;padding:1.25rem;">
-            <div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:1rem;">Why get travel insurance?</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-              <div style="display:flex;gap:8px;"><span style="color:#1a56db;">&#10003;</span><div><div style="font-size:13px;font-weight:500;">Flight delays</div><div style="font-size:12px;color:#64748b;">Get compensated for lost time</div></div></div>
-              <div style="display:flex;gap:8px;"><span style="color:#1a56db;">&#10003;</span><div><div style="font-size:13px;font-weight:500;">Cancellations</div><div style="font-size:12px;color:#64748b;">Full refund protection</div></div></div>
-              <div style="display:flex;gap:8px;"><span style="color:#1a56db;">&#10003;</span><div><div style="font-size:13px;font-weight:500;">Medical emergencies</div><div style="font-size:12px;color:#64748b;">Covered worldwide</div></div></div>
-              <div style="display:flex;gap:8px;"><span style="color:#1a56db;">&#10003;</span><div><div style="font-size:13px;font-weight:500;">Missed connections</div><div style="font-size:12px;color:#64748b;">Never miss your transfer</div></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    </div>
-<div class="ad-inner">Ad space</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- RESULTS -->
-<div style="background:#fff;">
-  <div style="max-width:1400px;margin:0 auto;padding:0 2rem 1rem;">
-    <div id="tpwl-tickets"></div>
-  </div>
-</div>
-
-<!-- MAIN LAYOUT -->
-<div class="main-layout">
-  <div class="main-content">
-
-    <!-- DEALS -->
-    <div class="deals-card">
-      <div class="section-label">Hot deals</div>
-      <div class="section-title">Latest flight deals</div>
-      <script async src="https://tpwgts.com/content?currency=USD&trs=520977&shmarker=719723&locale=en&category=3&amount=3&powered_by=false&campaign_id=137&promo_id=4497" charset="utf-8"></script>
-    </div>
-
-    <!-- DESTINATIONS -->
-    <div class="dest-card-wrap">
-      <div class="section-label">Popular routes</div>
-      <div class="section-title">Top destinations worldwide</div>
-      <div class="dest-grid">
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/dxb/" target="_blank"><div class="dest-emoji">🌆</div><div class="dest-name">Dubai</div><div class="dest-price">from <strong>₹8,500</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/bkk/" target="_blank"><div class="dest-emoji">🏯</div><div class="dest-name">Bangkok</div><div class="dest-price">from <strong>₹6,200</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/sin/" target="_blank"><div class="dest-emoji">🦁</div><div class="dest-name">Singapore</div><div class="dest-price">from <strong>₹9,800</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/lhr/" target="_blank"><div class="dest-emoji">🎡</div><div class="dest-name">London</div><div class="dest-price">from <strong>₹38,000</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/jfk/" target="_blank"><div class="dest-emoji">🗽</div><div class="dest-name">New York</div><div class="dest-price">from <strong>₹52,000</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/kul/" target="_blank"><div class="dest-emoji">🌴</div><div class="dest-name">Kuala Lumpur</div><div class="dest-price">from <strong>₹7,400</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/cdg/" target="_blank"><div class="dest-emoji">🗼</div><div class="dest-name">Paris</div><div class="dest-price">from <strong>₹41,000</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/syd/" target="_blank"><div class="dest-emoji">🦘</div><div class="dest-name">Sydney</div><div class="dest-price">from <strong>₹44,000</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/nrt/" target="_blank"><div class="dest-emoji">🗾</div><div class="dest-name">Tokyo</div><div class="dest-price">from <strong>₹29,000</strong></div></a>
-        <a class="dest-card" href="https://www.skyscanner.co.in/flights/hyd/ist/" target="_blank"><div class="dest-emoji">🕌</div><div class="dest-name">Istanbul</div><div class="dest-price">from <strong>₹24,000</strong></div></a>
-      </div>
-    </div>
-
-    <!-- FAQ -->
-    <div class="faq-card" id="faq">
-      <div class="section-label">Help</div>
-      <div class="section-title">Booking flights with GoSailor</div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">How does GoSailor work? <span>+</span></div>
-        <div class="faq-a">GoSailor searches hundreds of airlines and travel sites simultaneously to find you the cheapest flights. We compare prices in real time so you always get the best deal available.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">How can I find the cheapest flight? <span>+</span></div>
-        <div class="faq-a">Enter your origin, destination and travel dates, then click Search. GoSailor will show you all available flights sorted by price. Try flexible dates for even cheaper options.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Do I book my flight with GoSailor? <span>+</span></div>
-        <div class="faq-a">GoSailor shows you the best prices from trusted travel sites. When you find a flight you like, we direct you to the airline or travel site to complete your booking safely.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">What happens after I book my flight? <span>+</span></div>
-        <div class="faq-a">Once you complete your booking on the airline or travel site, you will receive a confirmation email directly from them. GoSailor does not handle bookings or payments.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Can I book a flexible flight ticket? <span>+</span></div>
-        <div class="faq-a">Yes! Many airlines now offer flexible tickets. Look for the "Flexible dates" option in our search results to compare prices across different travel dates.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">What is a Price Alert? <span>+</span></div>
-        <div class="faq-a">Sign up and log in to set price alerts for your favourite routes. We will email you when prices drop so you never miss a great deal.</div>
-      </div>
-    </div>
-
-    <!-- WHY -->
-    <div class="why-card">
-      <div class="section-label">Why GoSailor</div>
-      <div class="section-title">Your trusted travel partner</div>
-      <div class="why-grid">
-        <div class="why-item"><div class="why-icon">🔍</div><div class="why-title">Search everywhere</div><div class="why-sub">We search hundreds of airlines and travel sites at once.</div></div>
-        <div class="why-item"><div class="why-icon">💰</div><div class="why-title">Best prices</div><div class="why-sub">Compare real prices. No hidden fees or surprises.</div></div>
-        <div class="why-item"><div class="why-icon">⚡</div><div class="why-title">Fast results</div><div class="why-sub">Get results in seconds from 500+ destinations worldwide.</div></div>
-        <div class="why-item"><div class="why-icon">🔒</div><div class="why-title">Safe &amp; trusted</div><div class="why-sub">Only verified, trusted booking platforms.</div></div>
-      </div>
-    </div>
-
-  </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<!-- EMAIL POPUP -->
-<div id="emailPopup" style="display:none;position:fixed;bottom:24px;right:24px;z-index:999;max-width:320px;width:100%;background:#fff;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.2);overflow:hidden;">
-  <div style="background:#0a1628;padding:1.25rem 1.25rem 1rem;position:relative;">
-    <button onclick="closePopup()" style="position:absolute;top:10px;right:12px;background:none;border:none;color:rgba(255,255,255,0.6);font-size:18px;cursor:pointer;">✕</button>
-    <div style="font-size:24px;margin-bottom:0.5rem;">✈️</div>
-    <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.25rem;">Get flight deals first!</div>
-    <div style="font-size:12px;color:rgba(255,255,255,0.6);">Sign up for exclusive deals & price alerts</div>
-  </div>
-  <div style="padding:1.25rem;">
-    <input type="email" placeholder="Your email address" style="width:100%;padding:10px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:10px;" />
-    <button onclick="closePopup()" style="width:100%;padding:11px;background:#1a56db;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:8px;">Sign up for free →</button>
-    <button onclick="closePopup()" style="width:100%;padding:8px;background:transparent;color:#64748b;border:none;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;">Already have an account? Log in</button>
-    <div style="font-size:11px;color:#94a3b8;text-align:center;margin-top:6px;">No spam. Unsubscribe anytime.</div>
-  </div>
-</div>
-
-<!-- BLOG SECTION -->
-<div style="max-width:1400px;margin:1.5rem auto;padding:0 2rem;">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
-    <div>
-      <div style="font-size:11px;font-weight:600;color:#1a56db;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.3rem;">Travel guides</div>
-      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1e293b;">Most popular travel guides</div>
-    </div>
-    <a href="blog/index.html" style="font-size:14px;color:#1a56db;text-decoration:none;font-weight:500;white-space:nowrap;">View all articles →</a>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-    <a href="blog/thailand-safe-solo-female.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img alt="GoSailor travel" loading="lazy" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
-      <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#7c3aed;text-transform:uppercase;margin-bottom:4px;">👩 Solo Travel · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">Is Thailand Safe for Solo Female Travelers in 2026?</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 11 min read</div></div>
-    </a>
-    <a href="blog/week-in-bali-cost-2026.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img alt="GoSailor travel" loading="lazy" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
-      <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#ea580c;text-transform:uppercase;margin-bottom:4px;">💰 Budget · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">How Much Does a Week in Bali Cost in 2026?</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 10 min read</div></div>
-    </a>
-    <a href="blog/travel-hacks-long-flights.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img alt="GoSailor travel" loading="lazy" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
-      <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#1a56db;text-transform:uppercase;margin-bottom:4px;">✈ Flight Hacks · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">25 Travel Hacks for Long Flights That Actually Work</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 12 min read</div></div>
-    </a>
-    <a href="blog/passport-validity-guide.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img alt="GoSailor travel" loading="lazy" src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
-      <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#16a34a;text-transform:uppercase;margin-bottom:4px;">📋 Essential · 🔥 New</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">Passport Validity Rules by Country 2026</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 8 min read</div></div>
-    </a>
-    <a href="blog/find-cheap-flights-ai-2026.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img alt="GoSailor travel" loading="lazy" src="https://images.unsplash.com/photo-1485871551301-aadbd8191b2a?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
-      <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#7c3aed;text-transform:uppercase;margin-bottom:4px;">🤖 AI Guide · 🔥 New · 315% Trending</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">How to Find Cheap Flights Using AI in 2026</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 9 min read</div></div>
-    </a>
-    <a href="blog/flight-compensation.html" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" onmouseover="this.style.borderColor='#1a56db'" onmouseout="this.style.borderColor='#e2e8f0'">
-      <img alt="GoSailor travel" loading="lazy" src="https://images.unsplash.com/photo-1544620347460-35ea508f54eb?w=500&q=80" style="width:100%;height:140px;object-fit:cover;display:block;"/>
-      <div style="padding:1rem;"><div style="font-size:10px;font-weight:600;color:#16a34a;text-transform:uppercase;margin-bottom:4px;">💰 Compensation · Up to €600</div><div style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e293b;margin-bottom:6px;line-height:1.3;">How to Claim EU261 Flight Compensation</div><div style="font-size:11px;color:#94a3b8;">📅 May 2026 · 11 min read</div></div>
-    </a>
-  </div>
-</div>
-
-<!-- VIATOR EXPERIENCES SECTION -->
-<div style="max-width:1400px;margin:0 auto 2rem;padding:0 2rem;">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
-    <div>
-      <div style="font-size:11px;font-weight:600;color:#1a56db;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.3rem;">Things To Do</div>
-      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#1e293b;">Top experiences worldwide</div>
-    </div>
-    <a href="#" onclick="showSection('activities',document.querySelectorAll('.nav-tab')[6]);window.scrollTo({top:0,behavior:'smooth'});return false;" style="font-size:14px;color:#1a56db;text-decoration:none;font-weight:500;white-space:nowrap;">View all activities →</a>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:1.5rem;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:1rem;">
-      <span class="pvdr viator">Viator</span>
-      <span style="font-size:12px;color:#64748b;">300,000+ experiences · Book now, pay later · Free cancellation on most</span>
-    </div>
-    <script async src="https://tp.media/content?trs=520977&shmarker=719723&locale=en&powered_by=true&promo_id=4199&campaign_id=130" charset="utf-8"></script>
-  </div>
-</div>
-
-<div class="footer-wrap">
-  <div class="footer-inner">
-    <div class="footer-sections">
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="https://www.skyscanner.co.in/flights/hyd/dxb/" target="_blank">Flights to Dubai</a>
-        <a href="https://www.skyscanner.co.in/flights/hyd/bkk/" target="_blank">Flights to Bangkok</a>
-        <a href="https://www.skyscanner.co.in/flights/hyd/lhr/" target="_blank">Flights to London</a>
-        <a href="https://www.skyscanner.co.in/flights/hyd/sin/" target="_blank">Flights to Singapore</a>
-        <a href="https://www.skyscanner.co.in/flights/hyd/jfk/" target="_blank">Flights to New York</a>
-      </div>
-      <div class="footer-col">
-        <h4>Travel Guides</h4>
-        <a href="blog/index.html">All Travel Guides</a>
-        <a href="blog/dubai-guide.html">Dubai Guide</a>
-        <a href="blog/bangkok-guide.html">Bangkok Guide</a>
-        <a href="blog/cheap-flights-india.html">Cheap Flights India</a>
-        <a href="blog/passport-validity-guide.html">Passport Guide</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About GoSailor</a>
-        <a href="mailto:hello@gosailor.in">Contact Us</a>
-        <a href="blog/index.html">Travel Blog</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="cookie-policy.html">Cookie Policy</a>
-      </div>
-    </div>
-    <div class="footer-logo">Go<span>Sailor</span>.in</div>
-    <div class="footer-copy">© GoSailor.in 2026 — Cheap flights from anywhere to everywhere — Hyderabad, India</div>
-  </div>
-</div>
-
-<!-- LOGIN MODAL -->
-<div class="modal-overlay" id="loginModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('login')">✕</button>
-    <h2>Welcome back</h2>
-    <p>Log in to save flights and get price alerts</p>
-    <input class="modal-input" type="email" placeholder="Email address" />
-    <div class="remember"><input type="checkbox" checked /> Remember me</div>
-    <button class="modal-btn">Continue with email</button>
-    <div class="modal-divider">or</div>
-    <button class="modal-google">🔵 Continue with Google</button>
-    <div class="modal-switch">Don't have an account? <a onclick="switchModal('login','signup')">Sign up</a></div>
-    <div class="modal-terms">By continuing, you agree to GoSailor's Terms of Service and acknowledge that you have read our Privacy Policy.</div>
-  </div>
-</div>
-
-<!-- SIGNUP MODAL -->
-<div class="modal-overlay" id="signupModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('signup')">✕</button>
-    <h2>Create account</h2>
-    <p>Save flights and get price alerts when prices drop</p>
-    <input class="modal-input" type="text" placeholder="Full name" />
-    <input class="modal-input" type="email" placeholder="Email address" />
-    <input class="modal-input" type="password" placeholder="Create password" />
-    <button class="modal-btn">Create account</button>
-    <div class="modal-divider">or</div>
-    <button class="modal-google">🔵 Sign up with Google</button>
-    <div class="modal-switch">Already have an account? <a onclick="switchModal('signup','login')">Log in</a></div>
-    <div class="modal-terms">By continuing, you agree to GoSailor's Terms of Service and acknowledge that you have read our Privacy Policy.</div>
-  </div>
-</div>
-
 <script>
+'use strict';
 
-function showWidget(group, name, btn) {
-  var prefix = group === 'hotel' ? 'hw' : 'aw';
-  var ids = group === 'hotel' 
-    ? ['booking','expedia','bundle','agoda','deals']
-    : ['viator','gyg','tiqets'];
-  ids.forEach(function(w){
-    var el = document.getElementById(prefix+'-'+w);
-    if(el) el.style.display = (w===name) ? 'block' : 'none';
-  });
-  if(btn){
-    btn.closest('.ptabs-wrap').querySelectorAll('.ptab').forEach(function(t){ t.classList.remove('active'); });
-    btn.classList.add('active');
-  }
+/* widget URLs — your exact scripts from Travelpayouts */
+var WIDGETS = {
+  hotels:     'https://tpwgts.com/content?trs=520977&shmarker=719723&tab=H&background=1&overlay=000000&button_color=0071c2&target=1&powered_by=true&campaign_id=594&promo_id=8682',
+  flights:    'https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&sustainable=false&deals=false&border_radius=5&plain=true&powered_by=true&promo_id=2693&campaign_id=84',
+  activities: 'https://tpwgts.com/content?trs=520977&shmarker=719723&place=DXB&items=3&locale=en-US&powered_by=true&campaign_id=108&promo_id=4039',
+  cruises:    'https://tpwgts.com/content?currency=usd&trs=520977&shmarker=719723&powered_by=true&locale=en&lowest_price=&highest_price=&min_lines=5&color_button=%230071c2&promo_id=5850&campaign_id=47'
+};
+
+var loaded = {};
+
+function injectWidget(type) {
+  if (loaded[type]) return;
+  loaded[type] = true;
+  var wrap = document.getElementById(type + '-widget');
+  if (!wrap) return;
+  var s = document.createElement('script');
+  s.async = true;
+  s.charset = 'utf-8';
+  s.src = WIDGETS[type];
+  wrap.appendChild(s);
 }
 
-var tripType = 'return';
-
-function setTrip(type, el) {
-  tripType = type;
-  document.querySelectorAll('.trip-tab').forEach(t => t.classList.remove('active'));
+/* TAB SWITCH */
+function switchTab(tab, el) {
+  document.querySelectorAll('.stab').forEach(function(t){t.classList.remove('active')});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});
   el.classList.add('active');
-  var rs = document.getElementById('returnSf');
-  rs.style.opacity = type === 'oneway' ? '0.3' : '1';
-  rs.style.pointerEvents = type === 'oneway' ? 'none' : 'auto';
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.querySelectorAll('.result-panel').forEach(function(r){r.classList.remove('open')});
 }
 
-function focusField(field) {
-  var inputs = {from:'fromInput',to:'toInput',dep:'depInput',ret:'retInput',pax:'paxInput'};
-  var vals = {from:'fromVal',to:'toVal',dep:'depVal',ret:'retVal',pax:'paxVal'};
-  var input = document.getElementById(inputs[field]);
-  var val = document.getElementById(vals[field]);
-  if(input && val) {
-    val.style.display = 'none';
-    input.style.display = 'block';
-    input.focus();
+/* OPEN RESULT — inject widget on demand */
+function openResult(type) {
+  document.querySelectorAll('.result-panel').forEach(function(r){r.classList.remove('open')});
+  var el = document.getElementById('rp-' + type);
+  if (!el) return;
+
+  if (type === 'hotels') {
+    var dest = document.getElementById('h-dest').value.trim();
+    document.getElementById('rp-hotels-title').textContent = 'Hotels' + (dest ? ' — ' + dest : '');
+    injectWidget('hotels');
   }
-}
-
-function updateField(field) {
-  var inputs = {from:'fromInput',to:'toInput'};
-  var vals = {from:'fromVal',to:'toVal'};
-  var input = document.getElementById(inputs[field]);
-  var val = document.getElementById(vals[field]);
-  if(input && val) {
-    input.style.display = 'none';
-    val.style.display = 'block';
-    if(input.value) {
-      val.textContent = input.value;
-      val.className = 'sf-value';
-    }
+  if (type === 'flights') injectWidget('flights');
+  if (type === 'activities') {
+    var adest = document.getElementById('act-dest').value.trim();
+    document.getElementById('rp-act-title').textContent = 'Activities' + (adest ? ' — ' + adest : '');
+    injectWidget('activities');
   }
+  if (type === 'cruises') injectWidget('cruises');
+
+  el.classList.add('open');
+  setTimeout(function(){el.scrollIntoView({behavior:'smooth', block:'nearest'})}, 80);
 }
 
-function updateDate(field) {
-  var inputs = {dep:'depInput',ret:'retInput'};
-  var vals = {dep:'depVal',ret:'retVal'};
-  var input = document.getElementById(inputs[field]);
-  var val = document.getElementById(vals[field]);
-  if(input && val && input.value) {
-    var d = new Date(input.value);
-    val.textContent = d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
-    val.className = 'sf-value';
-    input.style.display = 'none';
-    val.style.display = 'block';
-  }
+function closeResult(type) {
+  var el = document.getElementById('rp-' + type);
+  if (el) el.classList.remove('open');
 }
 
-function updatePax() {
-  var input = document.getElementById('paxInput');
-  var val = document.getElementById('paxVal');
-  if(input && val) {
-    val.textContent = input.value;
-    input.style.display = 'none';
-    val.style.display = 'block';
-  }
-}
-
-function swapCities() {
-  var fv = document.getElementById('fromVal');
-  var tv = document.getElementById('toVal');
-  var fi = document.getElementById('fromInput');
-  var ti = document.getElementById('toInput');
-  var tmp = fv.textContent; fv.textContent = tv.textContent; tv.textContent = tmp;
-  var tmp2 = fi.value; fi.value = ti.value; ti.value = tmp2;
-  var fc = fv.className; fv.className = tv.className; tv.className = fc;
-}
-
-function doSearch() {
-  var from = document.getElementById('fromInput').value || document.getElementById('fromVal').textContent;
-  var to = document.getElementById('toInput').value || document.getElementById('toVal').textContent;
-  var url = 'https://www.skyscanner.co.in';
-  if(from && to && from !== 'Enter city or airport' && to !== 'Enter destination') {
-    url = 'https://www.skyscanner.co.in/transport/flights/' + encodeURIComponent(from) + '/' + encodeURIComponent(to) + '/';
-  }
-  window.open(url, '_blank');
-}
-
-function toggleFaq(el) {
-  var a = el.querySelector('.faq-a');
-  var s = el.querySelector('.faq-q span');
-  a.classList.toggle('open');
-  s.textContent = a.classList.contains('open') ? '−' : '+';
-}
-
-// showSection defined below
-
-function searchCruises() {
-  var region = document.getElementById('cruiseRegion').value;
-  var type = document.getElementById('cruiseType').value;
-  var url = 'https://searadar.tpo.lv/rFGXRf9V';
-  if(region) url += '?region=' + encodeURIComponent(region);
-  if(type) url += (region ? '&' : '?') + 'type=' + encodeURIComponent(type);
-  window.open(url, '_blank');
-}
-
-function searchKlook() {
-  var q = document.getElementById('klookSearch').value.trim();
-  var cat = document.getElementById('klookCat').value;
-  var url = 'https://www.klook.com/en-IN/';
-  if(q) url = 'https://www.klook.com/en-IN/search/?query=' + encodeURIComponent(q) + '&categoryId=' + encodeURIComponent(cat);
-  window.open(url, '_blank');
-}
-
-function quickKlook(cat, dest) {
-  window.open('https://www.klook.com/en-IN/search/?query=' + encodeURIComponent(dest) + '&categoryId=' + encodeURIComponent(cat), '_blank');
-}
-
-function openModal(type) {
-  document.getElementById(type + 'Modal').classList.add('open');
-}
-function closeModal(type) {
-  document.getElementById(type + 'Modal').classList.remove('open');
-}
-function switchModal(from, to) {
-  closeModal(from);
-  openModal(to);
-}
-
-document.querySelectorAll('.modal-overlay').forEach(m => {
-  m.addEventListener('click', function(e) {
-    if(e.target === m) m.classList.remove('open');
-  });
-});
-
-// Show popup after 8 seconds
-setTimeout(function() {
-  var popup = document.getElementById('emailPopup');
-  if(popup && !localStorage.getItem('popupClosed')) {
-    popup.style.display = 'block';
-  }
-}, 8000);
-
-function closePopup() {
-  var popup = document.getElementById('emailPopup');
-  if(popup) popup.style.display = 'none';
-  localStorage.setItem('popupClosed', '1');
-}
-
-function showSection(section, el) {
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+/* BOTTOM NAV */
+function scrollToSearch(tab, el) {
+  document.querySelectorAll('.bn-item').forEach(function(b){b.classList.remove('active')});
   el.classList.add('active');
-  var sections = ['flights','hotels','deals','compensation','cruises','cars','activities','tickets','insurance'];
-  sections.forEach(function(s) {
-    var el2 = document.getElementById('section-' + s);
-    if(el2) el2.style.display = s === section ? 'block' : 'none';
-  });
-  var tickets = document.getElementById('tpwl-tickets');
-  if(tickets) tickets.style.display = section === 'flights' ? 'block' : 'none';
-  var mainLayout = document.querySelector('.main-layout');
-  if(mainLayout) mainLayout.style.display = section === 'flights' ? 'grid' : 'none';
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  var tabs = ['hotels','flights','cars','activities','cruises'];
+  var stabs = document.querySelectorAll('.stab');
+  var idx = tabs.indexOf(tab);
+  if (idx >= 0) switchTab(tab, stabs[idx]);
+  document.querySelector('.hero').scrollIntoView({behavior:'smooth', block:'start'});
 }
 
-function searchYacht() {
-  var dest = document.getElementById('yacht-dest').value.trim();
-  var url = 'https://searadar.tpo.lv/rFGXRf9V';
-  if(dest) url = 'https://searadar.tpo.lv/rFGXRf9V?region=' + encodeURIComponent(dest);
-  window.open(url, '_blank');
+/* STYLE GRID */
+var STYLES = {
+  beach:[
+    {name:'Albufera',loc:'Portugal',price:'₹16,334',emoji:'🏖️',bg:'beach'},
+    {name:'Busan',loc:'South Korea',price:'₹10,284',emoji:'🌊',bg:'beach'},
+    {name:'San Diego',loc:'USA',price:'₹20,616',emoji:'🌅',bg:'beach'},
+    {name:'Pattaya',loc:'Thailand',price:'₹5,585',emoji:'🏝️',bg:'beach'}
+  ],
+  city:[
+    {name:'Tokyo',loc:'Japan',price:'₹12,400',emoji:'🗼',bg:'city'},
+    {name:'Paris',loc:'France',price:'₹18,600',emoji:'🗽',bg:'city'},
+    {name:'New York',loc:'USA',price:'₹22,000',emoji:'🌆',bg:'city'},
+    {name:'Singapore',loc:'Asia',price:'₹14,800',emoji:'🏙️',bg:'city'}
+  ],
+  family:[
+    {name:'Bali',loc:'Indonesia',price:'₹7,200',emoji:'🌺',bg:'family'},
+    {name:'Orlando',loc:'USA',price:'₹19,500',emoji:'🎡',bg:'family'},
+    {name:'Gold Coast',loc:'Australia',price:'₹24,000',emoji:'🎠',bg:'family'},
+    {name:'Phuket',loc:'Thailand',price:'₹6,800',emoji:'🐠',bg:'family'}
+  ],
+  wellness:[
+    {name:'Ubud',loc:'Bali',price:'₹8,900',emoji:'🧘',bg:'wellness'},
+    {name:'Chiang Mai',loc:'Thailand',price:'₹5,200',emoji:'🌿',bg:'wellness'},
+    {name:'Kerala',loc:'India',price:'₹4,800',emoji:'🌴',bg:'wellness'},
+    {name:'Maldives',loc:'South Asia',price:'₹32,000',emoji:'🌊',bg:'wellness'}
+  ]
+};
+
+function renderStyle(type) {
+  document.getElementById('style-grid').innerHTML = STYLES[type].map(function(d){
+    return '<div class="dcard" onclick="window.open(\'https://booking.tpo.lv/A2xyok35\',\'_blank\')">'
+      + '<div class="dc-img ' + d.bg + '">' + d.emoji + '</div>'
+      + '<div class="dc-body"><div class="dc-name">' + d.name + '</div>'
+      + '<div class="dc-loc">' + d.loc + '</div>'
+      + '<div class="dc-price">from <strong>' + d.price + '</strong>/night</div>'
+      + '</div></div>';
+  }).join('');
 }
 
-function searchCars() {
-  var dest = document.getElementById('car-dest').value.trim();
-  var url = 'https://klook.tpo.lv/DbyqEc3I';
-  if(dest) url = 'https://klook.tpo.lv/DbyqEc3I?dest=' + encodeURIComponent(dest);
-  window.open(url, '_blank');
+function switchStyle(type, el) {
+  document.querySelectorAll('.st').forEach(function(t){t.classList.remove('active')});
+  el.classList.add('active');
+  renderStyle(type);
 }
 
+/* FAQ */
+var FAQS = [
+  {q:'How does GoSailor work?', a:'GoSailor connects you to the best travel platforms — hotels via Hotellook/Booking.com, flights via Aviasales/WayAway, activities via GetYourGuide, and cruises via our yacht network. Search here, book on their secure platform.'},
+  {q:'Are the prices real?', a:'Yes. All prices are pulled live from our partner networks. Prices can change, so always confirm the final price before completing your booking.'},
+  {q:'Is my payment secure?', a:'Payments go directly through Booking.com, Expedia, GetYourGuide or our cruise partners — all PCI-DSS compliant. GoSailor never handles your card details.'},
+  {q:'How do I claim flight compensation?', a:'If your flight was delayed 3+ hours, cancelled, or you were denied boarding, tap Check My Flight below. Free eligibility check — you could be owed up to €600.'},
+  {q:'What is a Price Alert?', a:'Sign up for a free account and set price alerts on your favourite routes. We\'ll email you when fares drop.'}
+];
 
-function searchKiwi() {
-  var from = document.getElementById('kiwi-from').value.trim();
-  var to = document.getElementById('kiwi-to').value.trim();
-  var url = 'https://kiwi.tpo.lv/ST6JL5h0';
-  if(from && to) url = 'https://kiwi.tpo.lv/ST6JL5h0?from=' + encodeURIComponent(from) + '&to=' + encodeURIComponent(to);
-  window.open(url, '_blank');
+function renderFAQ() {
+  document.getElementById('faq-list').innerHTML = FAQS.map(function(f, i){
+    return '<div class="faq-item" id="fi-' + i + '">'
+      + '<button class="faq-q" onclick="toggleFAQ(' + i + ')">' + f.q
+      + '<span class="faq-icon">+</span></button>'
+      + '<div class="faq-a">' + f.a + '</div></div>';
+  }).join('');
 }
 
-function searchActivities() {
-  var dest = document.getElementById('act-dest').value.trim();
-  var url = 'https://tiqets.tpo.lv/5IHn9Yt7';
-  if(dest) url = 'https://tiqets.tpo.lv/5IHn9Yt7?search=' + encodeURIComponent(dest);
-  window.open(url, '_blank');
-}
+function toggleFAQ(i) { document.getElementById('fi-' + i).classList.toggle('open'); }
 
-function searchHotels() {
-  var dest = document.getElementById('hotel-dest').value.trim();
-  var checkin = document.getElementById('hotel-checkin').value;
-  var checkout = document.getElementById('hotel-checkout').value;
-  var url = 'https://klook.tpo.lv/DbyqEc3I';
-  if(dest) url = 'https://www.klook.com/en-US/hotels/?city=' + encodeURIComponent(dest) + '&checkInDate=' + checkin + '&checkOutDate=' + checkout + '&aff_id=719723';
-  window.open(url, '_blank');
-}
-
-function searchAviasales() {
-  var from = document.getElementById('avia-from').value.trim();
-  var to = document.getElementById('avia-to').value.trim();
-  var url = 'https://aviasales.tpo.lv/8czJdWtU';
-  if(from && to) url = 'https://aviasales.tpo.lv/8czJdWtU?from=' + encodeURIComponent(from) + '&to=' + encodeURIComponent(to);
-  window.open(url, '_blank');
-}
-
-function searchTickets() {
-  var q = document.getElementById('ticket-search').value.trim();
-  var url = 'https://ticketnetwork.tpo.lv/3ooUWVAH';
-  if(q) url = 'https://ticketnetwork.tpo.lv/3ooUWVAH?q=' + encodeURIComponent(q);
-  window.open(url, '_blank');
-}
+/* INIT */
+renderStyle('beach');
+renderFAQ();
 </script>
 </body>
 </html>
