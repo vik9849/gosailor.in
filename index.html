@@ -184,6 +184,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <a class="logo" href="/"><div class="logo-mark">⛵</div><div class="logo-text">Go<span>Sailor</span>.in</div></a>
   <nav class="topnav">
     <a onclick="sw('flights')">Flights</a>
+    <a onclick="sw('hotels')">Hotels</a>
     <a onclick="sw('cars')">Cars</a>
     <a onclick="sw('activities')">Activities</a>
     <a onclick="sw('cruises')">Cruises</a>
@@ -206,7 +207,8 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 <!-- STICKY TABS -->
 <div class="section-tabs">
   <div class="stabs-inner">
-    <button class="stab active" id="tab-flights"    onclick="sw('flights')"><span class="si">✈️🏨</span>Flights &amp; Hotels</button>
+    <button class="stab active" id="tab-flights" onclick="sw('flights')"><span class="si">✈️</span>Flights</button>
+    <button class="stab" id="tab-hotels" onclick="sw('hotels')"><span class="si">🏨</span>Hotels</button>
     
     <button class="stab"        id="tab-cars"       onclick="sw('cars')"><span class="si">🚗</span>Cars</button>
     <button class="stab"        id="tab-activities" onclick="sw('activities')"><span class="si">🎡</span>Activities</button>
@@ -224,14 +226,25 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 ══════════════════════════════════ -->
 <div class="tab-section active" id="section-flights">
   <div class="sec-inner">
-    <div class="sec-title">Flights &amp; Hotels</div>
-    <p class="sec-sub">Search flights AND hotels — switch tabs inside the widget below. Results appear right here.</p>
+    <div class="sec-title">Flights</div>
+    <p class="sec-sub">Search hundreds of airlines — live results appear right here on GoSailor</p>
     <div id="tpwl-search"></div>
     <div id="tpwl-tickets"></div>
   </div>
 </div>
 
 
+
+<!-- HOTELS — Agoda widget -->
+<div class="tab-section" id="section-hotels">
+  <div class="sec-inner">
+    <div class="sec-title">Hotels</div>
+    <p class="sec-sub">Search 2,000,000+ properties — powered by Agoda</p>
+    <div class="wcard">
+      <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&powered_by=true&primary_override=%230071c2&color_button=%230071c2&color_icons=%230071c2&dark=%231a1a2e&color_border=%230071c2&color_focused=%230071c2&border_radius=8&plain=false&promo_id=8303&campaign_id=104" charset="utf-8"></script>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════
   CARS — localrent.com White Label widget
@@ -352,19 +365,20 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 <!-- BOTTOM NAV mobile -->
 <nav class="bnav">
   <button class="bn active" id="bn-flights"    onclick="sw('flights')"><span class="bi">✈️</span>Flights</button>
-  <button class="bn"        id="bn-cars"       onclick="sw('cars')"><span class="bi">🚗</span>Cars</button>
+  <button class="bn" id="bn-hotels" onclick="sw('hotels')"><span class="bi">🏨</span>Hotels</button>
+  <button class="bn" id="bn-cars" onclick="sw('cars')"><span class="bi">🚗</span>Cars</button>
   <button class="bn"        id="bn-activities" onclick="sw('activities')"><span class="bi">🎡</span>Activities</button>
   <button class="bn"        id="bn-blog"       onclick="sw('blog')"><span class="bi">📝</span>Blog</button>
 </nav>
 
-<!-- White Label — last so DOM is ready when it initialises -->
+<!-- White Label FLIGHTS -->
 <script type="module" src="https://tpwgts.com/wl_web/main.js?wl_id=16536"></script>
 <!-- Tracking -->
 <script>(function(){var s=document.createElement("script");s.async=1;s.src='https://emrld.ltd/NTIwOTc3.js?t=520977';document.body.appendChild(s);})();</script>
 
 <script>
 'use strict';
-var TABS=['flights','cars','activities','cruises','blog'];
+var TABS=['flights','hotels','cars','activities','cruises','blog'];
 
 function sw(tab){
   TABS.forEach(function(t){
