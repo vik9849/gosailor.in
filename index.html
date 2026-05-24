@@ -79,8 +79,8 @@ button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparen
 @media(min-width:640px){.sec-title{font-size:1.2rem}}
 
 /* Widget card */
-.wcard{background:var(--white);border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;padding:1rem;min-height:100px}
-@media(min-width:640px){.wcard{padding:1.5rem}}
+.wcard{background:var(--white);border-radius:var(--rl);box-shadow:var(--sh);overflow:visible;padding:1rem;min-height:100px}
+@media(min-width:640px){.wcard{padding:1.5rem;overflow:visible}}
 
 /* White Label containers — always in DOM */
 #tpwl-search{background:var(--white);border-radius:var(--rl);box-shadow:var(--shl);overflow:hidden;margin-bottom:.75rem;min-height:60px}
@@ -240,9 +240,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <div class="sec-inner">
     <div class="sec-title">Hotels</div>
     <p class="sec-sub">Search 2,000,000+ properties — powered by Agoda</p>
-    <div class="wcard">
-      <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&powered_by=true&primary_override=%230071c2&color_button=%230071c2&color_icons=%230071c2&dark=%231a1a2e&color_border=%230071c2&color_focused=%230071c2&border_radius=8&plain=false&promo_id=8303&campaign_id=104" charset="utf-8"></script>
-    </div>
+    <div class="wcard" id="w-hotels"></div>
   </div>
 </div>
 
@@ -255,9 +253,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <div class="sec-inner">
     <div class="sec-title">Car Rentals</div>
     <p class="sec-sub">Browse cars with live prices — powered by LocalRent.com</p>
-    <div class="wcard">
-      <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&country=153&city=68511&powered_by=true&campaign_id=87&promo_id=2466" charset="utf-8"></script>
-    </div>
+    <div class="wcard" id="w-cars"></div>
   </div>
 </div>
 
@@ -270,9 +266,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <div class="sec-inner">
     <div class="sec-title">Tours &amp; Activities</div>
     <p class="sec-sub">300,000+ experiences worldwide — powered by GetYourGuide</p>
-    <div class="wcard">
-      <script async src="https://tpwgts.com/content?trs=520977&shmarker=719723&powered_by=true&campaign_id=108&promo_id=8412" charset="utf-8"></script>
-    </div>
+    <div class="wcard" id="w-activities"></div>
   </div>
 </div>
 
@@ -283,9 +277,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <div class="sec-inner">
     <div class="sec-title">Yacht &amp; Cruise Charter</div>
     <p class="sec-sub">Find and book yacht charters and cruises worldwide</p>
-    <div class="wcard">
-      <script async src="https://tpwgts.com/content?currency=usd&trs=520977&shmarker=719723&powered_by=true&locale=en&lowest_price=&highest_price=&min_lines=5&color_button=%230071c2&promo_id=5850&campaign_id=47" charset="utf-8"></script>
-    </div>
+    <div class="wcard" id="w-cruises"></div>
   </div>
 </div>
 
@@ -380,6 +372,26 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 'use strict';
 var TABS=['flights','hotels','cars','activities','cruises','blog'];
 
+var LOADED={};
+var WIDGET_URLS={
+  hotels:'https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&powered_by=true&primary_override=%230071c2&color_button=%230071c2&color_icons=%230071c2&dark=%231a1a2e&color_border=%230071c2&color_focused=%230071c2&border_radius=8&plain=false&promo_id=8303&campaign_id=104',
+  cars:'https://tpwgts.com/content?trs=520977&shmarker=719723&locale=en&country=153&city=68511&powered_by=true&campaign_id=87&promo_id=2466',
+  activities:'https://tpwgts.com/content?trs=520977&shmarker=719723&powered_by=true&campaign_id=108&promo_id=8412',
+  cruises:'https://tpwgts.com/content?currency=usd&trs=520977&shmarker=719723&powered_by=true&locale=en&lowest_price=&highest_price=&min_lines=5&color_button=%230071c2&promo_id=5850&campaign_id=47'
+};
+
+function loadWidget(tab){
+  if(LOADED[tab])return;
+  LOADED[tab]=true;
+  var wrap=document.getElementById('w-'+tab);
+  if(!wrap||!WIDGET_URLS[tab])return;
+  var s=document.createElement('script');
+  s.async=true;
+  s.charset='utf-8';
+  s.src=WIDGET_URLS[tab];
+  wrap.appendChild(s);
+}
+
 function sw(tab){
   TABS.forEach(function(t){
     var s=document.getElementById('section-'+t);
@@ -389,6 +401,8 @@ function sw(tab){
     if(b)b.classList.toggle('active',t===tab);
     if(n)n.classList.toggle('active',t===tab);
   });
+  // Lazy load widget only when tab is first opened
+  loadWidget(tab);
   document.querySelector('.section-tabs').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
