@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact GoSailor.in — Get in Touch</title>
+<meta name="description" content="Contact GoSailor.in for support, partnerships or press enquiries. Based in Hyderabad, India. Email: hello@gosailor.in"/>
+<link rel="canonical" href="https://gosailor.in/contact.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#f3f4f6;color:#1a1a2e}
+a{text-decoration:none;color:inherit}
+nav{background:#003b6f;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:7px;color:#fff;font-size:1.1rem;font-weight:800}
+.logo-mark{width:28px;height:28px;border-radius:5px;background:#febb02;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.logo-text span{color:#febb02}
+.nav-back{color:rgba(255,255,255,.7);font-size:.82rem;font-weight:600}
+.nav-back:hover{color:#fff}
+.hero{background:linear-gradient(135deg,#003b6f,#0071c2);padding:3rem 1.5rem;text-align:center}
+.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:#fff;margin-bottom:.5rem}
+.hero p{color:rgba(255,255,255,.7);font-size:.95rem}
+.container{max-width:760px;margin:2rem auto;padding:0 1.25rem 4rem}
+.card{background:#fff;border-radius:14px;padding:1.75rem;margin-bottom:1.25rem;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.card h2{font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:.85rem;padding-bottom:.65rem;border-bottom:2px solid #f3f4f6}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+@media(max-width:480px){.contact-grid{grid-template-columns:1fr}}
+.contact-item{background:#f3f4f6;border-radius:10px;padding:1.1rem}
+.contact-icon{font-size:1.5rem;margin-bottom:.5rem}
+.contact-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6b7280;margin-bottom:.25rem}
+.contact-value{font-size:.875rem;font-weight:600;color:#1a1a2e}
+.contact-value a{color:#0071c2}
+/* Form */
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#6b7280;margin-bottom:.4rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.7rem .9rem;border:1.5px solid #e5e7eb;border-radius:8px;font-family:inherit;font-size:.875rem;color:#1a1a2e;background:#fff;transition:border-color .15s}
+.form-group input:focus,.form-group select,.form-group textarea:focus{outline:none;border-color:#0071c2}
+.form-group textarea{height:130px;resize:vertical}
+.btn-submit{width:100%;background:#0071c2;color:#fff;border:none;padding:.8rem;border-radius:8px;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;transition:background .15s;margin-top:.5rem}
+.btn-submit:hover{background:#005299}
+.success{display:none;background:#d1fae5;border:1.5px solid #6ee7b7;border-radius:8px;padding:1rem;text-align:center;font-size:.875rem;color:#065f46;font-weight:600;margin-top:1rem}
+.footer-wrap{background:#00224d;padding:1.5rem;text-align:center}
+.footer-copy{font-size:.72rem;color:rgba(255,255,255,.4)}
+.footer-links{display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;margin-bottom:.75rem}
+.footer-links a{color:rgba(255,255,255,.5);font-size:.72rem}
+.footer-links a:hover{color:#fff}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">⛵</div><div class="logo-text">Go<span>Sailor</span>.in</div></a>
+  <a class="nav-back" href="/">← Back to GoSailor</a>
+</nav>
+<div class="hero">
+  <h1>Contact Us</h1>
+  <p>We typically respond within 24 hours</p>
+</div>
+<div class="container">
+  <div class="card">
+    <h2>Get in touch</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:hello@gosailor.in">hello@gosailor.in</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Hyderabad, Telangana, India</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">⏰</div>
+        <div class="contact-label">Response time</div>
+        <div class="contact-value">Within 24 hours</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🤝</div>
+        <div class="contact-label">Partnerships</div>
+        <div class="contact-value"><a href="mailto:hello@gosailor.in">hello@gosailor.in</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Send us a message</h2>
+    <form id="contact-form" onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" placeholder="John Smith" required/>
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="you@example.com" required/>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select>
+          <option>General enquiry</option>
+          <option>Booking support</option>
+          <option>Partnership / affiliate</option>
+          <option>Press / media</option>
+          <option>Bug report</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="How can we help you?" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message →</button>
+      <div class="success" id="success-msg">✅ Message sent! We'll get back to you within 24 hours.</div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Booking issues?</h2>
+    <p style="font-size:.875rem;color:#4b5563;line-height:1.75">GoSailor is a search engine — we don't process bookings directly. For issues with a booking, please contact the platform where you booked:</p>
+    <ul style="font-size:.85rem;color:#4b5563;line-height:2;padding-left:1.25rem;margin-top:.5rem">
+      <li><strong>Flights</strong> — contact the airline directly or the travel agency you booked through</li>
+      <li><strong>Hotels</strong> — contact Agoda support at agoda.com/help</li>
+      <li><strong>Car rentals</strong> — contact LocalRent at localrent.com</li>
+      <li><strong>Activities</strong> — contact GetYourGuide at getyourguide.com/help</li>
+      <li><strong>Flight compensation</strong> — use AirHelp at airhelp.com</li>
+    </ul>
+  </div>
+</div>
+<div class="footer-wrap">
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+    <a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/cookie-policy.html">Cookies</a>
+  </div>
+  <div class="footer-copy">© GoSailor.in 2026 — Hyderabad, India</div>
+</div>
+<script>
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('success-msg').style.display='block';
+  document.getElementById('contact-form').reset();
+  // To make this actually send emails, connect to Netlify Forms:
+  // Add name="contact" netlify to the <form> tag and Netlify handles it free
+}
+</script>
+</body>
+</html>
