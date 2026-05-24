@@ -184,7 +184,6 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <a class="logo" href="/"><div class="logo-mark">⛵</div><div class="logo-text">Go<span>Sailor</span>.in</div></a>
   <nav class="topnav">
     <a onclick="sw('flights')">Flights</a>
-    <a onclick="sw('hotels')">Hotels</a>
     <a onclick="sw('cars')">Cars</a>
     <a onclick="sw('activities')">Activities</a>
     <a onclick="sw('cruises')">Cruises</a>
@@ -207,8 +206,8 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 <!-- STICKY TABS -->
 <div class="section-tabs">
   <div class="stabs-inner">
-    <button class="stab active" id="tab-flights"    onclick="sw('flights')"><span class="si">✈️</span>Flights</button>
-    <button class="stab"        id="tab-hotels"     onclick="sw('hotels')"><span class="si">🏨</span>Hotels</button>
+    <button class="stab active" id="tab-flights"    onclick="sw('flights')"><span class="si">✈️🏨</span>Flights &amp; Hotels</button>
+    
     <button class="stab"        id="tab-cars"       onclick="sw('cars')"><span class="si">🚗</span>Cars</button>
     <button class="stab"        id="tab-activities" onclick="sw('activities')"><span class="si">🎡</span>Activities</button>
     <button class="stab"        id="tab-cruises"    onclick="sw('cruises')"><span class="si">⛵</span>Cruises</button>
@@ -226,23 +225,13 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 <div class="tab-section active" id="section-flights">
   <div class="sec-inner">
     <div class="sec-title">Flights &amp; Hotels</div>
-    <p class="sec-sub">Search flights and hotels — results appear right here on GoSailor</p>
+    <p class="sec-sub">Search flights AND hotels — switch tabs inside the widget below. Results appear right here.</p>
     <div id="tpwl-search"></div>
     <div id="tpwl-tickets"></div>
   </div>
 </div>
 
-<!-- Hotels tab — scrolls to White Label and activates hotels tab inside it -->
-<div class="tab-section" id="section-hotels">
-  <div class="sec-inner">
-    <div class="sec-title">Hotels</div>
-    <p class="sec-sub">Search hotels — results appear right here on GoSailor</p>
-    <div class="info-banner">ℹ️ &nbsp;Use the search engine below — select the Hotels tab inside it to search hotels with live prices shown on this page.</div>
-    <!-- Duplicate White Label containers for hotels tab -->
-    <div id="tpwl-search-h"></div>
-    <div id="tpwl-tickets-h"></div>
-  </div>
-</div>
+
 
 <!-- ══════════════════════════════════
   CARS — localrent.com White Label widget
@@ -363,7 +352,6 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 <!-- BOTTOM NAV mobile -->
 <nav class="bnav">
   <button class="bn active" id="bn-flights"    onclick="sw('flights')"><span class="bi">✈️</span>Flights</button>
-  <button class="bn"        id="bn-hotels"     onclick="sw('hotels')"><span class="bi">🏨</span>Hotels</button>
   <button class="bn"        id="bn-cars"       onclick="sw('cars')"><span class="bi">🚗</span>Cars</button>
   <button class="bn"        id="bn-activities" onclick="sw('activities')"><span class="bi">🎡</span>Activities</button>
   <button class="bn"        id="bn-blog"       onclick="sw('blog')"><span class="bi">📝</span>Blog</button>
@@ -376,7 +364,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 
 <script>
 'use strict';
-var TABS=['flights','hotels','cars','activities','cruises','blog'];
+var TABS=['flights','cars','activities','cruises','blog'];
 
 function sw(tab){
   TABS.forEach(function(t){
