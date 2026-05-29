@@ -1,0 +1,360 @@
+backend:
+  name: git-gateway
+  branch: main   # change to "master" if your GitHub default branch is master
+
+# Set the primary site URL to anchor the editorial preview tracking
+site_url: https://gosailor.in
+
+# Media files — where uploaded images are stored in your repo
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Show the CMS even when not logged in (set to false = require login first)
+publish_mode: editorial_workflow   # adds Draft → Review → Published workflow
+
+collections:
+
+  # ─────────────────────────────────────────────
+  # 1. BLOG POSTS
+  # ─────────────────────────────────────────────
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    preview_path: "blog/{{slug}}.html"
+    
+    # FIX: Explicitly mapping display properties so the grid populated in image_0245bb.png works flawlessly
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - label: "Post Title"
+        name: "title"     # The programmatic key must strictly remain lowercase "title"
+        widget: "string"
+        hint: "The main headline — keep it under 60 characters for SEO"
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD MMMM YYYY"
+        time_format: false
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "GoSailor Editorial"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Destinations", value: "destinations" }
+          - { label: "Travel Tips", value: "travel-tips" }
+          - { label: "Flight Deals", value: "flight-deals" }
+          - { label: "Hotel Guides", value: "hotel-guides" }
+          - { label: "Budget Travel", value: "budget-travel" }
+          - { label: "Africa", value: "africa" }
+          - { label: "Asia", value: "asia" }
+          - { label: "Europe", value: "europe" }
+          - { label: "Latin America", value: "latin-america" }
+          - { label: "Middle East", value: "middle-east" }
+
+      - label: "Hero Image URL"
+        name: "hero_image"
+        widget: "string"
+        hint: "Paste a full image URL (e.g. from Unsplash). Use format: https://images.unsplash.com/photo-ID?w=1400&q=80"
+        required: false
+
+      - label: "Hero Image Alt Text"
+        name: "hero_alt"
+        widget: "string"
+        hint: "Describe the image for accessibility and SEO"
+        required: false
+
+      - label: "SEO Meta Description"
+        name: "description"
+        widget: "text"
+        hint: "160 characters max. This shows in Google search results."
+        pattern: [".{1,160}", "Must be under 160 characters"]
+
+      - label: "Excerpt / Card Summary"
+        name: "excerpt"
+        widget: "text"
+        hint: "2–3 sentences shown on the blog listing card. Keep it punchy."
+
+      - label: "Read Time (minutes)"
+        name: "read_time"
+        widget: "number"
+        default: 5
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Featured Post?"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        hint: "Featured posts appear at the top of the blog grid"
+
+      - label: "Body Content"
+        name: "body"
+        widget: "markdown"
+        hint: "Full post content. Use headings, bold, images, and links freely."
+        modes: ["rich_text", "raw"]
+
+      - label: "GoSailor CTA Type"
+        name: "cta_type"
+        widget: "select"
+        hint: "Which GoSailor search widget to promote in this post"
+        options:
+          - { label: "Flights", value: "flights" }
+          - { label: "Hotels", value: "hotels" }
+          - { label: "Cars", value: "cars" }
+          - { label: "Activities", value: "activities" }
+          - { label: "Cruises", value: "cruises" }
+          - { label: "All (general)", value: "all" }
+        default: "all"
+
+      - label: "Canonical URL"
+        name: "canonical"
+        widget: "string"
+        hint: "Full URL e.g. https://gosailor.in/blog/post-name.html"
+        required: false
+
+      - label: "Schema Type"
+        name: "schema_type"
+        widget: "select"
+        default: "Article"
+        options:
+          - "Article"
+          - "TravelGuide"
+          - "HowTo"
+          - "FAQPage"
+
+  # ─────────────────────────────────────────────
+  # 2. SITE SETTINGS (single file)
+  # ─────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+
+      - name: "general"
+        label: "⚙️ General Settings"
+        file: "_data/settings.json"
+        fields:
+          - label: "Site Name"
+            name: "site_name"
+            widget: "string"
+            default: "GoSailor.in"
+
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+            default: "Find cheap flights, hotels, cars & cruises worldwide"
+
+          - label: "Contact Email"
+            name: "contact_email"
+            widget: "string"
+            hint: "This is the email shown on your contact page and in the footer"
+            default: "hellogosailor@gmail.com"
+
+          - label: "Support Response Time"
+            name: "response_time"
+            widget: "string"
+            default: "Within 24 hours"
+
+          - label: "Default OG / Share Image URL"
+            name: "og_image"
+            widget: "string"
+            hint: "Shown when someone shares gosailor.in on social media"
+            required: false
+
+          - label: "Google Analytics ID"
+            name: "ga_id"
+            widget: "string"
+            hint: "Format: G-XXXXXXXXXX"
+            required: false
+
+          - label: "Travelpayouts Marker (trs)"
+            name: "tp_marker"
+            widget: "string"
+            default: "520977"
+            hint: "Your Travelpayouts tracking marker — do not change unless it changes in your dashboard"
+
+          - label: "Travelpayouts White Label ID"
+            name: "tp_wl_id"
+            widget: "string"
+            default: "16536"
+            hint: "Your wl_id for the Flights widget"
+
+      - name: "homepage"
+        label: "🏠 Homepage Content"
+        file: "_data/homepage.json"
+        fields:
+          - label: "Hero Headline"
+            name: "hero_headline"
+            widget: "string"
+            default: "Find Your Perfect Journey"
+
+          - label: "Hero Subheading"
+            name: "hero_sub"
+            widget: "string"
+            default: "Search cheap flights, hotels, cars, cruises & activities — all in one place"
+
+          - label: "Announcement Banner"
+            name: "banner_text"
+            widget: "string"
+            required: false
+            hint: "Optional — leave blank to hide. Example: '✈ Summer flight deals now live!'"
+
+          - label: "Banner Link URL"
+            name: "banner_url"
+            widget: "string"
+            required: false
+            hint: "Where the banner links to (optional)"
+
+          - label: "Show Banner?"
+            name: "banner_active"
+            widget: "boolean"
+            default: false
+
+          - label: "Default Active Tab"
+            name: "default_tab"
+            widget: "select"
+            default: "flights"
+            options:
+              - { label: "Flights", value: "flights" }
+              - { label: "Hotels", value: "hotels" }
+              - { label: "Cars", value: "cars" }
+              - { label: "Activities", value: "activities" }
+              - { label: "Cruises", value: "cruises" }
+
+          - label: "Featured Destinations"
+            name: "featured_destinations"
+            widget: "list"
+            hint: "Destinations shown as quick-pick tiles on the homepage"
+            max: 8
+            fields:
+              - { label: "City Name", name: "city", widget: "string" }
+              - { label: "Country", name: "country", widget: "string" }
+              - { label: "Emoji Flag", name: "flag", widget: "string" }
+              - { label: "Image URL", name: "image", widget: "string", required: false }
+
+      - name: "seo"
+        label: "🔍 SEO & Meta"
+        file: "_data/seo.json"
+        fields:
+          - label: "Homepage Title Tag"
+            name: "home_title"
+            widget: "string"
+            hint: "Keep under 60 characters. Shown in browser tab + Google"
+            default: "GoSailor.in — Cheap Flights, Hotels & Travel Deals"
+
+          - label: "Homepage Meta Description"
+            name: "home_description"
+            widget: "text"
+            hint: "160 characters max"
+            default: "Search and compare cheap flights, hotels, car rentals, cruises and activities worldwide. GoSailor.in — your one-stop travel comparison platform."
+
+          - label: "Blog Page Title"
+            name: "blog_title"
+            widget: "string"
+            default: "Travel Blog — GoSailor.in"
+
+          - label: "Twitter / X Handle"
+            name: "twitter_handle"
+            widget: "string"
+            hint: "Without the @ symbol"
+            required: false
+
+          - label: "Facebook Page URL"
+            name: "facebook_url"
+            widget: "string"
+            required: false
+
+          - label: "Instagram Handle"
+            name: "instagram_handle"
+            widget: "string"
+            required: false
+
+  # ─────────────────────────────────────────────
+  # 3. STATIC PAGES (About, Contact, etc.)
+  # ─────────────────────────────────────────────
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - name: "about"
+        label: "📄 About Page"
+        file: "_data/about.json"
+        fields:
+          - label: "Page Headline"
+            name: "headline"
+            widget: "string"
+            default: "About GoSailor.in"
+
+          - label: "Intro Paragraph"
+            name: "intro"
+            widget: "text"
+            hint: "The opening paragraph shown at the top of the About page"
+
+          - label: "Our Story"
+            name: "story"
+            widget: "markdown"
+
+          - label: "Founder Name"
+            name: "founder_name"
+            widget: "string"
+            required: false
+
+          - label: "Founded Year"
+            name: "founded_year"
+            widget: "string"
+            default: "2024"
+
+          - label: "Based In"
+            name: "location"
+            widget: "string"
+            default: "Hyderabad, Telangana, India"
+
+      - name: "contact"
+        label: "📬 Contact Page"
+        file: "_data/contact.json"
+        fields:
+          - label: "Page Headline"
+            name: "headline"
+            widget: "string"
+            default: "Contact Us"
+
+          - label: "Subheading"
+            name: "subheading"
+            widget: "string"
+            default: "We typically respond within 24 hours"
+
+          - label: "Contact Email"
+            name: "email"
+            widget: "string"
+            default: "hellogosailor@gmail.com"
+            hint: "Shown in the Email and Partnerships cards"
+
+          - label: "Location"
+            name: "location"
+            widget: "string"
+            default: "Hyderabad, Telangana, India"
+
+          - label: "Response Time"
+            name: "response_time"
+            widget: "string"
+            default: "Within 24 hours"
+
+          - label: "Netlify Form Name"
+            name: "form_name"
+            widget: "string"
+            default: "contact"
+            hint: "Must match the name attribute on your HTML form for Netlify Forms to capture submissions"

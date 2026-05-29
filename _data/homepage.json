@@ -1,0 +1,14 @@
+{
+  "hero_headline": "Find Your Perfect Journey",
+  "hero_sub": "Search cheap flights, hotels, cars, cruises & activities — all in one place",
+  "banner_text": "",
+  "banner_url": "",
+  "banner_active": false,
+  "default_tab": "flights",
+  "featured_destinations": [
+    { "city": "Dubai", "country": "UAE", "flag": "🇦🇪", "image": "" },
+    { "city": "Bangkok", "country": "Thailand", "flag": "🇹🇭", "image": "" },
+    { "city": "London", "country": "UK", "flag": "🇬🇧", "image": "" },
+    { "city": "Singapore", "country": "Singapore", "flag": "🇸🇬", "image": "" }
+  ]
+}
