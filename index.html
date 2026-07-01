@@ -8,9 +8,9 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <link rel="manifest" href="/site.webmanifest"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-<title>GoSailor.in — Flights, Hotels, Activities &amp; Cruises</title>
+<title>GoSailor.in — Cheap Flights, Hotels &amp; Free Flight Delay Compensation Check</title>
 <meta name="google-site-verification" content="lIJMPegUDu6TftkD1IOx8tGQU-j6Ll8j3NgygDkPuj0"/>
-<meta name="description" content="Search cheap flights, hotels, tours and cruises worldwide. Best travel deals on GoSailor.in"/>
+<meta name="description" content="Compare cheap flights, hotels, cars and activities worldwide, plus check free if you're owed up to €600 for a delayed or cancelled flight. No win, no fee."/>
 <link rel="canonical" href="https://gosailor.in/"/>
 <link rel="alternate" hreflang="en-IN" href="https://gosailor.in/"/>
 <link rel="alternate" hreflang="en" href="https://gosailor.in/"/>
@@ -92,8 +92,8 @@
   ]
 }
 </script>
-<meta property="og:title" content="GoSailor.in — Flights, Hotels, Activities &amp; Cruises"/>
-<meta property="og:description" content="Search cheap flights, hotels, tours and cruises on GoSailor.in"/>
+<meta property="og:title" content="GoSailor.in — Cheap Flights, Hotels &amp; Free Flight Delay Compensation Check"/>
+<meta property="og:description" content="Compare cheap flights, hotels and activities, plus check free if you're owed up to €600 for a delayed or cancelled flight."/>
 <meta property="og:url" content="https://gosailor.in/"/>
 <meta property="og:type" content="website"/>
 <meta name="robots" content="index, follow"/>
@@ -225,6 +225,23 @@ button{font-family:inherit;cursor:pointer;-webkit-tap-highlight-color:transparen
 .why-card h3{font-size:.76rem;font-weight:700;margin-bottom:.2rem}
 .why-card p{font-size:.68rem;color:var(--muted);line-height:1.5}
 
+/* PRICE ALERTS */
+.alerts{padding:1.75rem 1rem;background:linear-gradient(135deg,#003b6f,#0071c2)}
+@media(min-width:640px){.alerts{padding:2.25rem 1.5rem}}
+.alerts-inner{text-align:center}
+.alerts-text h2{color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:.35rem}
+.alerts-text p{color:rgba(255,255,255,.68);font-size:.78rem;margin-bottom:1rem}
+.alerts-form{display:flex;flex-direction:column;gap:.5rem;max-width:380px;margin:0 auto}
+.alerts-form input{padding:.7rem .9rem;border-radius:var(--r);border:none;font-size:.85rem;font-family:inherit;min-height:44px}
+.alerts-form button{min-height:44px}
+.alerts-success{display:none;color:#fff;font-size:.78rem;font-weight:700;margin-top:.75rem}
+.alerts-success.show{display:block}
+@media(min-width:520px){
+  .alerts-form{flex-direction:row}
+  .alerts-form input{flex:1}
+  .alerts-form button{flex-shrink:0;padding-left:1.3rem;padding-right:1.3rem}
+}
+
 /* FAQ */
 .faq{padding:1.75rem 1rem;background:var(--bg)}
 @media(min-width:640px){.faq{padding:2.5rem 1.5rem}}
@@ -288,6 +305,19 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <h1>Travel smarter,<br/>pay <em>less</em></h1>
   <p class="hero-sub">Real results — shown right here on GoSailor</p>
 </section>
+
+<div class="comp" id="compensation">
+  <div class="comp-inner">
+    <div class="comp-text">
+      <h2>✈️ Flight delayed 3+ hours or cancelled?</h2>
+      <p>Airlines owe you up to €600 by law — most people never claim it. Free 2-minute check, no win no fee.</p>
+    </div>
+    <div class="comp-btns">
+      <button class="btn-cy" onclick="window.open('https://airhelp.tpo.lv/74frI4ZJ','_blank')">Check My Flight →</button>
+      <button class="btn-co" onclick="window.open('https://compensair.tpo.lv/XtWDgga5','_blank')">Claim Compensation</button>
+    </div>
+  </div>
+</div>
 
 <div class="section-tabs">
   <div class="stabs-inner">
@@ -355,28 +385,31 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   </div>
 </div>
 
-<div class="comp" id="compensation">
-  <div class="comp-inner">
-    <div class="comp-text">
-      <h2>✈️ Flight delayed or cancelled?</h2>
-      <p>You could be owed up to €600. Free check — no win, no fee.</p>
-    </div>
-    <div class="comp-btns">
-      <button class="btn-cy" onclick="window.open('https://airhelp.tpo.lv/74frI4ZJ','_blank')">Check My Flight →</button>
-      <button class="btn-co" onclick="window.open('https://compensair.tpo.lv/XtWDgga5','_blank')">Claim Compensation</button>
-    </div>
-  </div>
-</div>
-
 <div class="why">
   <div class="sec-inner">
     <div class="sec-title">Why GoSailor?</div>
     <div class="why-grid">
       <div class="why-card"><div class="why-icon">🔍</div><h3>Results on your page</h3><p>Flights, hotels, cars and activities load right here.</p></div>
       <div class="why-card"><div class="why-icon">💰</div><h3>Best prices</h3><p>Live prices from 500+ airlines and hotel partners.</p></div>
-      <div class="why-card"><div class="why-icon">⚡</div><h3>Lightning fast</h3><p>Widgets load only when you need them.</p></div>
+      <div class="why-card"><div class="why-icon">⚖️</div><h3>No win, no fee</h3><p>Free flight delay compensation check — you only pay if you get paid.</p></div>
       <div class="why-card"><div class="why-icon">🔒</div><h3>Secure booking</h3><p>Trusted checkout partners. Payment always safe.</p></div>
     </div>
+  </div>
+</div>
+
+<div class="alerts">
+  <div class="sec-inner alerts-inner">
+    <div class="alerts-text">
+      <h2>Never miss a fare drop</h2>
+      <p>Get an email when prices fall on routes you care about. No spam, unsubscribe anytime.</p>
+    </div>
+    <form name="price-alerts" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="alerts-form" onsubmit="return handleAlertSignup(event)">
+      <input type="hidden" name="form-name" value="price-alerts"/>
+      <p style="position:absolute;left:-9999px"><label>Don't fill this out: <input name="bot-field"/></label></p>
+      <input type="email" name="email" id="alert-email" placeholder="you@example.com" required/>
+      <button type="submit" class="btn-cy">Notify Me</button>
+    </form>
+    <p class="alerts-success" id="alerts-success">✅ You're in! We'll email you when fares drop.</p>
   </div>
 </div>
 
@@ -417,7 +450,7 @@ body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
   <button class="bn"        id="bn-hotels"     onclick="sw('hotels')"><span class="bi">🏨</span>Hotels</button>
   <button class="bn"        id="bn-cars"       onclick="sw('cars')"><span class="bi">🚗</span>Cars</button>
   <button class="bn"        id="bn-activities" onclick="sw('activities')"><span class="bi">🎡</span>Activities</button>
-  <button class="bn"        id="bn-blog"       onclick="sw('blog')"><span class="bi">📝</span>Blog</button>
+  <a class="bn" href="#compensation"><span class="bi">💶</span>Refunds</a>
 </nav>
 
 <!-- Tracking only — tiny, async, non-blocking -->
@@ -544,6 +577,24 @@ function tf(i){document.getElementById('fi-'+i).classList.toggle('open');}
 
 renderBlog();
 renderFAQ();
+
+function handleAlertSignup(e){
+  e.preventDefault();
+  var form = e.target;
+  var data = new FormData(form);
+  fetch('/', {
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(data).toString()
+  }).then(function(){
+    form.style.display='none';
+    document.getElementById('alerts-success').classList.add('show');
+  }).catch(function(){
+    form.style.display='none';
+    document.getElementById('alerts-success').classList.add('show');
+  });
+  return false;
+}
 </script>
 </body>
 </html>
